@@ -1,0 +1,120 @@
+
+/*=========== HEADER - CONTAINER ===========*/
+
+.header-container {
+
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--azul-escuro);
+}
+
+/*=========== LOGO - CONTAINER ===========*/
+
+.logo-container {
+  display: flex;
+  padding: .2rem .4rem;
+  gap: .5rem;
+}
+
+.logo-imagem {
+
+}
+
+/*=========== LOGO-NOME - CONTAINER ===========*/
+
+.logo-nome {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: .3rem;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  color: var(--azul-gelo);
+  text-align: center;
+}
+
+/*=========== NAV - CONTAINER ===========*/
+
+.nav-container {
+  display: flex;
+  align-items: center;
+
+
+  /* background-color: lightgreen; */
+}
+
+.nav-container ul {
+  display: flex;
+  gap: 1.3rem;
+  
+  align-content: center;
+
+  /* background-color: red; */
+}
+
+.nav-container li {
+  padding: 0 .9rem;
+  
+  color: var(--azul-escuro);
+  border-radius: .7rem;
+  background-color: var(--azul-gelo);
+}
+
+/*=========== REDES SOCIAIS - CONTAINER ===========*/
+
+/* Container das redes sociais */
+.redes-sociais-container {
+    display: flex;
+    gap: 1.5rem; /* Espaço entre os ícones */
+    align-items: center;
+}
+
+/* Estilo geral dos links */
+.social-link {
+    text-decoration: none;
+    font-size: 2.5rem; /* Tamanho do ícone */
+    color: #A7D8F0; /* O azul claro para combinar com o fundo */
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.social-link:hover {
+    transform: translateY(-3px); /* O ícone "sobe" um pouquinho */
+}
+
+/* Cores específicas no Hover (opcional) 
+   Se quiser que eles ganhem as cores originais ao passar o mouse: */
+
+.whatsapp:hover {
+    color: #25D366; /* Verde oficial do WhatsApp */
+}
+
+.instagram:hover {
+    color: #E4405F; /* Rosa oficial do Instagram */
+}
+
+.youtube:hover {
+    color: #FF0000; /* Vermelho oficial do YouTube */
+}
+
+/* Ajuste do Header para manter tudo na linha */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #52648d; /* Seu fundo */
+}
+
+
+/*===========  ===========*/
+
+
+
+
+/*===========  ===========*/
+
+
+
+
+/*===========  ===========*/
+

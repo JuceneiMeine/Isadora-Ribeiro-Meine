@@ -1,0 +1,54 @@
+/*
+=============================================================
+CORES PADRONIZADAS - Variáveis de Cores
+=============================================================
+*/
+:root { /* "Depósito" global de informações. */
+
+  /* Cores do Site */
+
+  --marrom-escuro: #a76964;
+  --marrom-medio: #c69c94;
+
+  --marrom-salmao: #e0b29c;
+
+  --azul-escuro: #52648d;
+  --azul-gelo: #E1E9F5;
+  --azul-ciano: #A7D8F0;
+
+  --bege-escuro: #f4e7d3;
+  --bege-claro: #fffbee;
+
+
+  /* Cores Auxiliares */
+
+  --branco:#fff;
+  --preto:#222;
+
+  --palha-1:#FAFAD2;
+
+  --creme-1:#ffff94;
+
+  --amarelo-escuro:#FFD700;
+  --amarelo-medio:#F5EF52;
+  --amarelo-claro:#FAF7A9;
+
+  --dourado-escuro:#b28405;
+  --dourado-medio:#fbc02d;   
+  --dourado-claro:#f9db5c;
+
+  --laranja-escuro:#FF4D00;  
+  --laranja-medio:#FF8C00;
+  --laranja-claro:#ffa500;
+
+  --laranja-queimado:#CC5500;
+
+  --abobora:#FF7518;
+
+  --grafite-escuro:#2e2e2e;
+  --grafite-medio:#4e4949;
+  
+  --grafite-azul:#474a51;
+}
+
+

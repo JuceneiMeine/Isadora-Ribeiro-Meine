@@ -1,0 +1,24 @@
+
+/* --- IMPORTAR OS ARQUIVOS CSS --- */
+@import url("./assets/styles/1-root-cores.css");
+
+@import url("./assets/styles/2-reset-normalize.css");
+
+@import url("./assets/styles/3-format-base.css");
+
+@import url("./assets/styles/4-header-nav.css");
+
+@import url("./assets/styles/5-main-sections.css");
+
+@import url("./assets/styles/6-contact-footer.css");
+
+@import url("./assets/styles/7-responsividade.css");
+
+
+
+/* --- FONTE INTER --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+
+/* --- FONTE NUNITO --- */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
