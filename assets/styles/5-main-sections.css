@@ -1,3 +1,150 @@
+/*
+=============================================================
+MAIN --- SECTION - HOME
+=============================================================
+*/
 
-/*=========== MAIN - CONTAINER ===========*/
+.home-section {
+  display: flex;
+  padding: 10px 2%;
+  align-items: center;
+  gap: 20px;    
+  background-color: var(--bege-escuro);
+}
+
+.home-container {
+  display: flex;    
+  align-items: center;
+  gap: 20px;    
+}
+
+.home-foto-ctn {
+  width: 900px;
+  height: 450px;
+  background: #ddd;
+  margin: 0 auto;  
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.home-foto-ctn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  
+}
+
+.home-info-pessoais-ctn { 
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;  
+}
+
+.home-info-logo {
+  padding-bottom: 1rem;
+}
+
+.home-info-logo img{ 
+  display: flex;
+  align-items: center;    
+}
+
+.home-info-pessoais-ctn h1 {
+  text-align: center;
+  font-size: 1.5rem; 
+  color: var(--marrom-escuro);
+}
+
+.home-info-pessoais-ctn p {
+  text-align: center;  
+  color: var(--marrom-escuro);
+}
+
+.home-btn-ctn {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;  
+}
+.home-btn {  
+    background-color: var(--azul-escuro);
+    color: white;
+    border: none;
+    padding: .3rem 2rem;
+    cursor: pointer;
+    border-radius: 1.3rem;
+    font-size: 1rem;
+    transition: 0.3s;
+    letter-spacing: .1rem;
+  }
+
+/*
+=============================================================
+SECTION - SERVIÇO
+=============================================================
+*/
+
+
+
+
+
+
+
+
+/*
+=============================================================
+SECTION - ANALISE
+=============================================================
+*/
+
+.grid-benefits {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 0 10%;
+}
+
+/*
+=============================================================
+SECTION - DUVIDAS
+=============================================================
+*/
+
+
+
+/*
+=============================================================
+SECTION - AGENDAMENTO
+=============================================================
+*/
+
+.btn-contato {
+    background-color: var(--azul-claro);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-cta:hover { opacity: 0.9; }
+
+/*
+=============================================================
+SECTION - SOBRE-MIM
+=============================================================
+*/
+
+.sobre-fundo {
+    padding: 60px 10%;
+    text-align: center;
+    background: #ece9e4;
+}
+
+
 

@@ -6,6 +6,8 @@ BODY - Corpo da página
 
 body {
 
+  font-family: 'Times New Roman', Times, serif;
+
   display: flex;
   /* Transforma o corpo do site em um "container flexível" */
 
@@ -55,7 +57,7 @@ body {
 
   font-weight: 400;
 
-  line-height: 1.6; 
+  /* line-height: 1.6;  */
   /* Espaçamento entre linhas, essencial para a leitura não ficar cansativa. */
 }
 
@@ -66,7 +68,6 @@ h1 { /* TÍTULO DO SITE */
 
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
   color: var(--laranja-queimado);   
 
   font-size: clamp(1.9rem, 3.5vw, 5rem); 

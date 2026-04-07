@@ -1,125 +1,100 @@
 
-/*=========== HEADER - CONTAINER ===========*/
+/*=========== HEADER ===========*/
 
 .header-container {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: .1rem .2rem;;
   background-color: var(--azul-escuro);
-
   margin-top: .15rem;
-
   border-radius: .5rem;
+
+  position: sticky; /* VER O QUE SIGNIFICA */
+  top: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/*=========== LOGO - CONTAINER ===========*/
+
+/*=========== LOGO ===========*/
 
 .logo-container {
   display: flex;
   padding: .2rem .4rem;
-  gap: .5rem;
-
-  /* background-color: red; */
 }
 
 .logo-imagem {
-
+  
 }
 
-/*=========== LOGO-NOME - CONTAINER ===========*/
 
-
-
-/*=========== NAV - CONTAINER ===========*/
+/*=========== NAV ===========*/
 
 .nav-container {
   display: flex;
   align-items: center;
 
-
-  /* background-color: lightgreen; */
+  justify-content: space-between;
 }
 
 .nav-container ul {
   display: flex;
-  gap: 1.3rem;
-  
+  gap: 1.3rem;  
   align-content: center;
-
-  /* background-color: red; */
 }
 
 .nav-container li {
-  padding: 0 .9rem;
-  
+  padding: 0 .9rem;  
   color: var(--branco);
   border-radius: .7rem;
   background-color: var(--azul-escuro);
-  border: solid .1rem var(--branco);
-
+  border: solid 1px var(--azul-gelo);
   transition: transform 0.3s, color 0.3s;
 }
 
 .nav-container li:hover {
-  /* padding: 0 .9rem; */
-
-  transform: translateY(-3px);
   
-  color: var(--azul-escuro);
-  /* border-radius: .7rem; */
+  transform: translateY(-3px);  
+  color: var(--azul-escuro); 
   background-color: var(--branco);
-  /* border: solid .1rem var(--branco); */
-
   font-weight: 700;
 }
 
-/*=========== REDES SOCIAIS - CONTAINER ===========*/
 
-/* Container das redes sociais */
+
+
+/*=========== REDES SOCIAIS ===========*/
+
 .redes-sociais-container {
-    display: flex;
-    gap: 1.5rem; /* Espaço entre os ícones */
-    align-items: center;
-    margin-right: 3rem;
+  display: flex;
+  gap: 1.5rem; 
+  align-items: center;
+  margin-right: 3rem;
 }
 
-/* Estilo geral dos links */
 .social-link {
-    text-decoration: none;
-    font-size: 2.5rem; /* Tamanho do ícone */
-
-    color: var(--branco);
-
-    /* color: #A7D8F0;  */
-    /* O azul claro para combinar com o fundo */
-    transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
+  font-size: 2.5rem; 
+    /* Tamanho do ícone */
+  color: var(--branco);  
+  transition: transform 0.3s, color 0.3s;
 }
 
-/* Efeito ao passar o mouse */
 .social-link:hover {
-    transform: translateY(-3px); /* O ícone "sobe" um pouquinho */
+  transform: translateY(-3px); 
+    /* O ícone "sobe" um pouquinho */
 }
-
-/* Cores específicas no Hover (opcional) 
-   Se quiser que eles ganhem as cores originais ao passar o mouse: */
 
 .whatsapp:hover {
-    color: #25D366; /* Verde oficial do WhatsApp */
+  color: #25D366;
 }
 
 .instagram:hover {
-    color: #E4405F; /* Rosa oficial do Instagram */
+  color: #E4405F;
 }
 
 
-/* Ajuste do Header para manter tudo na linha */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: .1rem .2rem;
-    background-color: #52648d; /* Seu fundo */
-}
 
 
 /*===========  ===========*/
