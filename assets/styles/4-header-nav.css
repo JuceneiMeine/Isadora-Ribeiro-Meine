@@ -6,6 +6,10 @@
   display: flex;
   justify-content: space-between;
   background-color: var(--azul-escuro);
+
+  margin-top: .15rem;
+
+  border-radius: .5rem;
 }
 
 /*=========== LOGO - CONTAINER ===========*/
@@ -14,6 +18,8 @@
   display: flex;
   padding: .2rem .4rem;
   gap: .5rem;
+
+  /* background-color: red; */
 }
 
 .logo-imagem {
@@ -22,15 +28,7 @@
 
 /*=========== LOGO-NOME - CONTAINER ===========*/
 
-.logo-nome {
-  font-family: 'Nunito', sans-serif;
-  letter-spacing: .3rem;
-  line-height: 1.4;
-  display: flex;
-  flex-direction: column;
-  color: var(--azul-gelo);
-  text-align: center;
-}
+
 
 /*=========== NAV - CONTAINER ===========*/
 
@@ -54,9 +52,25 @@
 .nav-container li {
   padding: 0 .9rem;
   
-  color: var(--azul-escuro);
+  color: var(--branco);
   border-radius: .7rem;
-  background-color: var(--azul-gelo);
+  background-color: var(--azul-escuro);
+  border: solid .1rem var(--branco);
+
+  transition: transform 0.3s, color 0.3s;
+}
+
+.nav-container li:hover {
+  /* padding: 0 .9rem; */
+
+  transform: translateY(-3px);
+  
+  color: var(--azul-escuro);
+  /* border-radius: .7rem; */
+  background-color: var(--branco);
+  /* border: solid .1rem var(--branco); */
+
+  font-weight: 700;
 }
 
 /*=========== REDES SOCIAIS - CONTAINER ===========*/
@@ -66,13 +80,18 @@
     display: flex;
     gap: 1.5rem; /* Espaço entre os ícones */
     align-items: center;
+    margin-right: 3rem;
 }
 
 /* Estilo geral dos links */
 .social-link {
     text-decoration: none;
     font-size: 2.5rem; /* Tamanho do ícone */
-    color: #A7D8F0; /* O azul claro para combinar com o fundo */
+
+    color: var(--branco);
+
+    /* color: #A7D8F0;  */
+    /* O azul claro para combinar com o fundo */
     transition: transform 0.3s, color 0.3s;
 }
 
@@ -92,16 +111,13 @@
     color: #E4405F; /* Rosa oficial do Instagram */
 }
 
-.youtube:hover {
-    color: #FF0000; /* Vermelho oficial do YouTube */
-}
 
 /* Ajuste do Header para manter tudo na linha */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: .1rem .2rem;
     background-color: #52648d; /* Seu fundo */
 }
 
