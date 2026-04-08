@@ -100,8 +100,7 @@ h2 { /* SUB-TÍTULOS */
 
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 500;
-  text-transform: uppercase; 
-
+  
   margin-bottom: 5px;   
   font-size: clamp(1.9rem, 3vw, 4rem); 
     /* clamp( mínimo, ideal, máximo ) */

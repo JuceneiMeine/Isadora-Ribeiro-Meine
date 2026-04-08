@@ -9,7 +9,7 @@ MAIN --- SECTION - HOME
   padding: 10px 2%;
   align-items: center;
   gap: 20px;    
-  background-color: var(--bege-escuro);
+  background-color: var(--bege-claro);
 }
 
 .home-container {
@@ -78,17 +78,129 @@ MAIN --- SECTION - HOME
     letter-spacing: .1rem;
   }
 
+  /*
+=============================================================
+DIV - TRANSIÇÃO DE CORES ENTRE SEÇÕES
+=============================================================
+*/
+
+.transicao-cor-bege-marrom {
+    width: 100%;
+    height: 70px; /* Altura da transição */
+    background: linear-gradient(
+        to bottom, 
+        var(--bege-claro) 0%, 
+        var(--marrom-claro) 100%
+    );
+}
+
+.transicao-cor-marrom-bege {
+    width: 100%;
+    height: 70px; /* Altura da transição */
+    background: linear-gradient(
+        to bottom,
+        var(--marrom-claro) 0%, 
+        var(--bege-escuro) 100%
+    );
+}
+
 /*
 =============================================================
 SECTION - SERVIÇO
 =============================================================
 */
 
+/* Seção Externa: Define o fundo rosado e o espaçamento */
+.servico-section {
+    background-color: var(--marrom-claro); /* Cor de fundo rosada da imagem */
+    padding: 1rem 0 ;
+    font-family: sans-serif;
+}
+
+/* Container Interno: Limita a largura e centraliza */
+.servico-container {
+    width: 100%; /* Ocupa a tela toda */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo ao início (esquerda) por padrão */
+}
+
+/* Card de Título (Branco no topo) */
+/* Card de Título (Colado na Esquerda) */
+.servico-card {
+    background: white;
+    width: 75%; /* Controla o comprimento do card */
+    padding: .5rem 1rem;
+    /* Arredondado apenas no lado DIREITO (superior e inferior) */
+    border-radius: 0 50px 50px 0; 
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    display: inline-block; 
+    margin-bottom: 30px;
+    margin-left: 0; /* Garante que encoste na borda esquerda */
+}
+
+.servico-card h2 {
+    color: #a6736a; 
+    /* Tom de marrom rosado do título */
+    /* margin: 0; */
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+/* Área de Informação: Fazemos ela ocupar toda a largura disponível */
+/* Área de Informação (Empurra os outros cards para a Direita) */
+.servico-info-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha os cards brancos de serviço para a direita */
+}
+
+/* Título secundário: Ajustamos a margem para ele não colar na borda */
+.servico-info-area h3 {
+    width: 100%;
+    padding-left: 4.5rem; /* Mantém o alinhamento com o design */
+    padding-bottom: 1rem;
+    text-align: left;
+    color: var(--branco);
+    font-size: 1.5rem;
+}
+
+/* Cards Brancos de Informação */
+.servico-info-card {
+    background: white;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    width: 95%; /* Controla o comprimento do card */
+    
+    /* Lado esquerdo arredondado, lado direito reto para colar na borda */
+    border-radius: 50px 0 0 50px; 
+    
+    box-shadow: -5px 8px 20px rgba(0,0,0,0.15);
+    margin-right: 0; /* Força o encosto na margem direita */
+}
+
+.servico-info-card p {
+    color: #a6736a;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+.servico-info-card strong {
+    color: #8c5a52; 
+    /* Destaque em negrito um pouco mais escuro */
+}
 
 
-
-
-
+/* Efeito opcional: leve movimento ao passar o mouse */
+/* .servico-info-card:hover { */
+    /* transform: translateX(-10px);  */
+    /* Move um pouco para a esquerda ao passar o mouse */
+/* } */
 
 
 /*
@@ -97,15 +209,142 @@ SECTION - ANALISE
 =============================================================
 */
 
-.grid-benefits {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 15px;
-    margin: 0 10%;
+.analise-section {
+    background-color: var(--bege-escuro); /* Fundo bege clarinho da imagem */
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
 }
+
+.analise-card {
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 60px 40px 40px 40px;
+    border-radius: 40px;
+    position: relative; /* Necessário para o título flutuar */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* O Título Azul Flutuante */
+.analise-header {
+    background-color: #5d6d97; /* Azul acinzentado da imagem */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    position: absolute;
+    top: -25px; /* Sobe metade do card para fora */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza perfeitamente */
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.analise-header h2 {
+  font-family: 'Nunito', sans-serif;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+/* A Lista Customizada */
+.analise-lista {
+    list-style: none; /* Remove as bolinhas padrão */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.analise-lista li {
+    color: #a6736a; /* Cor do texto rosada */
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 45px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Criando o ícone de Check customizado */
+.analise-lista li::before {
+    content: '✔'; /* Você pode substituir por uma imagem de check do Canva */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #a6736a;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    color: #a6736a;
+}
+
+
+
+
+
+
+
+/* Esconde o checkbox original feio */
+.check-item input {
+    display: none;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 20px;
+    cursor: pointer; /* Muda o mouse para a mãozinha */
+    color: #a6736a;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    transition: all 0.2s;
+}
+
+/* O quadrado do checkbox desmarcado */
+.checkbox-custom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #a6736a;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+/* Quando o item está marcado (O que acontece no clique) */
+.check-item input:checked + .checkbox-custom {
+    background-color: #a6736a; /* Preenche o fundo */
+}
+
+/* O símbolo de Check (✔) que aparece quando marcado */
+.check-item input:checked + .checkbox-custom::after {
+    content: '✔';
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Efeito visual ao marcar: o texto fica levemente mais escuro ou em negrito */
+.check-item input:checked ~ .check-item {
+    font-weight: bold;
+}
+
+
+.check-item:has(input:checked) {
+    color: #5d6d97; /* Muda o texto para o azul do título ao marcar */
+}
+
 
 /*
 =============================================================
@@ -113,7 +352,72 @@ SECTION - DUVIDAS
 =============================================================
 */
 
+.faq-section {
+    background-color: #c59990; /* Tom rosado do fundo */
+    padding: 60px 20px;
+    text-align: center;
+}
 
+.faq-section h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+
+.faq-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 4px; /* Bordas levemente arredondadas como na imagem */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Estilo da Pergunta (O que fica visível) */
+summary {
+    padding: 25px 40px;
+    list-style: none; /* Remove a setinha padrão do navegador */
+    cursor: pointer;
+    font-weight: bold;
+    color: #a6736a;
+    font-size: 1.1rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Criando o sinal de + customizado */
+summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: #a6736a;
+    transition: transform 0.3s ease;
+}
+
+/* Gira o sinal quando o FAQ está aberto */
+details[open] summary::after {
+    transform: rotate(45deg); /* O + vira um X ou apenas gira */
+}
+
+/* Estilo da Resposta (O que aparece ao clicar) */
+.faq-content {
+    padding: 0 40px 25px 40px;
+    color: #a6736a;
+    line-height: 1.6;
+    animation: slideDown 0.4s ease-out;
+}
+
+/* Animação suave para abrir */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /*
 =============================================================
