@@ -9,19 +9,19 @@ MAIN --- SECTION - HOME
   padding: 10px 2%;
   align-items: center;
   gap: 20px;    
-  background-color: var(--bege-claro);
+  background-color: var(--container-claro);
 }
 
 .home-container {
   display: flex;    
   align-items: center;
-  gap: 20px;    
+  gap: 10px;    
 }
 
 .home-foto-ctn {
   width: 900px;
   height: 450px;
-  background: #ddd;
+  /* background: #ddd; */
   margin: 0 auto;  
   align-items: center;
   justify-content: center;
@@ -37,7 +37,7 @@ MAIN --- SECTION - HOME
 .home-info-pessoais-ctn { 
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 90%;
   align-items: center;  
 }
 
@@ -78,31 +78,7 @@ MAIN --- SECTION - HOME
     letter-spacing: .1rem;
   }
 
-  /*
-=============================================================
-DIV - TRANSIÇÃO DE CORES ENTRE SEÇÕES
-=============================================================
-*/
 
-.transicao-cor-bege-marrom {
-    width: 100%;
-    height: 70px; /* Altura da transição */
-    background: linear-gradient(
-        to bottom, 
-        var(--bege-claro) 0%, 
-        var(--marrom-claro) 100%
-    );
-}
-
-.transicao-cor-marrom-bege {
-    width: 100%;
-    height: 70px; /* Altura da transição */
-    background: linear-gradient(
-        to bottom,
-        var(--marrom-claro) 0%, 
-        var(--bege-escuro) 100%
-    );
-}
 
 /*
 =============================================================
@@ -112,7 +88,7 @@ SECTION - SERVIÇO
 
 /* Seção Externa: Define o fundo rosado e o espaçamento */
 .servico-section {
-    background-color: var(--marrom-claro); /* Cor de fundo rosada da imagem */
+    background-color: var(--container-escuro); /* Cor de fundo rosada da imagem */
     padding: 1rem 0 ;
     font-family: sans-serif;
 }
@@ -130,24 +106,29 @@ SECTION - SERVIÇO
 /* Card de Título (Colado na Esquerda) */
 .servico-card {
     background: white;
-    width: 75%; /* Controla o comprimento do card */
-    padding: .5rem 1rem;
+    width: 80%; /* Controla o comprimento do card */
+    padding: .7rem 1rem;
     /* Arredondado apenas no lado DIREITO (superior e inferior) */
     border-radius: 0 50px 50px 0; 
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    display: inline-block; 
-    margin-bottom: 30px;
-    margin-left: 0; /* Garante que encoste na borda esquerda */
+    /* display: inline-block;  */
+    display: flex;
+    align-items: center;
+    margin: 40px 0 40px 0;
+    
+
 }
 
 .servico-card h2 {
+    margin: 0;
     color: #a6736a; 
     /* Tom de marrom rosado do título */
     /* margin: 0; */
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: 'Nunito', sans-serif;
     padding-right: 3rem;
     padding-left: 3rem;
+ 
 }
 
 /* Área de Informação: Fazemos ela ocupar toda a largura disponível */
@@ -210,8 +191,8 @@ SECTION - ANALISE
 */
 
 .analise-section {
-    background-color: var(--bege-escuro); /* Fundo bege clarinho da imagem */
-    padding: 20px 20px;
+    background-color: var(--container-claro); /* Fundo bege clarinho da imagem */
+    padding: 50px 20px;
     display: flex;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
@@ -353,7 +334,7 @@ SECTION - DUVIDAS
 */
 
 .faq-section {
-    background-color: #c59990; /* Tom rosado do fundo */
+    background-color: var(--container-escuro); /* Tom rosado do fundo */
     padding: 60px 20px;
     text-align: center;
 }
@@ -425,18 +406,100 @@ SECTION - AGENDAMENTO
 =============================================================
 */
 
-.btn-contato {
-    background-color: var(--azul-claro);
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: 0.3s;
+.processo-terapeutico {
+  background-color: var(--container-claro);
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.btn-cta:hover { opacity: 0.9; }
+.processo-terapeutico h2 {
+  color: white;
+  background-color: var(--azul-escuro);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 150px 20px; /* Padding inferior grande para o "vão" dos cards */
+  border-radius: 40px;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: -120px; /* Sobe os cards para dentro do bloco azul */
+  flex-wrap: wrap;
+}
+
+.passo-item {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+}
+
+.numero {
+  position: absolute;
+  top: -20px;
+  background-color: var(--rosa-claro);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.card h3 {
+  color: var(--texto-vinho);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.btn-saiba-mais {
+  position: absolute;
+  bottom: -20px;
+  background: white;
+  border: 1px solid var(--rosa-claro);
+  color: var(--texto-vinho);
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.btn-saiba-mais:hover {
+  background-color: var(--rosa-claro);
+  color: white;
+}
+
+.descricao {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
 
 /*
 =============================================================
@@ -444,10 +507,81 @@ SECTION - SOBRE-MIM
 =============================================================
 */
 
-.sobre-fundo {
-    padding: 60px 10%;
+.sobre-mim {
+    background-color: var(--container-claro);
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
+    align-items: center;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* Bloco Rosa de Fundo */
+.texto-card {
+    background-color: var(--rosa-fundo);
+    padding: 60px 60px 60px 120px; /* Padding extra na esquerda para compensar a foto */
+    border-radius: 40px;
+    color: white;
     text-align: center;
-    background: #ece9e4;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+/* Moldura e Foto */
+.foto-wrapper {
+    position: relative;
+    z-index: 2;
+    margin-right: -100px; /* Puxa a foto para dentro do bloco rosa */
+}
+
+.foto-wrapper img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 80px 80px 80px 10px; /* Bordas arredondadas assimétricas */
+    object-fit: cover;
+    display: block;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Tipografia */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.texto-principal p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Botão Instagram */
+.btn-insta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--rosa-fundo);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-insta:hover {
+    transform: scale(1.05);
 }
 
 

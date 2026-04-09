@@ -5,28 +5,44 @@ CORES PADRONIZADAS - Variáveis de Cores
 */
 :root { /* "Depósito" global de informações. */
 
-  /* Cores do Site */
+  /* PALETA CORES - ISADORA */
 
-  --marrom-escuro: #a76964;
-  --marrom-medio: #c69c94;
-  --marrom-claro: #d0b1ab;
+  --marrom-escuro: #a76964; 
+  --marrom-medio: #c69c94;  
 
   --marrom-salmao: #e0b29c;
 
-  --azul-escuro: #52648d;
-  --azul-claro: #A7D8F0;
-
-  --azul-gelo: #E1E9F5;
-  
+  --azul-escuro: #52648d;   
 
   --bege-escuro: #f4e7d3;
   --bege-claro: #fffbee;
 
 
-  /* Cores Auxiliares */
+    /* Cores Auxiliares */
+
+  --container-escuro: #e0b29c; 
+  --container-claro: #fffbee;
+
+
+
+  --marrom-claro: #d0b1ab;
+  --azul-claro: #A7D8F0;
+  --azul-gelo: #E1E9F5;
 
   --branco:#fff;
   --preto:#222;
+
+
+  /* CORES EXTRAS */
+
+  --rosa-fundo: #c69a91; /* Cor extraída da imagem */
+  --creme-fundo: #fdfaf3;
+
+  --azul-escuro: #5d6d8e;
+  --rosa-claro: #e5c3b8;
+  --texto-vinho: #8e5d56;
+  --fundo-creme: #fdfaf3;
+  
 
   --palha-1:#FAFAD2;
 

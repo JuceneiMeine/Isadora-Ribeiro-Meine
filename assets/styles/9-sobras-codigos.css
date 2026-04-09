@@ -1,0 +1,33 @@
+/*
+=============================================================
+DIV - TRANSIÇÃO DE CORES ENTRE SEÇÕES
+=============================================================
+*/
+
+/* HTML -----------------
+<div class="transicao-cor-bege-marrom"></div>
+
+<div class="transicao-cor-marrom-bege"></div>
+*/
+
+  
+
+.transicao-cor-bege-marrom {
+    width: 100%;
+    height: 70px; /* Altura da transição */
+    background: linear-gradient(
+        to bottom, 
+        var(--bege-claro) 0%, 
+        var(--marrom-claro) 100%
+    );
+}
+
+.transicao-cor-marrom-bege {
+    width: 100%;
+    height: 70px; /* Altura da transição */
+    background: linear-gradient(
+        to bottom,
+        var(--marrom-claro) 0%, 
+        var(--bege-escuro) 100%
+    );
+}

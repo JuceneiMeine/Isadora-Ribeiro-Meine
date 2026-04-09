@@ -15,7 +15,55 @@
 
 @media (max-width: 768px) {
 
-  
+
+/*=============== SECTION - HOME ===============*/
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*=============== SECTION - SERVICO ===============*/
+
+
+/*=============== SECTION - ANALISE ===============*/
+
+
+/*=============== SECTION - DUVIDAS ===============*/
+
+
+
+/*=============== SECTION - AGENDAMENTO ===============*/
+
+.processo-terapeutico h2 {
+    padding-bottom: 200px;
+  }
+
+.cards-container {
+   margin-top: -180px;
+  }
+
+/*=============== SECTION - SOBRE-MIM ===============*/
+
+.sobre-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+.foto-wrapper {
+    margin-right: 0;
+    margin-bottom: -40px; /* Sobrepõe verticalmente no mobile */
+  }
+
+.texto-card {
+    padding: 60px 20px 40px 20px;
+  }
+
+
+
+
+
 
 }
 
