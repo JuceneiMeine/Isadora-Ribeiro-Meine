@@ -4,7 +4,15 @@ BODY - Corpo da página
 =============================================================
 */
 
-body {
+.body-container{
+  /* ou a classe que envolve seu conteúdo */
+    
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body-container {
 
   font-family: 'Times New Roman', Times, serif;
 
@@ -22,6 +30,7 @@ body {
     /* Cria um pequeno respiro nas laterais para que 
     o texto não cole na borda da tela, especialmente em celulares. */
 
+  /* width: 100%; */
   max-width: 1200px; 
     /* Define que, mesmo em monitores gigantes, 
     o conteúdo do site não vai se "espalhar" 

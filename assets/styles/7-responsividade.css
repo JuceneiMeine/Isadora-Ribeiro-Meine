@@ -16,12 +16,95 @@
 @media (max-width: 768px) {
 
 
+.body {
+    display: flex;
+    flex-direction: column;
+  }
+
+/*=============== SECTION - HEADER ===============*/
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center;    /* Centraliza tudo */
+    text-align: center;
+    /* padding: 1rem 0; */
+    gap: 15px;             /* Espaçamento entre logo e menu */
+  }
+
+  .nav-container ul {
+    display: flex;
+    flex-wrap: wrap;       /* Se os links forem muitos, eles quebram linha */
+    justify-content: center;
+    padding: 0;
+    /* gap: 10px;             */
+     /* Espaço entre os botões/links */
+    list-style: none;
+  }
+
+  /* Estilizando os links para parecerem botões no celular */
+  .nav-container ul li a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f0f0; /* Cor de fundo opcional para os botões */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+    /* color: var(--branco); */
+    border-radius: .7rem;
+    background-color: var(--azul-escuro);
+    border: solid 1px var(--azul-gelo);
+  }
+
+  /* Se quiser esconder as redes sociais no celular ou movê-las */
+  .redes-sociais-container {
+    order: 3; /* Garante que fique por último */
+    margin-top: 10px;
+  }
+
+  .home-section {
+    flex-direction: column;
+  }
+
+  .home-foto-ctn {
+    width: 100%; /* Ocupa a largura da tela do celular */
+    height: auto;
+  }
+
+
 /*=============== SECTION - HOME ===============*/
 
-.body {
-  display: flex;
-  flex-direction: column;
-}
+.home-container {
+    flex-direction: column; /* Coloca a foto em cima e o texto embaixo */
+    text-align: center;
+    gap: 20px;
+  }
+
+  .home-foto-ctn {
+    width: 100%;      /* Ocupa a largura disponível */
+    height: auto;     /* Altura se ajusta proporcionalmente */
+    max-width: 300px; /* Evita que a foto fique gigante em telas médias */
+  }
+
+  .home-foto-ctn img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .home-info-pessoais-ctn {
+    width: 100%;      /* Garante que o texto use o espaço disponível */
+  }
+
+  .home-info-pessoais-ctn h1 {
+    font-size: 1.3rem; /* Diminui um pouco o título no celular */
+  }
+
+  .home-btn-ctn {
+    margin-top: 1.5rem; /* Reduz o espaçamento excessivo no mobile */
+  }
+
 
 
 /*=============== SECTION - SERVICO ===============*/
@@ -30,8 +113,65 @@
 /*=============== SECTION - ANALISE ===============*/
 
 
+  .analise-section {
+    padding: 60px 15px 30px 15px; /* Aumenta o padding superior para o título não bater no topo */
+  }
+
+  .analise-card {
+    padding: 50px 20px 20px 20px; /* Reduz o padding interno */
+    border-radius: 25px; /* Bordas um pouco menos exageradas no mobile */
+  }
+
+  .analise-header {
+    width: 85%; /* Garante que o título não ultrapasse a largura do card */
+    white-space: normal; /* Permite que o texto do título quebre linha se necessário */
+    text-align: center;
+    padding: 12px 15px;
+    top: -35px; /* Ajusta a posição para não cobrir o conteúdo interno */
+  }
+
+  .analise-header h2 {
+    font-size: 1.1rem; /* Diminui o tamanho da fonte do título */
+    line-height: 1.2;
+  }
+
+  .check-item {
+    font-size: 1rem; /* Diminui levely o texto dos itens */
+    padding-left: 40px; /* Ajusta o recuo para o checkbox */
+    margin-bottom: 15px;
+  }
+
+  .checkbox-custom {
+    width: 24px; /* Checkbox levemente menor para acompanhar o texto */
+    height: 24px;
+  
+}
+
 /*=============== SECTION - DUVIDAS ===============*/
 
+
+  .faq-section {
+    padding: 40px 15px; /* Reduz o respiro vertical da seção */
+  }
+
+  .faq-section h2 {
+    font-size: 1.5rem; /* Título um pouco menor para não quebrar muitas linhas */
+    margin-bottom: 25px;
+  }
+
+  summary {
+    padding: 15px 20px; /* Reduz o espaço interno da pergunta */
+    font-size: 1rem;    /* Fonte levemente menor para caber melhor */
+  }
+
+  .faq-content {
+    padding: 0 20px 20px 20px; /* Reduz o espaço interno da resposta */
+    font-size: 0.95rem;        /* Melhora a leitura em telas pequenas */
+  }
+
+  summary::after {
+    font-size: 1.2rem; /* Diminui o ícone de + */
+  }
 
 
 /*=============== SECTION - AGENDAMENTO ===============*/
