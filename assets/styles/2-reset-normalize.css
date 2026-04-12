@@ -22,8 +22,6 @@ img {
   max-width: 100%;
 }
 
-input, button, textarea, select {font: inherit;}
-
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 
 ul, ol {list-style: none;}
@@ -37,11 +35,7 @@ textarea {
   min-height: 40px;
 }
 
-:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 2px;
-    /* Deixa consistente o contorno azul que aparece ao clicar em botões/links */
-}
+
 
 /* Acessibilidade */
 @media (prefers-reduced-motion: reduce) {

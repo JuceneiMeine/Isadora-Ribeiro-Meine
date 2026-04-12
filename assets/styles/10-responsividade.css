@@ -14,85 +14,135 @@
 /*=============== SECTION - HEADER ===============*/
 
   .header-area {
-    display: flex;
-    flex-direction: row; /* Empilha os itens verticalmente */
-    align-items: center;    /* Centraliza tudo */
-    text-align: center;
-    /* padding: 1rem 0; */
+    display: flex;    
     gap: 15px;             /* Espaçamento entre logo e menu */
   }
 
-  .header-layout {
-    display: flex;
-    flex-direction: row; /* Empilha os itens verticalmente */
-    align-items: center;    /* Centraliza tudo */
-    text-align: center;
-    /* padding: 1rem 0; */
-    gap: 15px;
-  }
+  .header-layout {    
+    padding: 1rem ;
+    
+  }  
 
+
+  .logo-imagem {
+    max-width: 120px;
+    min-width: 90px;
+  }
   .nav-layout ul {
     display: flex;
-    flex-wrap: wrap;       /* Se os links forem muitos, eles quebram linha */
-    justify-content: center;
-    padding: 0;
-    /* gap: 10px;             */
-     /* Espaço entre os botões/links */
-    list-style: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;     
+  }
+
+  .nav-layout li {
+    display: inline-block;
+    font-size: 0.85rem;
+    min-width: 120px; /* Faz os botões ficarem mais largos no celular */
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.3rem;
+    
   }
 
   /* Estilizando os links para parecerem botões no celular */
-  .nav-layout ul li a {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #f0f0f0; /* Cor de fundo opcional para os botões */
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 0.9rem;
-
-    /* color: var(--branco); */
-    border-radius: .7rem;
-    background-color: var(--azul-escuro);
-    border: solid 1px var(--azul-gelo);
+  .nav-layout a {
+    display: block;
+    width: 100%;
   }
-
-  /* Se quiser esconder as redes sociais no celular ou movê-las */
-  .redes-sociais-layout {
-    order: 3; /* Garante que fique por último */
-    margin-top: 10px;
-  }
-
   
+.redes-sociais-layout {
+    margin-right: 0; /* Remove a margem que você tinha colocado no desktop */
+    justify-content: center;
+  }
+
+
+
+
+
+/* Exibe o botão hambúrguer */
+  .menu-mobile-btn {
+    display: block;
+    background: none;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    font-size: 1.8rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Esconde o menu por padrão no celular */
+  .nav-links {
+    display: none; 
+    position: absolute;
+    top: 100%; /* Aparece logo abaixo do header */
+    left: 0;
+    width: 100%;
+    background-color: var(--azul-escuro);
+    padding: 1rem 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  }
+
+  /* Classe que o JS vai ativar */
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .nav-links li { width: 80%; text-align: center; }
+
+  .redes-sociais-layout { margin-right: 0; }
+
+
+
+
+    
 /*=============== SECTION - HOME ===============*/
 
-.home-area {
-    flex-direction: column; /* Coloca a foto em cima e o texto embaixo */
+.home-layout {
+    flex-direction: column; /* Empilha foto sobre o texto */
+    padding: 40px 5%;     /* Dá um respiro maior nas laterais e topo */
     text-align: center;
-    gap: 20px;
+    gap: 30px;
   }
 
   .foto {
-    width: 100%;      /* Ocupa a largura disponível */
-    height: auto;     /* Altura se ajusta proporcionalmente */
-    max-width: 300px; /* Evita que a foto fique gigante em telas médias */
+    width: 100%;      
+    height: auto;     /* Remove a altura fixa de 450px que você tinha no desktop */
+    max-width: 300px; /* Limita o tamanho para a foto não estourar */
+    margin: 0 auto;   /* Garante a centralização */
   }
 
   .foto img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
+    object-fit: cover; /* Melhora o encaixe da foto no mobile */
   }
 
   .info-pessoais {
     width: 100%;      /* Garante que o texto use o espaço disponível */
+    
   }
 
   .info-pessoais h1 {
-    font-size: 1.3rem; /* Diminui um pouco o título no celular */
+    font-size: 1.5rem; 
+    margin-top: 10px;
   }
 
+  .info-pessoais p {
+    line-height: .2rem;
+  }
   .home-btn {
-    margin-top: 1.5rem; /* Reduz o espaçamento excessivo no mobile */
+    margin-top: 2rem; /* Reduz o espaçamento excessivo no mobile */
   }
 
 
@@ -212,18 +262,6 @@
   }
 
 }
-
-
-/*=====================================================
-  RESPONSIVIDADE  - 480 PX
-  =====================================================*/
-
-@media (max-width: 480px) {
-
-  
-}
-
-
 
 
 

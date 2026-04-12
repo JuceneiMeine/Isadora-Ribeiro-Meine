@@ -26,33 +26,37 @@
 
 <!------------------------ BODY ------------------------->  
 
-<body class="body-area">
+<body class="body-layout">
 
   <!-------------------- HEADER - NAV --------------------->  
 
   <header class="header-area header-layout" >
 
-    <section class="logo-section">
+    <section class="logo-layout">
       <div class="logo-imagem">
         <img src="./assets/images/logo-nome-150.png" 
         alt="Logo Isadora Ribeiro">
       </div>      
     </section>
 
-    <nav class="nav-container">      
-      <section class="link-section">
+    <nav class="nav-area nav-layout">        
+      <button class="menu-mobile-btn" id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="nav-links" id="nav-links">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#analises">Análises</a></li>
-          <li><a href="#atendimento">Atendimento</a></li>
-          <li><a href="#perguntas">Perguntas</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-        </ul>      
-      </section>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#agendamentos">Atendimento</a></li>
+          <li><a href="#sobre-mim">Sobre</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <section class="redes-sociais-container">        
+    <section class="redes-sociais-layout">        
       <a href="https://wa.me/5583999180699?text=Olá! Gostaria de mais informações sobre os atendimentos." 
         target="_blank" 
         class="social-link whatsapp">
@@ -102,7 +106,7 @@
   
     <!----------------------- SERVIÇO ----------------------->
 
-    <section class="servico-area servico-layout">      
+    <section id="servicos" class="servico-area servico-layout">      
 
       <div class="card-left">
         <h2>Está com dificuldades de lidar com o que está sentindo?</h2>
@@ -128,7 +132,7 @@
 
     <!---------------------- ANÁLISE ----------------------->
 
-    <section class="analise-area analise-layout">      
+    <section id="analises" class="analise-area analise-layout">      
 
       <div class="card-analise">
 
@@ -192,7 +196,7 @@
     
     <!--------------------- DUVIDAS --------------------->
 
-    <section class="duvidas-area duvidas-layout">      
+    <section id="duvidas" class="duvidas-area duvidas-layout">      
 
       <h2>Dúvidas Frequentes</h2>
 
@@ -226,7 +230,7 @@
 
     <!--------------------- AGENDAMENTO --------------------->
 
-    <section class="agendamento-area agendamento-layout">     
+    <section id="agendamentos" class="agendamento-area agendamento-layout">     
 
       <h2>Vamos iniciar o processo terapêutico?</h2>
 
@@ -262,7 +266,7 @@
 
     <!---------------------- SOBRE-MIM ---------------------->
 
-    <section class="sobre-mim-area sobre-mim-layout">      
+    <section id="sobre-mim" class="sobre-mim-area sobre-mim-layout">      
 
       <div class="foto-wrapper">
         <img src="./assets/images/isa-foto-sobre-mim.webp" alt="Isadora Ribeiro Meine">

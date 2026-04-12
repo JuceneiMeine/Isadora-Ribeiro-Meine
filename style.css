@@ -12,9 +12,11 @@
 
 @import url("./assets/styles/6-contact-footer.css");
 
-@import url("./assets/styles/7-responsividade.css");
-
 @import url("./assets/styles/9-geral.css");
+
+@import url("./assets/styles/10-responsividade.css");
+
+
 
 /* --- FONTE INTER --- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,700&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
