@@ -3,149 +3,50 @@
   RESET & NORMALIZE - "folha em branco" todos Navegadores
   =======================================================*/
 
-/* 1. Reset de Box Model e Margens */
-*, *::before, *::after {
-  margin: 0;   
-  padding: 0;  
-    /* Zerar margens automáticas dos navegadores */
-    /* Body costuma ter 8px margem */
-  
-  box-sizing: border-box;  
-    /* Impedir o padding aumentar tamanho total do Elm */
-}
-
-
-
-/* 2. Melhorias de Renderização e Altura */
-html {
-  height: 100%;
-  /* Garante que estrutura base documento ocupe toda altura disponível */
-
-  scroll-behavior: smooth;
-    /* efeito visual suave ao navegar por âncoras 
-    (clicar num menu e a página desliza em vez de "dar um soco" na seção) */
-
-  -webkit-text-size-adjust: none; 
-    /* Evita que iPhones e iPads aumentem o tamanho da fonte sozinhos 
-    ao virar o celular de lado (modo paisagem). */
-}
-
-
+*, *::before, *::after {box-sizing: border-box;}
 
 body {
-  line-height: 1.5;
-    /* Define um espaçamento entre linhas confortável para leitura. 
-    O padrão dos navegadores costuma ser muito "apertado". */
-
-  -webkit-font-smoothing: antialiased; 
-    /* Remove aspecto "serrilhado" das fontes 
-    em navegadores baseados em Webkit (Chrome, Safari), 
-    deixando o design com aparência mais profissional. */
-
-  font-family: sans-serif; 
-    /* Define uma base para não herdar a fonte serifada do sistema */
-
-  min-height: 100vh; 
-    /* Garante que o fundo da página (background) cubra toda a tela, 
-    mesmo que haja pouco conteúdo nela. */
-
-  text-rendering: optimizeSpeed;
-    /* Prioriza a velocidade de carregamento do texto 
-    sobre detalhes estéticos complexos de ligaduras. */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%; 
+}
 
-
-/* 3. Ajuste de Elementos de Mídia */
-img, picture, video, canvas, svg {
+img {
   display: block;
-    /* Por padrão, imagens são elementos de "linha" (inline), 
-    o que gera um espacinho vazio estranho no rodapé delas. 
-    Transformá-las em bloco remove esse erro. */
-
   max-width: 100%;
-    /* Crucial para o design responsivo. 
-    Garante que uma imagem grande nunca fique 
-    maior que a largura do celular do usuário.
-    Evita que imagens "vazem" do container */
 }
 
+input, button, textarea, select {font: inherit;}
 
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
 
-/* 4. Tipografia, Formulários e Botões (Herança de fonte) */
-input, button, textarea, select {
-  font: inherit;
-    /* Por padrão, botões e campos de texto não usam a fonte 
-    que você definiu para o site (eles usam a fonte do sistema). 
-    Essa linha obriga eles a herdarem a fonte do body.
-    garante que tudo no seu site use a mesma tipografia 
-    sem você precisar repetir código. */
-}
+ul, ol {list-style: none;}
 
+a {text-decoration: none;}
 
+table {border-collapse: collapse;}
 
-/* 5. Evitar quebras de layout por palavras muito longas */
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-    /* Se alguém digitar uma URL gigantesca ou uma palavra sem espaços, 
-    o navegador a "quebra" para a próxima linha 
-    em vez de criar uma barra de rolagem lateral. */
-}
-
-
-
-/* 6. Remover decorações de lista e links */
-ul, ol {
-  list-style: none;
-  /* Remove aquelas "bolinhas" automáticas das listas (ul). */
-}
-
-a {
-  text-decoration: none;
-  /* Remove o sublinhado azul padrão dos links (a). */
-  color: inherit;
-
-  /* Faz com que o link tenha a cor do texto ao redor, a menos que você mude manualmente. */
-}
-
-/* Faz com que as bordas da tabela se unam em uma só */
-table {
-  border-collapse: collapse;
-  /* Em tabelas, une as bordas das células. Sem isso, as tabelas parecem ter "bordas duplas". */
-}
-
-/* Impede que o usuário "estique" o campo de texto para os lados, quebrando o layout */
 textarea {
   resize: vertical;
-  /* Impede que o usuário arraste o canto do campo de mensagem para os lados, 
-  o que geralmente destrói o design. Ele só poderá aumentar para baixo. */
-
   min-height: 40px;
 }
 
 :focus-visible {
-  /* Melhora a acessibilidade. 
-  Quando um usuário navega pelo teclado (Tab), 
-  ele cria uma borda nítida para mostrar onde 
-  o "cursor" está, mantendo o design limpo mas funcional. */
-
   outline: 2px solid currentColor;
   outline-offset: 2px;
     /* Deixa consistente o contorno azul que aparece ao clicar em botões/links */
 }
 
-/* 8. Acessibilidade */
+/* Acessibilidade */
 @media (prefers-reduced-motion: reduce) {
-  /* Uma regra de empatia. 
-    Se o usuário configurou o sistema dele para "reduzir movimento" 
-    (comum para pessoas com labirintite ou autismo), 
-    o site desativa a rolagem suave (scroll-behavior: auto) 
-    para evitar desconforto. */
-
+  
   html {
     scroll-behavior: auto;
   }
 }
-
-
-

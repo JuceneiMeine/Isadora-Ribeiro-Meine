@@ -2,10 +2,6 @@
   RESPONSIVIDADE  - 900 PX
   =====================================================*/
 
-@media (max-width: 900px) {
-
-
-}
 
 
 
@@ -13,26 +9,29 @@
   RESPONSIVIDADE  - 768 PX
   =====================================================*/
 
-@media (max-width: 768px) {
-
-
-.body {
-    display: flex;
-    flex-direction: column;
-  }
+@media (max-width: 768px) {  
 
 /*=============== SECTION - HEADER ===============*/
 
-.header-container {
+  .header-area {
     display: flex;
-    flex-direction: column; /* Empilha os itens verticalmente */
+    flex-direction: row; /* Empilha os itens verticalmente */
     align-items: center;    /* Centraliza tudo */
     text-align: center;
     /* padding: 1rem 0; */
     gap: 15px;             /* Espaçamento entre logo e menu */
   }
 
-  .nav-container ul {
+  .header-layout {
+    display: flex;
+    flex-direction: row; /* Empilha os itens verticalmente */
+    align-items: center;    /* Centraliza tudo */
+    text-align: center;
+    /* padding: 1rem 0; */
+    gap: 15px;
+  }
+
+  .nav-layout ul {
     display: flex;
     flex-wrap: wrap;       /* Se os links forem muitos, eles quebram linha */
     justify-content: center;
@@ -43,7 +42,7 @@
   }
 
   /* Estilizando os links para parecerem botões no celular */
-  .nav-container ul li a {
+  .nav-layout ul li a {
     display: inline-block;
     padding: 8px 15px;
     background-color: #f0f0f0; /* Cor de fundo opcional para os botões */
@@ -58,66 +57,57 @@
   }
 
   /* Se quiser esconder as redes sociais no celular ou movê-las */
-  .redes-sociais-container {
+  .redes-sociais-layout {
     order: 3; /* Garante que fique por último */
     margin-top: 10px;
   }
 
-  .home-section {
-    flex-direction: column;
-  }
-
-  .home-foto-ctn {
-    width: 100%; /* Ocupa a largura da tela do celular */
-    height: auto;
-  }
-
-
+  
 /*=============== SECTION - HOME ===============*/
 
-.home-container {
+.home-area {
     flex-direction: column; /* Coloca a foto em cima e o texto embaixo */
     text-align: center;
     gap: 20px;
   }
 
-  .home-foto-ctn {
+  .foto {
     width: 100%;      /* Ocupa a largura disponível */
     height: auto;     /* Altura se ajusta proporcionalmente */
     max-width: 300px; /* Evita que a foto fique gigante em telas médias */
   }
 
-  .home-foto-ctn img {
+  .foto img {
     width: 100%;
     height: auto;
     border-radius: 10px;
   }
 
-  .home-info-pessoais-ctn {
+  .info-pessoais {
     width: 100%;      /* Garante que o texto use o espaço disponível */
   }
 
-  .home-info-pessoais-ctn h1 {
+  .info-pessoais h1 {
     font-size: 1.3rem; /* Diminui um pouco o título no celular */
   }
 
-  .home-btn-ctn {
+  .home-btn {
     margin-top: 1.5rem; /* Reduz o espaçamento excessivo no mobile */
   }
-
 
 
 /*=============== SECTION - SERVICO ===============*/
 
 
+
+
 /*=============== SECTION - ANALISE ===============*/
 
-
-  .analise-section {
+  .analise-area {
     padding: 60px 15px 30px 15px; /* Aumenta o padding superior para o título não bater no topo */
   }
 
-  .analise-card {
+  .card-analise {
     padding: 50px 20px 20px 20px; /* Reduz o padding interno */
     border-radius: 25px; /* Bordas um pouco menos exageradas no mobile */
   }
@@ -141,20 +131,19 @@
     margin-bottom: 15px;
   }
 
-  .checkbox-custom {
+  .checkbox-opcao {
     width: 24px; /* Checkbox levemente menor para acompanhar o texto */
     height: 24px;
-  
-}
+  }
+
 
 /*=============== SECTION - DUVIDAS ===============*/
 
-
-  .faq-section {
+  .duvidas-area {
     padding: 40px 15px; /* Reduz o respiro vertical da seção */
   }
 
-  .faq-section h2 {
+  .duvidas-layout h2 {
     font-size: 1.5rem; /* Título um pouco menor para não quebrar muitas linhas */
     margin-bottom: 25px;
   }
@@ -176,17 +165,19 @@
 
 /*=============== SECTION - AGENDAMENTO ===============*/
 
-.processo-terapeutico h2 {
+
+.agendamento-layout h2 {
     padding-bottom: 200px;
   }
 
-.cards-container {
+.cards-agendamento {
    margin-top: -180px;
   }
 
+
 /*=============== SECTION - SOBRE-MIM ===============*/
 
-.sobre-container {
+.sobre-layout {
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -199,14 +190,28 @@
 .texto-card {
     padding: 60px 20px 40px 20px;
   }
+  
 
+/*=============== FOOTER ===============*/
 
+.footer-layout {
+      flex-direction: column;
+      text-align: center;
+  }
 
+  .perfil {
+      flex-direction: column;
+  }
 
+  .contatos {
+      text-align: center;
+  }
 
+  .item-contato {
+      justify-content: center;
+  }
 
 }
-
 
 
 /*=====================================================
@@ -217,3 +222,8 @@
 
   
 }
+
+
+
+
+
