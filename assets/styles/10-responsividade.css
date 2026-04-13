@@ -4,15 +4,10 @@
 
   @media (max-width: 900px) { 
 
-
 /*=============== SECTION - HEADER ===============*/
-
-  .header-area {
+  .header-layout { 
     display: flex;    
-    gap: 15px;             /* Espaçamento entre logo e menu */
-  }
-
-  .header-layout {    
+    gap: 15px;    
     padding: 1rem;    
   }  
 
@@ -32,24 +27,22 @@
   .nav-layout li {
     display: inline-block;
     font-size: 0.85rem;
-    min-width: 120px; /* Faz os botões ficarem mais largos no celular */
+    min-width: 120px; /* botões ficam + largos no celular */
     text-align: center;
     white-space: nowrap;
-    padding: 0.3rem;
-    
+    padding: 0.3rem;    
   }
 
-  /* Estilizando os links para parecerem botões no celular */
+  /* Estilizando links para parecerem botões no celular */
   .nav-layout a {
     display: block;
     width: 100%;
   }
   
 .redes-sociais-layout {
-    margin-right: 0; /* Remove a margem que você tinha colocado no desktop */
+    margin-right: 0; /* Remove margem no desktop */
     justify-content: center;
   }
-
 
 
 
@@ -71,7 +64,8 @@
     display: none; 
     position: absolute;
     top: 100%; /* Aparece logo abaixo do header */
-    left: 0;
+    /* left: 0; */
+    align-items: center;
     width: 50%;
     background-color: var(--azul-escuro);
     padding: 1rem 0;
@@ -101,11 +95,9 @@
   RESPONSIVIDADE  - 768 PX
   =====================================================*/
 
-
 @media (max-width: 768px) {  
 
-
-  /*=============== SECTION - HEADER ===============*/
+/*=============== SECTION - HEADER ===============*/
 
 
     
@@ -113,27 +105,26 @@
 
 .home-layout {
     flex-direction: column; /* Empilha foto sobre o texto */
-    padding: 40px 5%;     /* Dá um respiro maior nas laterais e topo */
+    padding: 40px 5%;  /* respiro maior laterais e topo */
     text-align: center;
     gap: 30px;
   }
 
   .foto {
     width: 100%;      
-    height: auto;     /* Remove a altura fixa de 450px que você tinha no desktop */
-    max-width: 300px; /* Limita o tamanho para a foto não estourar */
+    height: auto;  /* Remove altura fixa */
+    max-width: 300px; /* Limita tamanho p/ foto não estourar */
     margin: 0 auto;   /* Garante a centralização */
   }
 
   .foto img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Melhora o encaixe da foto no mobile */
+    object-fit: cover; /* Melhora encaixe da foto no mobile */
   }
 
   .info-pessoais {
-    width: 100%;      /* Garante que o texto use o espaço disponível */
-    
+    width: 100%;  /*Garante que texto use espaço disponível*/
   }
 
   .info-pessoais h1 {
@@ -144,8 +135,10 @@
   .info-pessoais p {
     line-height: .2rem;
   }
+
   .home-btn {
-    margin-top: 2rem; /* Reduz o espaçamento excessivo no mobile */
+    margin-top: 2rem; /*Reduz espaçamento excessivo no mobile*/
+    text-decoration: none;
   }
 
 
@@ -153,36 +146,35 @@
 
 
 
-
 /*=============== SECTION - ANALISE ===============*/
 
-  .analise-area {
-    padding: 60px 15px 30px 15px; /* Aumenta o padding superior para o título não bater no topo */
+  .analise-layout {
+    padding: 60px 15px 30px 15px; /*Aumenta padding superior*/
   }
 
   .card-analise {
     padding: 50px 20px 20px 20px; /* Reduz o padding interno */
-    border-radius: 25px; /* Bordas um pouco menos exageradas no mobile */
+    border-radius: 25px;
   }
 
   .analise-header {
-    width: 85%; /* Garante que o título não ultrapasse a largura do card */
-    white-space: normal; /* Permite que o texto do título quebre linha se necessário */
+    width: 95%; /* título não ultrapasse largura do card */
+    white-space: normal; /* texto do título quebre linha se necessário */
     text-align: center;
     padding: 12px 15px;
-    top: -35px; /* Ajusta a posição para não cobrir o conteúdo interno */
+    top: -35px; /* Ajusta posição p/ não cobrir conteúdo interno */
   }
 
   .analise-header h2 {
-    font-size: 1.1rem; /* Diminui o tamanho da fonte do título */
+    font-size: 1.1rem; /* tamanho da fonte do título */
     line-height: 1.2;
   }
 
   .interatividade {
-    width: 90%;            /* Quase toda a largura no celular */
-    max-width: 650px;      /* Mas não passa disso no computador */
+    width: 90%; /* Quase toda a largura no celular */
+    max-width: 650px; /* não passa disso no computador */
     margin: 0 auto;
-}
+  }
 
   .check-item {
     font-size: 1rem; /* Diminui levely o texto dos itens */
@@ -191,46 +183,46 @@
   }
 
   .checkbox-opcao {
-    width: 24px; /* Checkbox levemente menor para acompanhar o texto */
+    width: 24px; /* levemente menor para acompanhar o texto */
     height: 24px;
   }
 
 
 /*=============== SECTION - DUVIDAS ===============*/
 
-  .duvidas-area {
-    padding: 40px 15px; /* Reduz o respiro vertical da seção */
+  .duvidas-layout {
+    padding: 40px 15px; /* Reduz respiro vertical da seção */
   }
 
   .duvidas-layout h2 {
-    font-size: 1.5rem; /* Título um pouco menor para não quebrar muitas linhas */
+    font-size: 1.5rem; /* pouco menor p/ não quebrar muitas linhas */
     margin-bottom: 25px;
   }
 
   summary {
-    padding: 15px 20px; /* Reduz o espaço interno da pergunta */
-    font-size: 1rem;    /* Fonte levemente menor para caber melhor */
+    padding: 15px 20px; /* Reduz espaço interno da pergunta */
+    font-size: 1rem;    /* Fonte menor para caber melhor */
   }
 
   .faq-content {
-    padding: 0 20px 20px 20px; /* Reduz o espaço interno da resposta */
-    font-size: 0.95rem;        /* Melhora a leitura em telas pequenas */
+    padding: 0 20px 20px 20px; /* Reduz espaço interno */
+    font-size: 0.95rem;  /* Melhora leitura telas pequenas */
   }
 
   summary::after {
-    font-size: 1.2rem; /* Diminui o ícone de + */
+    font-size: 1.2rem; /* Diminui ícone de + */
   }
 
 
 /*=============== SECTION - AGENDAMENTO ===============*/
 
 
-.agendamento-layout h2 {
+  .agendamento-layout h2 {
     padding-bottom: 200px;
   }
 
-.cards-agendamento {
-   margin-top: -180px;
+  .cards-agendamento {
+    margin-top: -180px;
   }
 
 
@@ -239,18 +231,18 @@
 .sobre-mim-layout {
     display: flex;
     flex-direction: column; /* Força a coluna */
-    align-items: center;    /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
     justify-content: center;
     padding: 40px 20px;
-    gap: 0;                 /* Vamos controlar o gap manualmente via margens */
+    gap: 0;     /* controlar gap manualmente via margens */
   }
 
   .foto-wrapper {
-    width: 250px;           /* Tamanho fixo ou proporcional para o celular */
+    width: 250px;  /* Tamanho fixo/proporcional p/ celular */
     height: 250px;
-    margin-right: 0;        /* Remove margens de desktop */
-    margin-bottom: -50px;   /* Efeito de sobreposição no card de texto */
-    z-index: 2;             /* Garante que a foto fique acima do card */
+    margin-right: 0;   /* Remove margens desktop */
+    margin-bottom: -50px;   /* Efeito sobreposição no card de texto */
+    z-index: 2;     /* a foto fique acima do card */
     margin-top: 0;
   }
 
@@ -258,7 +250,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30%;     /* Opcional: deixa a foto redonda no mobile */
+    border-radius: 30%; /* deixa foto redonda no mobile */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     
   }
@@ -266,8 +258,8 @@
   .texto-card {
     width: 100%;
     max-width: 100%;
-    padding: 80px 25px 40px 25px; /* Padding superior maior para compensar a foto */
-    text-align: center;           /* Centraliza todos os textos internos */
+    padding: 80px 25px 40px 25px; 
+    text-align: center;  /* Centraliza todos textos internos */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -275,37 +267,66 @@
   }
 
   .texto-principal p {
-    text-align: center;           /* Garante que os parágrafos fiquem centralizados */
+    text-align: center;  /* parágrafos fiquem centralizados */
     font-size: 1rem;
     line-height: 1.6;
   }
 
   .btn-insta {
     margin-top: 20px;
-    width: fit-content;           /* Botão se ajusta ao texto e centraliza */
+    width: fit-content; /* Botão se ajusta ao texto e centraliza */
   }
   
 
-/*=============== FOOTER ===============*/
+  /*=============== WHATSAPP FLUTUANTE ===============*/
 
-.footer-layout {
-      flex-direction: column;
-      text-align: center;
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 25px;
+  }
+
+  /*=============== FOOTER ===============*/
+
+  .footer-layout {
+    flex-direction: column;
+    text-align: center;
   }
 
   .perfil {
-      flex-direction: column;
+    flex-direction: column;
+  }
+
+  .perfil-logo img {
+    height: 3.5rem;   
   }
 
   .contatos {
-      text-align: center;
+    text-align: center;
   }
 
   .item-contato {
-      justify-content: center;
+    justify-content: center;
   }
 
 }
 
+/*=====================================================
+  RESPONSIVIDADE  - 375 PX
+  =====================================================*/
 
+@media (max-width: 375px) {  
+
+  .info-texto h2 {
+      font-size: 1.5rem;
+  }
+
+  .perfil-logo img {
+    height: 2.5rem;   
+  }
+
+
+}
 

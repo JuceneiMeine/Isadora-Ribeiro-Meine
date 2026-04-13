@@ -40,18 +40,16 @@ h1 {
 }
 
 h2 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Nunito', sans-serif;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
   font-weight: 500;  
   margin-bottom: 5px;   
-  font-size: clamp(1.9rem, 3vw, 4rem); 
-  /* clamp( mínimo, ideal, máximo ) */
+  font-size: clamp(1.9rem, 3vw, 4rem);
   font-weight: bold;
   color: var(--laranja-queimado);  
   text-shadow: 2px 2px 20px var(--amarelo-4);  
   width: 100%;   
   text-align: center;
-  letter-spacing: .2rem;
-  word-spacing: .4rem;
 }
 
 label, span, p { 
@@ -67,7 +65,11 @@ html {
   HEADER
   ===========================================================*/
 
-.header-area {  
+.header-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 2rem;
   background-color: var(--azul-escuro);  
   position: sticky;
   top: 0;
@@ -77,38 +79,25 @@ html {
   margin-top: .15rem;  
 }
 
-.header-layout {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .5rem 2rem;
-}
-
 /*=========== LOGO ===========*/
 
 .logo-layout {
-  flex-shrink: 0; /* <--- Garante que a logo mantenha seu tamanho original */
+  flex-shrink: 0; /* logo mantenha seu tamanho original */
 }
 
 .logo-imagem img {
   display: block;
-  width: 120px; /* Ou o tamanho fixo que você deseja manter */
+  width: 120px; /* tamanho fixo que deseja manter */
   height: auto;
 }
 
-
 /*=========== NAV ===========*/
 
-.nav-area {
+.nav-layout {
   display: flex;  
   align-items: center;
- 
-}
-
-.nav-layout {
-flex-direction: row;
-justify-content: space-between;
-
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-layout ul {
@@ -120,8 +109,9 @@ justify-content: space-between;
 }
 
 .nav-layout li {
-  padding: 0 .9rem;  
+  padding: .3rem .9rem;  
   color: var(--branco);
+  font-family: 'Nunito', sans-serif;
   border-radius: .7rem;
   background-color: var(--azul-escuro);
   border: solid 1px var(--azul-gelo);
@@ -146,7 +136,7 @@ justify-content: space-between;
 
 
 
-.menu-mobile-btn { display: none; } /* Esconde o botão no PC */
+.menu-mobile-btn { display: none; } /* Esconde botão no PC */
 
 .nav-links ul {
   display: flex;
@@ -170,7 +160,7 @@ justify-content: space-between;
 
 /* Aplica em todas as seções que são alvos de links do menu */
 #home, #servicos, #analises, #duvidas, #agendamentos, #sobre-mim {
-  scroll-margin-top: 100px; /* Ajuste esse valor para a altura do seu header */
+  scroll-margin-top: 100px; /* Ajustar valor p altura header */
 }
 
 
@@ -186,15 +176,13 @@ justify-content: space-between;
 
 .social-link {
   text-decoration: none;
-  font-size: 2.5rem; 
-    /* Tamanho do ícone */
+  font-size: 2.5rem;  /* Tamanho do ícone */
   color: var(--branco);  
   transition: transform 0.3s, color 0.3s;
 }
 
 .social-link:hover {
-  transform: translateY(-3px); 
-    /* O ícone "sobe" um pouquinho */
+  transform: translateY(-3px); /* ícone "sobe" um pouco */
 }
 
 .whatsapp:hover {
@@ -206,18 +194,12 @@ justify-content: space-between;
 }
 
 
-
-
-.redes-sociais-layout { display: flex; gap: 1rem; align-items: center; }
-
-.social-link { color: var(--branco); font-size: 2rem; transition: 0.3s; }
-
 /*===========================================================
   MAIN - AREA
   ===========================================================*/
 
 
-.main-area {
+.main-layout {
   flex-grow: 1;
 }
 
@@ -227,12 +209,8 @@ justify-content: space-between;
   SECTION - HOME
   ===========================================================*/
 
-
-.home-area {
-  flex-grow: 1;
-}
-
 .home-layout {
+  flex-grow: 1;
   display: flex;    
   align-items: center;
   padding: 10px 2%;
@@ -288,105 +266,98 @@ justify-content: space-between;
   margin-top: 3rem;
   justify-content: center;  
 }
+
 .btn-contate-me {  
-    background-color: var(--azul-escuro);
-    color: white;
-    border: none;
-    padding: .3rem 2rem;
-    cursor: pointer;
-    border-radius: 1.3rem;
-    font-size: 1rem;
-    transition: 0.3s;
-    letter-spacing: .1rem;
-  }
+  background-color: var(--azul-escuro);
+  color: white;
+  border: none;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: .4rem;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  letter-spacing: .1rem;
+}
 
 /*===========================================================
   SECTION - SERVIÇO
   ===========================================================*/
 
-.servico-area {
-    background-color: var(--container-escuro); /* Cor de fundo rosada da imagem */
-    padding: 1rem 0 ;
-    font-family: sans-serif;
-}
-
 .servico-layout {
-    width: 100%; /* Ocupa a tela toda */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha o conteúdo ao início (esquerda) por padrão */
+  width: 100%; /* Ocupa a tela toda */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha conteúdo esquerda */
+  background-color: var(--azul-escuro);
+  padding: 1rem 0 ;
+  font-family: sans-serif;
 }
 
 /* Card de Título (Branco no topo) */
 /* Card de Título (Colado na Esquerda) */
 .card-left {
-    background: white;
-    width: 80%; /* Controla o comprimento do card */
-    padding: .7rem 1rem;
-    /* Arredondado apenas no lado DIREITO (superior e inferior) */
-    border-radius: 0 50px 50px 0; 
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    /* display: inline-block;  */
-    display: flex;
-    align-items: center;
-    margin: 40px 0 40px 0;
+  background: white;
+  width: 95%; /* comprimento do card */
+  padding: .7rem 1rem;
+  border-radius: .5rem; 
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  margin: 4px 8px;
 }
 
 .card-left h2 {
-    margin: 0;
-    color: #a6736a; 
-    /* Tom de marrom rosado do título */
-    /* margin: 0; */
-    font-size: 1.4rem;
-    font-family: 'Nunito', sans-serif;
-    padding-right: 3rem;
-    padding-left: 3rem; 
+  margin: 0;
+  color: #a6736a;
+  font-size: 1.4rem;
+  font-family: 'Nunito', sans-serif;
+  padding: .5rem .2rem; 
 }
 
-/* Área de Informação: Fazemos ela ocupar toda a largura disponível */
-/* Área de Informação (Empurra os outros cards para a Direita) */
-.ajudar-area {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Alinha os cards brancos de serviço para a direita */
+/* ocupar toda a largura disponível */
+/* Empurra os outros cards para a Direita */
+.ajudar-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  /* Alinha os cards brancos de serviço para a direita */
 }
 
 /* Título secundário: Ajustamos a margem para ele não colar na borda */
-.ajudar-area h3 {
-    width: 100%;
-    padding-left: 4.5rem; /* Mantém o alinhamento com o design */
-    padding-bottom: 1rem;
-    text-align: left;
-    color: var(--branco);
-    font-size: 1.5rem;
+.ajudar-layout h3 {
+  width: 95%;
+  padding: .5rem .3rem;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: var(--branco);
+  font-size: 1.9rem;
 }
 
 /* Cards Brancos de Informação */
 .card-right {
-    background: white;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    width: 95%; /* Controla o comprimento do card */
-    
-    /* Lado esquerdo arredondado, lado direito reto para colar na borda */
-    border-radius: 50px 0 0 50px; 
-    
-    box-shadow: -5px 8px 20px rgba(0,0,0,0.15);
-    margin-right: 0; /* Força o encosto na margem direita */
+  background: white;
+  width: 95%; /* comprimento do card */
+  padding: .7rem 1rem;
+  border-radius: .5rem;    
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  margin: 4px 8px;  
 }
 
 .card-right p {
-    color: #a6736a;
-    margin: 0;
-    line-height: 1.6;
-    font-size: 1.2rem;
+  margin: 0;
+  color: #a6736a;
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  
 }
 
 .card-right strong {
-    color: #8c5a52; 
-    /* Destaque em negrito um pouco mais escuro */
+  color: #8c5a52;
 }
 
 
@@ -395,114 +366,107 @@ justify-content: space-between;
   ===========================================================*/
 
 
-.analise-area {
-    background-color: var(--container-claro); /* Fundo bege clarinho da imagem */
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Nunito', sans-serif;
-}
-
 .analise-layout {
-
-
+  background-color: var(--container-claro); 
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
 }
 
 .card-analise {
-    background-color: white;
-    width: 100%;
-    max-width: 100%;
-    padding: 60px 40px 40px 40px;
-    border-radius: 40px;
-    position: relative; /* Necessário para o título flutuar */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  background-color: white;
+  width: 100%;
+  max-width: 100%;
+  padding: 60px 40px 40px 40px;
+  border-radius: 40px;
+  position: relative; /* Necessário p título flutuar */
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 /* O Título Azul Flutuante */
 .analise-header {
-    background-color: #5d6d97; /* Azul acinzentado da imagem */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 12px;
-    position: absolute;
-    top: -25px; /* Sobe metade do card para fora */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza perfeitamente */
-    white-space: nowrap;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #5d6d97;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 12px;
+  position: absolute;
+  top: -25px; /* Sobe metade do card para fora */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza perfeitamente */
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .analise-header h2 {
   font-family: 'Nunito', sans-serif;
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color: var(--branco);
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--branco);
 }
 
-.interatividade {
-    
-    width: 100%;           /* No mobile ele ocupa tudo */
-    max-width: 630px;      /* Em telas grandes, trava em um tamanho confortável */
-    margin: 0 auto;        /* O segredo: centraliza o container na tela */
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.interatividade {    
+  width: 100%;   /* No mobile ocupa tudo */
+  max-width: 630px;  /* telas grandes, trava num tamanho confortável */
+  margin: 0 auto;  /* centraliza o container na tela */    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Esconde o checkbox original feio */
 .check-item input {
-    display: none;
+  display: none;
 }
 
 .check-item {
-    display: flex;
-    align-items: flex-start;
-    text-align: left;  /* Garante que o texto comece sempre na esquerda */
-    position: relative;
-    padding-left: 45px;
-    margin-bottom: 20px;
-    cursor: pointer; /* Muda o mouse para a mãozinha */
-    color: #a6736a;
-    font-size: 1.1rem;
-    line-height: 1.4;
-    transition: all 0.2s;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;  /* texto começar na esquerda */
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 20px;
+  cursor: pointer; /* Muda o mouse para a mãozinha */
+  color: #a6736a;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  transition: all 0.2s;
 }
 
 /* O quadrado do checkbox desmarcado */
 .checkbox-opcao {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 28px;
-    height: 28px;
-    border: 2px solid #a6736a;
-    border-radius: 6px;
-    background-color: transparent;
-    transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #a6736a;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.3s;
 }
 
 /* Quando o item está marcado (O que acontece no clique) */
 .check-item input:checked + .checkbox-opcao {
-    background-color: #a6736a; /* Preenche o fundo */
+  background-color: #a6736a; /* Preenche o fundo */
 }
 
 /* O símbolo de Check (✔) que aparece quando marcado */
 .check-item input:checked + .checkbox-opcao::after {
-    content: '✔';
-    position: absolute;
-    color: white;
-    font-size: 1rem;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  content: '✔';
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Se o item tem um input checado, deixe o texto em negrito e mude a cor */
 .check-item:has(input:checked) {
-    color: #5d6d97; 
-    font-weight: bold;
+  color: #5d6d97; 
+  font-weight: bold;
 }
 
 /*===========================================================
@@ -510,91 +474,82 @@ justify-content: space-between;
   ===========================================================*/
 
 
-.duvidas-area {
-    background-color: var(--container-escuro); /* Tom rosado do fundo */
-    padding: 60px 20px;
-    text-align: center;
-}
-
 .duvidas-layout {
-
+  background-color: var(--container-escuro); 
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .duvidas-layout h2 {
-    color: white;
-    margin-bottom: 40px;
-    font-family: sans-serif;
+  color: white;
+  margin-bottom: 40px;
+  font-family: sans-serif;
 }
 
 .faq-container {
-    max-width: 100%;
-    margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .faq-item {
-    background-color: white;
-    margin-bottom: 20px;
-    border-radius: 4px; /* Bordas levemente arredondadas como na imagem */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
-    overflow: hidden;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 4px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+  overflow: hidden;
 }
 
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
-    padding: 0 40px 25px 40px;
-    color: #a6736a;
-    line-height: 1.6;
-    animation: slideDown 0.4s ease-out;
+  padding: 0 40px 25px 40px;
+  color: #a6736a;
+  line-height: 1.6;
+  animation: slideDown 0.4s ease-out;
 }
 
 /* Estilo da Pergunta (O que fica visível) */
 summary {
-    padding: 25px 40px;
-    list-style: none; /* Remove a setinha padrão do navegador */
-    cursor: pointer;
-    font-weight: bold;
-    color: #a6736a;
-    font-size: 1.1rem;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 25px 40px;
+  list-style: none; /* Remove setinha padrão do navegador */
+  cursor: pointer;
+  font-weight: bold;
+  color: #a6736a;
+  font-size: 1.1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Criando o sinal de + customizado */
 summary::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: #a6736a;
-    transition: transform 0.3s ease;
+  content: '+';
+  font-size: 1.5rem;
+  color: #a6736a;
+  transition: transform 0.3s ease;
 }
 
 /* Gira o sinal quando o FAQ está aberto */
 details[open] summary::after {
-    transform: rotate(45deg); /* O + vira um X ou apenas gira */
+  transform: rotate(45deg); /* O + vira um X ou apenas gira */
 }
-
 
 /* Animação suave para abrir */
 @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /*===========================================================
   SECTION - AGENDAMENTO
   ===========================================================*/
 
-.agendamento-area {
+.agendamento-layout {
   background-color: var(--container-claro);
   padding: 60px 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-}
-
-.agendamento-layout {
-
 }
 
 /* O Container que define o fundo azul */
@@ -602,16 +557,15 @@ details[open] summary::after {
   background-color: var(--azul-escuro);
   width: 90%;
   max-width: 1100px;
-  margin: 40px auto; /* Margem externa para separar das outras seções */
+  margin: 40px auto; /* Margem p separar das outras seções */
   border-radius: 40px;
-  padding: 60px 20px; /* Padding igual em cima e embaixo */
+  padding: 60px 20px; 
   
   /* Flexbox para alinhar tudo dentro do azul */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .agendamento-bg-azul h2 {
   color: white;
@@ -626,9 +580,7 @@ details[open] summary::after {
   gap: 40px;
   width: 100%;
   flex-wrap: wrap;
-  /* REMOVEMOS o margin-top negativo aqui */
 }
-
 
 .passo-item {
   max-width: 350px;
@@ -640,16 +592,16 @@ details[open] summary::after {
 /* O Card Individual */
 .card {
   background: white;
-  width: 320px;
-  /* IMPORTANTE: height auto permite que o card cresça com o texto */
-  height: auto; 
-  min-height: 220px; 
+  width: 320px;  
+  height: auto; /* permite que o card cresça com o texto */
+  min-height: 150px; 
   border-radius: 20px;
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Alinha o conteúdo no topo do card */
+  justify-content: flex-start; 
+  /* Alinha o conteúdo no topo do card */
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   position: relative;
 }
@@ -679,7 +631,7 @@ details[open] summary::after {
   margin-top: 20px;
   background: white;
   border: 1px solid var(--rosa-claro);
-  color: var(--texto-vinho);
+  color: var(--azul-escuro);
   padding: 10px 30px;
   border-radius: 10px;
   cursor: pointer;
@@ -687,8 +639,8 @@ details[open] summary::after {
 }
 
 .btn-saiba-mais:hover {
-  background-color: var(--rosa-claro);
-  color: white;
+  background-color: var(--branco);
+  color: var(--azul-escuro);
 }
 
 /* Esconde a descrição inicialmente */
@@ -717,8 +669,12 @@ details[open] summary::after {
   SECTION - SOBRE-MIM
   ===========================================================*/
 
-
-.sobre-mim-area {
+.sobre-mim-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
+    align-items: center;
+    max-width: 100%;
+    position: relative;
     background-color: var(--container-claro);
     padding: 100px 20px;
     display: flex;
@@ -726,18 +682,10 @@ details[open] summary::after {
     font-family: 'Montserrat', sans-serif;
 }
 
-.sobre-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
-    align-items: center;
-    max-width: 100%;
-    position: relative;
-}
-
 /* Bloco Rosa de Fundo */
 .texto-card {
     background-color: var(--rosa-fundo);
-    padding: 60px 60px 60px 120px; /* Padding extra na esquerda para compensar a foto */
+    padding: 60px 60px 60px 120px; 
     border-radius: 40px;
     color: white;
     text-align: center;
@@ -749,22 +697,18 @@ details[open] summary::after {
 .foto-wrapper {
     position: relative;
     z-index: 2;
-    margin-right: -100px; /* Puxa a foto para dentro do bloco rosa */
-    /* background-color: violet; */
+    margin-right: -100px; /* Puxa foto p dentro bloco rosa */
     margin-top: 60px;
 }
 
 .foto-wrapper img {
     width: 300px;
     max-width: 400px;
-    height: auto;
-    
-    
-    border-radius: 20px 50px 50px 20px; /* Bordas arredondadas assimétricas */
+    height: auto;    
+    border-radius: 20px 50px 50px 20px; 
     object-fit: cover;
     display: block;
-    box-shadow: 5px 5px 55px rgba(0,0,0,0.45);
-    
+    box-shadow: 5px 5px 55px rgba(0,0,0,0.45);    
 }
 
 /* Tipografia */
@@ -804,29 +748,50 @@ details[open] summary::after {
 /*===========================================================
   SECTION - CONTATO
   ===========================================================*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
 
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20ba5a;
+    color: #FFF;
+}
 
 /*===========================================================
   SECTION - FOOTER
   ===========================================================*/
 
-
-.footer-area {
-    background-color: #5d6d8e; /* Cor azul acinzentada da imagem */
-    color: white;
-    padding: 20px 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: .3rem;
-}
-
 .footer-layout {
-    max-width: 1100px;
+    /* max-width: 1100px; */
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Garante que em telas pequenas os itens quebrem linha */
+    flex-wrap: wrap; /* telas pequenas itens quebrem linha */
     gap: 20px;
+    background-color: #5d6d8e;
+    color: white;
+    padding: 20px 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: .3rem;
 }
 
 .perfil {
@@ -840,14 +805,12 @@ details[open] summary::after {
 }
 
 .perfil-logo img {
-  height: 6.5rem;
-   /* tamanho da imagem - logo do footer */
-  width: auto; 
-  /* Mantém a proporção */
+  height: 6.5rem;  /* tamanho da imagem - logo do footer */
+  width: auto;   /* Mantém a proporção */
   display: block;
 }
 
-.info-texto h1 {
+.info-texto h2 {
     font-size: 2rem;
     margin: 0;
     font-weight: 500;
