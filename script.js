@@ -48,25 +48,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===========================================================
-       3. AGENDAMENTO / BOTÕES
-       =========================================================== */
-    const botoesSaibaMais = document.querySelectorAll('.btn-saiba-mais');
-    botoesSaibaMais.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            if (index === 0) {
-                alert("Você será redirecionado para o WhatsApp!");
-            } else {
-                console.log("Detalhes: A sessão dura 50min.");
-            }
-        });
-    });
+   3. AGENDAMENTO - EXPANDIR DESCRIÇÃO
+   =========================================================== */
+const botoesSaibaMais = document.querySelectorAll('.btn-saiba-mais');
 
-    const btnCta = document.querySelector('.btn-cta');
-    if (btnCta) {
-        btnCta.addEventListener('click', () => {
-            alert("Redirecionando para o WhatsApp...");
-        });
-    }
+botoesSaibaMais.forEach(botao => {
+    botao.addEventListener('click', function(e) {
+        // Impede que o clique dispare outras funções de scroll ou links
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Pega a descrição que vem logo após o botão
+        const descricao = this.nextElementSibling;
+
+        if (descricao && descricao.classList.contains('descricao')) {
+            // Alterna a classe 'ativo'
+            descricao.classList.toggle('ativo');
+
+            // Muda o texto do botão
+            if (descricao.classList.contains('ativo')) {
+                this.textContent = 'Fechar';
+            } else {
+                this.textContent = 'Saiba mais';
+            }
+            
+            console.log("Botão Saiba Mais clicado com sucesso!");
+        } else {
+            console.error("Erro: Não encontrei a tag <p class='descricao'> logo após o botão.");
+        }
+    });
+});
 
     /* ===========================================================
        4. ANIMAÇÃO SOBRE-MIM (Intersection Observer)

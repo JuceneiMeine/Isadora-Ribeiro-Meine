@@ -8,11 +8,12 @@
   flex-direction: column;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
-  line-height: 1.4; 
+  /* line-height: 1.4;  */
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font-optical-sizing: auto;
-  min-height: 100vh;
+  height: 100vh;
+  max-width: 100vw;
   background: var(--creme-2); 
   color: var(--preto); 
   padding: 0 .3rem;
@@ -439,9 +440,15 @@ justify-content: space-between;
     color: var(--branco);
 }
 
-.interatividade-layout {
-
-
+.interatividade {
+    
+    width: 100%;           /* No mobile ele ocupa tudo */
+    max-width: 630px;      /* Em telas grandes, trava em um tamanho confortável */
+    margin: 0 auto;        /* O segredo: centraliza o container na tela */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Esconde o checkbox original feio */
@@ -452,6 +459,7 @@ justify-content: space-between;
 .check-item {
     display: flex;
     align-items: flex-start;
+    text-align: left;  /* Garante que o texto comece sempre na esquerda */
     position: relative;
     padding-left: 45px;
     margin-bottom: 20px;
@@ -589,24 +597,38 @@ details[open] summary::after {
 
 }
 
-.agendamento-layout h2 {
-  color: white;
+/* O Container que define o fundo azul */
+.agendamento-bg-azul {
   background-color: var(--azul-escuro);
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px 150px 20px; /* Padding inferior grande para o "vão" dos cards */
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto; /* Margem externa para separar das outras seções */
   border-radius: 40px;
-  font-size: 1.8rem;
-  font-weight: 500;
+  padding: 60px 20px; /* Padding igual em cima e embaixo */
+  
+  /* Flexbox para alinhar tudo dentro do azul */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+
+.agendamento-bg-azul h2 {
+  color: white;
+  margin-bottom: 50px; /* Espaço entre o título e os cards */
+  font-size: 1.8rem;
+}
+
+/* Container dos Cards */
 .cards-agendamento {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: -120px; /* Sobe os cards para dentro do bloco azul */
+  width: 100%;
   flex-wrap: wrap;
+  /* REMOVEMOS o margin-top negativo aqui */
 }
+
 
 .passo-item {
   max-width: 350px;
@@ -615,18 +637,21 @@ details[open] summary::after {
   align-items: center;
 }
 
+/* O Card Individual */
 .card {
   background: white;
-  width: 100%;
-  height: 200px;
-  border-radius: 15px;
-  position: relative;
+  width: 320px;
+  /* IMPORTANTE: height auto permite que o card cresça com o texto */
+  height: auto; 
+  min-height: 220px; 
+  border-radius: 20px;
+  padding: 40px 25px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-  margin-bottom: 30px;
+  justify-content: flex-start; /* Alinha o conteúdo no topo do card */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
 }
 
 .numero {
@@ -651,16 +676,14 @@ details[open] summary::after {
 }
 
 .btn-saiba-mais {
-  position: absolute;
-  bottom: -20px;
+  margin-top: 20px;
   background: white;
   border: 1px solid var(--rosa-claro);
   color: var(--texto-vinho);
   padding: 10px 30px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn-saiba-mais:hover {
@@ -668,13 +691,27 @@ details[open] summary::after {
   color: white;
 }
 
+/* Esconde a descrição inicialmente */
 .descricao {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #333;
-  font-weight: 500;
-  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-out; /* Transição suave */
+  text-align: center;
+  margin: 0;
 }
+
+/* Classe que o JS vai adicionar para mostrar o texto */
+.descricao.ativo {
+  max-height: 300px; /* Tamanho suficiente para o texto */
+  opacity: 1;
+  margin-top: 20px; /* Espaço entre o botão e o texto */
+}
+
+
+
+
+
 
 /*===========================================================
   SECTION - SOBRE-MIM
@@ -713,16 +750,21 @@ details[open] summary::after {
     position: relative;
     z-index: 2;
     margin-right: -100px; /* Puxa a foto para dentro do bloco rosa */
+    /* background-color: violet; */
+    margin-top: 60px;
 }
 
 .foto-wrapper img {
-    width: 100%;
+    width: 300px;
     max-width: 400px;
     height: auto;
-    border-radius: 80px 80px 80px 10px; /* Bordas arredondadas assimétricas */
+    
+    
+    border-radius: 20px 50px 50px 20px; /* Bordas arredondadas assimétricas */
     object-fit: cover;
     display: block;
-    box-shadow: 10px 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 55px rgba(0,0,0,0.45);
+    
 }
 
 /* Tipografia */

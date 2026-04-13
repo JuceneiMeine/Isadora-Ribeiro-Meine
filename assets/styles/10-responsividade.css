@@ -2,14 +2,8 @@
   RESPONSIVIDADE  - 900 PX
   =====================================================*/
 
+  @media (max-width: 900px) { 
 
-
-
-/*=====================================================
-  RESPONSIVIDADE  - 768 PX
-  =====================================================*/
-
-@media (max-width: 768px) {  
 
 /*=============== SECTION - HEADER ===============*/
 
@@ -19,15 +13,14 @@
   }
 
   .header-layout {    
-    padding: 1rem ;
-    
+    padding: 1rem;    
   }  
-
 
   .logo-imagem {
     max-width: 120px;
     min-width: 90px;
   }
+
   .nav-layout ul {
     display: flex;
     flex-direction: column;
@@ -79,7 +72,7 @@
     position: absolute;
     top: 100%; /* Aparece logo abaixo do header */
     left: 0;
-    width: 100%;
+    width: 50%;
     background-color: var(--azul-escuro);
     padding: 1rem 0;
     border-bottom-left-radius: 10px;
@@ -102,7 +95,17 @@
 
   .redes-sociais-layout { margin-right: 0; }
 
+}
 
+/*=====================================================
+  RESPONSIVIDADE  - 768 PX
+  =====================================================*/
+
+
+@media (max-width: 768px) {  
+
+
+  /*=============== SECTION - HEADER ===============*/
 
 
     
@@ -175,6 +178,12 @@
     line-height: 1.2;
   }
 
+  .interatividade {
+    width: 90%;            /* Quase toda a largura no celular */
+    max-width: 650px;      /* Mas não passa disso no computador */
+    margin: 0 auto;
+}
+
   .check-item {
     font-size: 1rem; /* Diminui levely o texto dos itens */
     padding-left: 40px; /* Ajusta o recuo para o checkbox */
@@ -227,18 +236,53 @@
 
 /*=============== SECTION - SOBRE-MIM ===============*/
 
-.sobre-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
+.sobre-mim-layout {
+    display: flex;
+    flex-direction: column; /* Força a coluna */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    padding: 40px 20px;
+    gap: 0;                 /* Vamos controlar o gap manualmente via margens */
   }
 
-.foto-wrapper {
-    margin-right: 0;
-    margin-bottom: -40px; /* Sobrepõe verticalmente no mobile */
+  .foto-wrapper {
+    width: 250px;           /* Tamanho fixo ou proporcional para o celular */
+    height: 250px;
+    margin-right: 0;        /* Remove margens de desktop */
+    margin-bottom: -50px;   /* Efeito de sobreposição no card de texto */
+    z-index: 2;             /* Garante que a foto fique acima do card */
+    margin-top: 0;
   }
 
-.texto-card {
-    padding: 60px 20px 40px 20px;
+  .foto-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30%;     /* Opcional: deixa a foto redonda no mobile */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    
+  }
+
+  .texto-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 25px 40px 25px; /* Padding superior maior para compensar a foto */
+    text-align: center;           /* Centraliza todos os textos internos */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .texto-principal p {
+    text-align: center;           /* Garante que os parágrafos fiquem centralizados */
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .btn-insta {
+    margin-top: 20px;
+    width: fit-content;           /* Botão se ajusta ao texto e centraliza */
   }
   
 
