@@ -7,8 +7,8 @@
 /*=============== SECTION - HEADER ===============*/
   .header-layout { 
     display: flex;    
-    gap: 15px;    
-    padding: 1rem;    
+    gap: 15px;
+    padding: .2rem 2rem;   
   }  
 
   .logo-imagem {
@@ -105,15 +105,15 @@
 
 .home-layout {
     flex-direction: column; /* Empilha foto sobre o texto */
-    padding: 40px 5%;  /* respiro maior laterais e topo */
+    padding: 25px 5%;  /* respiro maior laterais e topo */
     text-align: center;
-    gap: 30px;
+    gap: 20px;
   }
 
   .foto {
     width: 100%;      
     height: auto;  /* Remove altura fixa */
-    max-width: 300px; /* Limita tamanho p/ foto não estourar */
+    max-width: 350px; /* Limita tamanho p/ foto não estourar */
     margin: 0 auto;   /* Garante a centralização */
   }
 
@@ -123,42 +123,50 @@
     object-fit: cover; /* Melhora encaixe da foto no mobile */
   }
 
-  .info-pessoais {
-    width: 100%;  /*Garante que texto use espaço disponível*/
+  .info-logo {
+    padding-top: .3rem;
   }
 
   .info-pessoais h1 {
     font-size: 1.5rem; 
-    margin-top: 10px;
-  }
-
-  .info-pessoais p {
-    line-height: .2rem;
+    margin-top: .8rem;
   }
 
   .home-btn {
-    margin-top: 2rem; /*Reduz espaçamento excessivo no mobile*/
+    margin-top: 1rem; /*Reduz espaçamento excessivo no mobile*/
     text-decoration: none;
   }
 
 
 /*=============== SECTION - SERVICO ===============*/
 
+.card-dificuldade, .card-servico {
+  width: 95vw;
+}
 
+.card-dificuldade h2 {
+  font-size: 1.4rem;
+  
+}
+
+.card-servico p {
+  font-size: 1.2rem;
+}
 
 /*=============== SECTION - ANALISE ===============*/
 
   .analise-layout {
-    padding: 60px 15px 30px 15px; /*Aumenta padding superior*/
+    padding: 30px 15px; /*Aumenta padding superior*/
   }
 
   .card-analise {
     padding: 50px 20px 20px 20px; /* Reduz o padding interno */
     border-radius: 25px;
+    width: 98%;
   }
 
   .analise-header {
-    width: 95%; /* título não ultrapasse largura do card */
+    width: 98%; /* título não ultrapasse largura do card */
     white-space: normal; /* texto do título quebre linha se necessário */
     text-align: center;
     padding: 12px 15px;
@@ -166,7 +174,7 @@
   }
 
   .analise-header h2 {
-    font-size: 1.1rem; /* tamanho da fonte do título */
+    font-size: 1.3rem; /* tamanho da fonte do título */
     line-height: 1.2;
   }
 
@@ -285,7 +293,7 @@
     height: 50px;
     bottom: 15px;
     right: 15px;
-    font-size: 25px;
+    font-size: 35px;
   }
 
   /*=============== FOOTER ===============*/

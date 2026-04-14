@@ -8,7 +8,6 @@
   flex-direction: column;
   font-family: 'Times New Roman', Times, serif;
   font-weight: 400;
-  /* line-height: 1.4;  */
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   font-optical-sizing: auto;
@@ -16,7 +15,7 @@
   max-width: 100vw;
   background: var(--creme-2); 
   color: var(--preto); 
-  padding: 0 .3rem;
+  padding: 0;
   margin: 0 auto; /* Centraliza o site */
 }
 
@@ -24,31 +23,14 @@
   TÍTULOS E FONTES
   ===========================================================*/
 
-h1 { 
+h1, h2 { 
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   color: var(--laranja-queimado); 
   font-size: clamp(1.9rem, 3.5vw, 5rem); 
-  /* clamp( mínimo, ideal, máximo ) */
   text-shadow: 2px 2px 20px var(--amarelo-4); 
-  /*Cria uma aura ou brilho atrás do texto*/
   margin-bottom: 5px; 
   width: 100%; 
-  text-align: center;
-  letter-spacing: .2rem;
-  word-spacing: .4rem;
-}
-
-h2 {
-  font-family: 'Nunito', sans-serif;
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
-  font-weight: 500;  
-  margin-bottom: 5px;   
-  font-size: clamp(1.9rem, 3vw, 4rem);
-  font-weight: bold;
-  color: var(--laranja-queimado);  
-  text-shadow: 2px 2px 20px var(--amarelo-4);  
-  width: 100%;   
   text-align: center;
 }
 
@@ -69,14 +51,14 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 2rem;
+  padding: .1rem 2rem;
   background-color: var(--azul-escuro);  
   position: sticky;
   top: 0;
   z-index: 999;  
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  border-radius: .5rem;
-  margin-top: .15rem;  
+  /* border-radius: .5rem; */
+  /* margin-top: .15rem;   */
 }
 
 /*=========== LOGO ===========*/
@@ -237,12 +219,8 @@ html {
 .info-pessoais { 
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   align-items: center;  
-}
-
-.info-logo {
-  padding-bottom: 1rem;
 }
 
 .info-logo img{ 
@@ -252,13 +230,15 @@ html {
 
 .info-pessoais h1 {
   text-align: center;
-  font-size: 1.5rem; 
+  font-size: 2rem; 
   color: var(--marrom-escuro);
 }
 
 .info-pessoais p {
   text-align: center;  
   color: var(--marrom-escuro);
+  padding: 0;
+  margin: 0;
 }
 
 .home-btn {
@@ -288,29 +268,38 @@ html {
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Alinha conteúdo esquerda */
+  align-items: center; 
   background-color: var(--azul-escuro);
-  padding: 1rem 0 ;
   font-family: sans-serif;
+}
+
+.card-dificuldade-layout {
+  width: 100vw;
+  background-color: var(--container-claro);
+  display: flex;
+  justify-content: center;
+  
 }
 
 /* Card de Título (Branco no topo) */
 /* Card de Título (Colado na Esquerda) */
-.card-left {
-  background: white;
-  width: 95%; /* comprimento do card */
+.card-dificuldade {
+  background-color: antiquewhite;
+  width: 70%; /* comprimento do card */
   padding: .7rem 1rem;
-  border-radius: .5rem; 
+  border-radius: .3rem; 
   box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 4px 8px;
+  text-align: center;
+  margin: 3rem 0;
 }
 
-.card-left h2 {
+.card-dificuldade h2 {
   margin: 0;
   color: #a6736a;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
   padding: .5rem .2rem; 
 }
@@ -321,8 +310,13 @@ html {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; 
-  /* Alinha os cards brancos de serviço para a direita */
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  hyphens: auto;
+  
+
 }
 
 /* Título secundário: Ajustamos a margem para ele não colar na borda */
@@ -336,18 +330,20 @@ html {
 }
 
 /* Cards Brancos de Informação */
-.card-right {
+.card-servico {
   background: white;
-  width: 95%; /* comprimento do card */
+  width: 70%; /* comprimento do card */
   padding: .7rem 1rem;
   border-radius: .5rem;    
   box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
   display: flex;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 4px 8px;  
 }
 
-.card-right p {
+.card-servico p {
   margin: 0;
   color: #a6736a;
   font-size: 1.5rem;
@@ -356,7 +352,7 @@ html {
   
 }
 
-.card-right strong {
+.card-servico strong {
   color: #8c5a52;
 }
 
@@ -367,34 +363,25 @@ html {
 
 
 .analise-layout {
-  background-color: var(--container-claro); 
-  padding: 50px 20px;
   display: flex;
+  flex-direction: column;
+ 
+  background-color: var(--container-claro);  
   justify-content: center;
+  align-items: center;
   font-family: 'Nunito', sans-serif;
 }
 
-.card-analise {
-  background-color: white;
-  width: 100%;
-  max-width: 100%;
-  padding: 60px 40px 40px 40px;
-  border-radius: 40px;
-  position: relative; /* Necessário p título flutuar */
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
 
 /* O Título Azul Flutuante */
 .analise-header {
+  
   background-color: #5d6d97;
   color: white;
   padding: 15px 30px;
-  border-radius: 12px;
-  position: absolute;
-  top: -25px; /* Sobe metade do card para fora */
-  left: 50%;
-  transform: translateX(-50%); /* Centraliza perfeitamente */
-  white-space: nowrap;
+  margin: 1rem 1rem;
+  border-radius: .5rem;
+  
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -405,6 +392,16 @@ html {
   font-weight: 500;
   color: var(--branco);
 }
+
+.card-analise {
+  background-color: white;
+  width: 70%;
+  padding: 60px 40px 40px 40px;
+  border-radius: 40px;
+  
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
 
 .interatividade {    
   width: 100%;   /* No mobile ocupa tudo */
@@ -547,7 +544,7 @@ details[open] summary::after {
 
 .agendamento-layout {
   background-color: var(--container-claro);
-  padding: 60px 20px;
+  padding: 1rem 0;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
@@ -555,11 +552,10 @@ details[open] summary::after {
 /* O Container que define o fundo azul */
 .agendamento-bg-azul {
   background-color: var(--azul-escuro);
-  width: 90%;
-  max-width: 1100px;
-  margin: 40px auto; /* Margem p separar das outras seções */
-  border-radius: 40px;
-  padding: 60px 20px; 
+  width: 100%;
+  margin: 10px auto; /* Margem p separar das outras seções */
+  
+  padding-bottom: 1rem; 
   
   /* Flexbox para alinhar tudo dentro do azul */
   display: flex;
@@ -570,7 +566,7 @@ details[open] summary::after {
 .agendamento-bg-azul h2 {
   color: white;
   margin-bottom: 50px; /* Espaço entre o título e os cards */
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 /* Container dos Cards */
@@ -758,7 +754,7 @@ details[open] summary::after {
   color: #FFF;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: flex;
