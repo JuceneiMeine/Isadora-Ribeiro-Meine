@@ -145,7 +145,7 @@
 }
 
 .card-dificuldade h2 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   
 }
 
@@ -160,9 +160,11 @@
   }
 
   .card-analise {
-    padding: 50px 20px 20px 20px; /* Reduz o padding interno */
-    border-radius: 25px;
-    width: 98%;
+    /* padding: 50px 20px 20px 20px; */
+    padding-left: .8rem;
+    border-radius: .5rem;
+    width: 99%;
+    margin-bottom: 1.5rem;
   }
 
   .analise-header {

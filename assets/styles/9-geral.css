@@ -254,7 +254,7 @@ html {
   padding: .5rem 1rem;
   cursor: pointer;
   border-radius: .4rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   transition: 0.3s;
   letter-spacing: .1rem;
 }
@@ -314,7 +314,7 @@ html {
   text-align: center;
   gap: 1rem;
   padding-bottom: 1rem;
-  hyphens: auto;
+  /* hyphens: auto; */
   
 
 }
@@ -395,11 +395,12 @@ html {
 
 .card-analise {
   background-color: white;
-  width: 70%;
-  padding: 60px 40px 40px 40px;
+  width: 60%;
+  padding: 30px 10px 20px 40px;
   border-radius: 40px;
+  margin-bottom: 3rem;
   
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 
@@ -644,6 +645,7 @@ details[open] summary::after {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  color: var(--marrom-escuro);
   transition: all 0.4s ease-out; /* Transição suave */
   text-align: center;
   margin: 0;
