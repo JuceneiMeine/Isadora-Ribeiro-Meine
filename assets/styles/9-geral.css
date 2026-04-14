@@ -1,7 +1,7 @@
 
-/*===========================================================
+/*=====================================
   BODY - Corpo da página
-  ===========================================================*/
+  =====================================*/
 
 .body-layout {
   display: flex;
@@ -19,9 +19,9 @@
   margin: 0 auto; /* Centraliza o site */
 }
 
-/*===========================================================
+/*=====================================
   TÍTULOS E FONTES
-  ===========================================================*/
+  =====================================*/
 
 h1, h2 { 
   font-family: 'Nunito', sans-serif;
@@ -43,9 +43,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/*===========================================================
+/*=====================================
   HEADER
-  ===========================================================*/
+  =====================================*/
 
 .header-layout {
   display: flex;
@@ -57,8 +57,6 @@ html {
   top: 0;
   z-index: 999;  
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  /* border-radius: .5rem; */
-  /* margin-top: .15rem;   */
 }
 
 /*=========== LOGO ===========*/
@@ -66,6 +64,8 @@ html {
 .logo-layout {
   flex-shrink: 0; /* logo mantenha seu tamanho original */
 }
+
+.logo-imagem {}
 
 .logo-imagem img {
   display: block;
@@ -82,42 +82,6 @@ html {
   justify-content: space-between;
 }
 
-.nav-layout ul {
-  display: flex;
-  list-style: none; /* Remove as bolinhas do menu */
-  gap: 1.5rem; /* Cria um espaço entre os links */
-  margin: 0;
-  padding: 0;
-}
-
-.nav-layout li {
-  padding: .3rem .9rem;  
-  color: var(--branco);
-  font-family: 'Nunito', sans-serif;
-  border-radius: .7rem;
-  background-color: var(--azul-escuro);
-  border: solid 1px var(--azul-gelo);
-  transition: transform 0.3s, color 0.3s;
-}
-
-.nav-layout li:hover {  
-  background-color: var(--branco);
-}
-
-.nav-layout a {
-  text-decoration: none;
-  color: var(--branco);
-}
-
-.nav-layout a:hover {  
-  transform: translateY(-3px);  
-  color: var(--azul-escuro); 
-  font-weight: 500;
-}
-
-
-
-
 .menu-mobile-btn { display: none; } /* Esconde botão no PC */
 
 .nav-links ul {
@@ -129,23 +93,33 @@ html {
 }
 
 .nav-links li {
-  padding: 0 .9rem;
+  font-family: 'Nunito', sans-serif;
+  color: var(--branco);
+  padding: .3rem .9rem;
   border-radius: .7rem;
   border: solid 1px var(--azul-gelo);
-  transition: all 0.3s;
+  background-color: var(--azul-escuro); 
+  transition: transform 0.3s, color 0.3s;
 }
 
-.nav-links li:hover { background-color: var(--branco); }
-.nav-links a { text-decoration: none; color: var(--branco); }
-.nav-links li:hover a { color: var(--azul-escuro); }
+.nav-links li:hover { 
+  background-color: var(--branco);   
+}
 
+.nav-links a { 
+  text-decoration: none; 
+  color: var(--branco); 
+}
 
-/* Aplica em todas as seções que são alvos de links do menu */
+.nav-links a:hover { 
+  color: var(--azul-escuro); 
+}
+
+/* Chamada Menu Hamburguer */
 #home, #servicos, #analises, #duvidas, #agendamentos, #sobre-mim {
-  scroll-margin-top: 100px; /* Ajustar valor p altura header */
+  scroll-margin-top: 100px; 
+  /* Ajustar valor p altura header */
 }
-
-
 
 /*=========== REDES SOCIAIS ===========*/
 
@@ -164,7 +138,7 @@ html {
 }
 
 .social-link:hover {
-  transform: translateY(-3px); /* ícone "sobe" um pouco */
+  transform: translateY(-1px); /* ícone "sobe" um pouco */
 }
 
 .whatsapp:hover {
@@ -176,20 +150,18 @@ html {
 }
 
 
-/*===========================================================
+/*=====================================
   MAIN - AREA
-  ===========================================================*/
-
+  =====================================*/
 
 .main-layout {
   flex-grow: 1;
 }
 
 
-
-/*===========================================================
-  SECTION - HOME
-  ===========================================================*/
+/*=====================================
+  HOME
+  =====================================*/
 
 .home-layout {
   flex-grow: 1;
@@ -203,7 +175,6 @@ html {
 .foto {
   width: 100%;
   height: 450px;
-  /* background: #ddd; */
   margin: 0 auto;  
   align-items: center;
   justify-content: center;
@@ -222,6 +193,8 @@ html {
   width: 100%;
   align-items: center;  
 }
+
+.info-logo {}
 
 .info-logo img{ 
   display: flex;
@@ -244,7 +217,8 @@ html {
 .home-btn {
   display: flex;
   margin-top: 3rem;
-  justify-content: center;  
+  justify-content: center; 
+  text-decoration: none; 
 }
 
 .btn-contate-me {  
@@ -259,12 +233,12 @@ html {
   letter-spacing: .1rem;
 }
 
-/*===========================================================
-  SECTION - SERVIÇO
-  ===========================================================*/
+/*=====================================
+  SERVIÇO
+  =====================================*/
 
 .servico-layout {
-  width: 100%; /* Ocupa a tela toda */
+  width: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -281,8 +255,6 @@ html {
   
 }
 
-/* Card de Título (Branco no topo) */
-/* Card de Título (Colado na Esquerda) */
 .card-dificuldade {
   background-color: antiquewhite;
   width: 70%; /* comprimento do card */
@@ -304,8 +276,6 @@ html {
   padding: .5rem .2rem; 
 }
 
-/* ocupar toda a largura disponível */
-/* Empurra os outros cards para a Direita */
 .ajudar-layout {
   width: 100%;
   display: flex;
@@ -314,12 +284,8 @@ html {
   text-align: center;
   gap: 1rem;
   padding-bottom: 1rem;
-  /* hyphens: auto; */
-  
-
 }
 
-/* Título secundário: Ajustamos a margem para ele não colar na borda */
 .ajudar-layout h3 {
   width: 95%;
   padding: .5rem .3rem;
@@ -329,7 +295,6 @@ html {
   font-size: 1.9rem;
 }
 
-/* Cards Brancos de Informação */
 .card-servico {
   background: white;
   width: 70%; /* comprimento do card */
@@ -348,8 +313,7 @@ html {
   color: #a6736a;
   font-size: 1.5rem;
   line-height: 1.3;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .card-servico strong {
@@ -357,31 +321,26 @@ html {
 }
 
 
-/*===========================================================
-  SECTION - ANALISE
-  ===========================================================*/
-
+/*=====================================
+  ANALISE
+  =====================================*/
 
 .analise-layout {
   display: flex;
-  flex-direction: column;
- 
+  flex-direction: column; 
   background-color: var(--container-claro);  
   justify-content: center;
   align-items: center;
   font-family: 'Nunito', sans-serif;
+  padding: 30px 15px;
 }
 
-
-/* O Título Azul Flutuante */
-.analise-header {
-  
+.analise-header {  
   background-color: #5d6d97;
   color: white;
   padding: 15px 30px;
   margin: 1rem 1rem;
-  border-radius: .5rem;
-  
+  border-radius: .5rem;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -391,6 +350,7 @@ html {
   font-size: 1.4rem;
   font-weight: 500;
   color: var(--branco);
+  line-height: 1.2;
 }
 
 .card-analise {
@@ -398,16 +358,14 @@ html {
   width: 60%;
   padding: 30px 10px 20px 40px;
   border-radius: 40px;
-  margin-bottom: 3rem;
-  
+  margin-bottom: 3rem;  
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-
 .interatividade {    
-  width: 100%;   /* No mobile ocupa tudo */
-  max-width: 630px;  /* telas grandes, trava num tamanho confortável */
-  margin: 0 auto;  /* centraliza o container na tela */    
+  width: 100%;  
+  max-width: 630px;  
+  margin: 0 auto;  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -421,11 +379,11 @@ html {
 .check-item {
   display: flex;
   align-items: flex-start;
-  text-align: left;  /* texto começar na esquerda */
+  text-align: left; 
   position: relative;
   padding-left: 45px;
   margin-bottom: 20px;
-  cursor: pointer; /* Muda o mouse para a mãozinha */
+  cursor: pointer; 
   color: #a6736a;
   font-size: 1.1rem;
   line-height: 1.4;
@@ -467,9 +425,9 @@ html {
   font-weight: bold;
 }
 
-/*===========================================================
+/*=====================================
   SECTION - DUVIDAS
-  ===========================================================*/
+  =====================================*/
 
 
 .duvidas-layout {
@@ -539,9 +497,9 @@ details[open] summary::after {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/*===========================================================
+/*=====================================
   SECTION - AGENDAMENTO
-  ===========================================================*/
+  =====================================*/
 
 .agendamento-layout {
   background-color: var(--container-claro);
@@ -663,9 +621,9 @@ details[open] summary::after {
 
 
 
-/*===========================================================
+/*=====================================
   SECTION - SOBRE-MIM
-  ===========================================================*/
+  =====================================*/
 
 .sobre-mim-layout {
     display: grid;
@@ -743,9 +701,9 @@ details[open] summary::after {
 }
 
 
-/*===========================================================
+/*=====================================
   SECTION - CONTATO
-  ===========================================================*/
+  =====================================*/
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -772,9 +730,9 @@ details[open] summary::after {
     color: #FFF;
 }
 
-/*===========================================================
+/*=====================================
   SECTION - FOOTER
-  ===========================================================*/
+  =====================================*/
 
 .footer-layout {
     /* max-width: 1100px; */

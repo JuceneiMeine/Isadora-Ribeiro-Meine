@@ -1,53 +1,40 @@
-/*=====================================================
-  RESPONSIVIDADE  - 900 PX
-  =====================================================*/
 
-  @media (max-width: 900px) { 
+/*=======================================
+  TABLETS - (de 1024px até 768px)
+=========================================*/
 
-/*=============== SECTION - HEADER ===============*/
-  .header-layout { 
+@media (max-width: 1024px) { }
+  
+
+/*=======================================
+  CELULARES GRANDES - (de 767px até 480px)
+=========================================*/
+
+@media (max-width: 768px) {  
+
+/*=========== HEADER ===========*/
+
+.header-layout { 
     display: flex;    
     gap: 15px;
     padding: .2rem 2rem;   
   }  
+
+/*=========== LOGO ===========*/
+
+  .logo-layout {}
 
   .logo-imagem {
     max-width: 120px;
     min-width: 90px;
   }
 
-  .nav-layout ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 10px;     
-  }
+  .logo-imagem img {}
 
-  .nav-layout li {
-    display: inline-block;
-    font-size: 0.85rem;
-    min-width: 120px; /* botões ficam + largos no celular */
-    text-align: center;
-    white-space: nowrap;
-    padding: 0.3rem;    
-  }
+  /*=========== NAV ===========*/
+  .nav-layout {}
 
-  /* Estilizando links para parecerem botões no celular */
-  .nav-layout a {
-    display: block;
-    width: 100%;
-  }
-  
-.redes-sociais-layout {
-    margin-right: 0; /* Remove margem no desktop */
-    justify-content: center;
-  }
-
-
-
-
-/* Exibe o botão hambúrguer */
+  /* Exibe o botão hambúrguer */
   .menu-mobile-btn {
     display: block;
     background: none;
@@ -59,7 +46,7 @@
     cursor: pointer;
   }
 
-  /* Esconde o menu por padrão no celular */
+/* Esconde o menu por padrão no celular */
   .nav-links {
     display: none; 
     position: absolute;
@@ -82,43 +69,47 @@
   .nav-links ul {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    width: 100%;
+  }  
+
+  .nav-links li {
+    display: inline-block;
+    width: 80%;
+    font-size: 0.85rem;
+    min-width: 120px; /* tamanho botões */
+    text-align: center;
+    white-space: nowrap;
+    padding: 0.3rem;    
   }
 
-  .nav-links li { width: 80%; text-align: center; }
+  /* Estilizando links para parecerem botões no celular */
+  .nav-links a {
+    display: block;
+    width: 100%;
+  }
+  
+  /*========== REDES SOCIAIS =========*/
 
-  .redes-sociais-layout { margin-right: 0; }
-
-}
-
-/*=====================================================
-  RESPONSIVIDADE  - 768 PX
-  =====================================================*/
-
-@media (max-width: 768px) {  
-
-/*=============== SECTION - HEADER ===============*/
-
-
+.redes-sociais-layout {
+    margin-right: 0; /* Remove margem no desktop */
+    justify-content: center;
+  }
     
-/*=============== SECTION - HOME ===============*/
+/*=============== HOME ===============*/
 
 .home-layout {
-    flex-direction: column; /* Empilha foto sobre o texto */
-    padding: 25px 5%;  /* respiro maior laterais e topo */
+    flex-direction: column;
+    padding: 25px 5%;
     text-align: center;
-    gap: 20px;
   }
 
-  .foto {
-    width: 100%;      
+  .foto {    
     height: auto;  /* Remove altura fixa */
     max-width: 350px; /* Limita tamanho p/ foto não estourar */
-    margin: 0 auto;   /* Garante a centralização */
   }
 
   .foto img {
-    width: 100%;
     height: auto;
     object-fit: cover; /* Melhora encaixe da foto no mobile */
   }
@@ -133,42 +124,28 @@
   }
 
   .home-btn {
-    margin-top: 1rem; /*Reduz espaçamento excessivo no mobile*/
-    text-decoration: none;
+    margin-top: 1rem;     
   }
 
 
-/*=============== SECTION - SERVICO ===============*/
+/*============= SERVICO =============*/
 
 .card-dificuldade, .card-servico {
   width: 95vw;
 }
 
 .card-dificuldade h2 {
-  font-size: 1.3rem;
-  
+  font-size: 1.3rem;  
 }
 
 .card-servico p {
   font-size: 1.2rem;
 }
 
-/*=============== SECTION - ANALISE ===============*/
-
-  .analise-layout {
-    padding: 30px 15px; /*Aumenta padding superior*/
-  }
-
-  .card-analise {
-    /* padding: 50px 20px 20px 20px; */
-    padding-left: .8rem;
-    border-radius: .5rem;
-    width: 99%;
-    margin-bottom: 1.5rem;
-  }
+/*============= ANALISE =============*/
 
   .analise-header {
-    width: 98%; /* título não ultrapasse largura do card */
+    width: 98%; 
     white-space: normal; /* texto do título quebre linha se necessário */
     text-align: center;
     padding: 12px 15px;
@@ -176,19 +153,23 @@
   }
 
   .analise-header h2 {
-    font-size: 1.3rem; /* tamanho da fonte do título */
-    line-height: 1.2;
+    font-size: 1.3rem;    
+  }
+
+  .card-analise {
+    padding-left: .8rem;
+    border-radius: .5rem;
+    width: 99%;
+    margin-bottom: 1.5rem;
   }
 
   .interatividade {
-    width: 90%; /* Quase toda a largura no celular */
-    max-width: 650px; /* não passa disso no computador */
-    margin: 0 auto;
+    width: 90%;     
   }
 
   .check-item {
-    font-size: 1rem; /* Diminui levely o texto dos itens */
-    padding-left: 40px; /* Ajusta o recuo para o checkbox */
+    font-size: 1rem; 
+    padding-left: 40px; 
     margin-bottom: 15px;
   }
 
@@ -198,7 +179,7 @@
   }
 
 
-/*=============== SECTION - DUVIDAS ===============*/
+/*=============== DUVIDAS ===============*/
 
   .duvidas-layout {
     padding: 40px 15px; /* Reduz respiro vertical da seção */
@@ -224,7 +205,7 @@
   }
 
 
-/*=============== SECTION - AGENDAMENTO ===============*/
+/*=============== AGENDAMENTO ===============*/
 
 
   .agendamento-layout h2 {
@@ -236,7 +217,7 @@
   }
 
 
-/*=============== SECTION - SOBRE-MIM ===============*/
+/*=============== SOBRE-MIM ===============*/
 
 .sobre-mim-layout {
     display: flex;
@@ -323,11 +304,13 @@
 
 }
 
-/*=====================================================
-  RESPONSIVIDADE  - 375 PX
-  =====================================================*/
 
-@media (max-width: 375px) {  
+/*=======================================
+  CELULARES PEQUENOS (Portrait) - (abaixo de 480px)
+=========================================*/
+
+
+@media (max-width: 480px) {  
 
   .info-texto h2 {
       font-size: 1.5rem;
