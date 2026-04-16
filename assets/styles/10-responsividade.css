@@ -15,9 +15,17 @@
 /*=========== HEADER ===========*/
 
 .header-layout { 
-    display: flex;    
+    display: flex; 
+    position: sticky;
+    z-index: 999;   
     gap: 15px;
-    padding: .2rem 2rem;   
+    padding: .2rem 2rem;  
+    
+    justify-content: space-between; /* Mantém logo de um lado e botão do outro */
+    align-items: center;
+    width: 100vw;
+
+
   }  
 
 /*=========== LOGO ===========*/
@@ -51,15 +59,27 @@
   .nav-links {
     display: none; 
     position: absolute;
-    top: 100%; /* Aparece logo abaixo do header */
-    /* left: 0; */
-    align-items: center;
-    width: 50%;
+    top: 100%;
+
+
+    /* Centralização Horizontal de 50% */
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 50%; 
+
+    z-index: 1000;
+    
     background-color: var(--azul-escuro);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+
+
+    /* Evita que o menu seja cortado se o header for pequeno */
+    overflow: visible;
+
+
   }
 
   /* Classe que o JS vai ativar */
@@ -70,18 +90,13 @@
   .nav-links ul {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
   }  
 
   .nav-links li {
-    display: inline-block;
-    width: 80%;
-    font-size: 0.85rem;
-    min-width: 120px; /* tamanho botões */
-    text-align: center;
-    white-space: nowrap;
-    padding: 0.3rem;    
+    width: 85%; /* Os botões internos ocupam quase todo o menu de 50% */
+    text-align: center;   
   }
 
   /* Estilizando links para parecerem botões no celular */
@@ -92,10 +107,8 @@
   
   /*========== REDES SOCIAIS =========*/
 
-.redes-sociais-layout {
-    margin-right: 0; /* Remove margem no desktop */
-    justify-content: center;
-  }
+
+
     
 /*=============== HOME ===============*/
 
@@ -292,6 +305,15 @@
   .item-contato {
     justify-content: center;
   }
+
+  /* Ajuste Responsivo (opcional, se quiser menor no celular) */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        bottom: 15px;
+        left: 15px;
+    }
 
 }
 
