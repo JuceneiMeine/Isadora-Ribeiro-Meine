@@ -32,14 +32,15 @@
   .logo-imagem img {}
 
   /*=========== NAV ===========*/
+
   .nav-layout {}
 
   /* Exibe o botão hambúrguer */
   .menu-mobile-btn {
     display: block;
     background: none;
-    border: 1px solid var(--branco);
-    color: var(--branco);
+    border: 1px solid var(--white);
+    color: var(--white);
     font-size: 1.8rem;
     padding: 5px 10px;
     border-radius: 5px;
@@ -194,21 +195,22 @@
     font-size: 1rem;    /* Fonte menor para caber melhor */
   }
 
-
   summary::after {
     font-size: 1.2rem; /* Diminui ícone de + */
   }
 
-
   .faq-content {
-    padding: 0 20px 20px 20px; /* Reduz espaço interno */
+    padding: 0 0px 0px 0px; /* Reduz espaço interno */
     font-size: 0.95rem;  /* Melhora leitura telas pequenas */
+    width: 96%;
   }
   
 
 /*========== AGENDAMENTO =============*/
 
-
+.card h3 {
+  font-size: 1.6rem;
+}
 
   
 /*============ SOBRE-MIM ============*/

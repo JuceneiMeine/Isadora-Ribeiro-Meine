@@ -7,53 +7,39 @@ CORES PADRONIZADAS - Variáveis de Cores
 
   /* PALETA CORES - ISADORA */
 
-  --marrom-escuro: #a76964; 
-  --marrom-medio: #c69c94;  
+  --white:#fff;
+  --black:#222;
 
+  --marrom-escuro: #a76964; 
+  --marrom-medio: #c69c94; 
+  --marrom-claro: #d0b1ab; 
+
+  --marrom-vinho: #8e5d56;
   --marrom-salmao: #e0b29c;
 
-  --azul-escuro: #52648d;   
-
-  --bege-escuro: #f4e7d3;
-  --bege-claro: #fffbee;
-
-
-    /* Cores Auxiliares */
-
-  --container-escuro: #e0b29c; 
-  --container-claro: #fffbee;
-
-
-
-  --marrom-claro: #d0b1ab;
+  --azul-escuro: #52648d;
   --azul-claro: #A7D8F0;
   --azul-gelo: #E1E9F5;
 
-  --branco:#fff;
-  --preto:#222;
+  --bege-escuro: #fafad2;
+  --bege-claro: #fffbee;
 
 
-  /* CORES EXTRAS */
+  /* CORES AUXILIARES */
 
-  --rosa-fundo: #c69a91; /* Cor extraída da imagem */
-  --creme-fundo: #fdfaf3;
+  --verde-escuro: #1b5e3a;
+  --verde-medio: #20ba5a;
+  --verde-claro: #25d366;    
 
-  --rosa-claro: #e5c3b8;
-  --texto-vinho: #8e5d56;
-  --fundo-creme: #fdfaf3;
-  
-
-  --palha-1:#FAFAD2;
-
-  --creme-1:#ffff94;
+  --creme:#ffff94;
 
   --amarelo-escuro:#FFD700;
   --amarelo-medio:#F5EF52;
   --amarelo-claro:#FAF7A9;
 
-  --dourado-escuro:#b28405;
-  --dourado-medio:#fbc02d;   
-  --dourado-claro:#f9db5c;
+  --gold-escuro:#b28405;
+  --gold-medio:#fbc02d;   
+  --gold-claro:#f9db5c;
 
   --laranja-escuro:#FF4D00;  
   --laranja-medio:#FF8C00;
@@ -64,9 +50,8 @@ CORES PADRONIZADAS - Variáveis de Cores
   --abobora:#FF7518;
 
   --grafite-escuro:#2e2e2e;
-  --grafite-medio:#4e4949;
-  
-  --grafite-azul:#474a51;
+  --grafite-medio:#4e4949;  
+  --grafite-claro:#474a51;
 }
 
 

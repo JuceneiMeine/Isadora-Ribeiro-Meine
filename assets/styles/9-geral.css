@@ -13,10 +13,10 @@
   font-optical-sizing: auto;
   height: 100vh;
   max-width: 100vw;
-  background: var(--creme-2); 
-  color: var(--preto); 
+  background: var(--bege-claro); 
+  color: var(--black); 
   padding: 0;
-  margin: 0 auto; /* Centraliza o site */
+  margin: 0 auto;
 }
 
 /*=====================================
@@ -62,7 +62,7 @@ html {
 /*=========== LOGO ===========*/
 
 .logo-layout {
-  flex-shrink: 0; /* logo mantenha seu tamanho original */
+  flex-shrink: 0; /* logo tamanho original */
 }
 
 .logo-imagem {}
@@ -94,7 +94,7 @@ html {
 
 .nav-links li {
   font-family: 'Nunito', sans-serif;
-  color: var(--branco);
+  color: var(--white);
   padding: .3rem .9rem;
   border-radius: .7rem;
   border: solid 1px var(--azul-gelo);
@@ -103,12 +103,12 @@ html {
 }
 
 .nav-links li:hover { 
-  background-color: var(--branco);   
+  background-color: var(--white);   
 }
 
 .nav-links a { 
   text-decoration: none; 
-  color: var(--branco); 
+  color: var(--white); 
 }
 
 .nav-links a:hover { 
@@ -133,7 +133,7 @@ html {
 .social-link {
   text-decoration: none;
   font-size: 2.5rem;  /* Tamanho do ícone */
-  color: var(--branco);  
+  color: var(--white);  
   transition: transform 0.3s, color 0.3s;
 }
 
@@ -169,7 +169,7 @@ html {
   align-items: center;
   padding: 10px 2%;
   gap: 20px;    
-  background-color: var(--container-claro); 
+  background-color: var(--bege-claro); 
 }
 
 .foto {
@@ -223,7 +223,7 @@ html {
 
 .btn-contate-me {  
   background-color: var(--azul-escuro);
-  color: white;
+  color: var(--white);
   border: none;
   padding: .5rem 1rem;
   cursor: pointer;
@@ -249,14 +249,13 @@ html {
 
 .card-dificuldade-layout {
   width: 100vw;
-  background-color: var(--container-claro);
+  background-color: var(--bege-claro);
   display: flex;
-  justify-content: center;
-  
+  justify-content: center;  
 }
 
 .card-dificuldade {
-  background-color: antiquewhite;
+  background-color:var(--marrom-medio);
   width: 70%; /* comprimento do card */
   padding: .7rem 1rem;
   border-radius: .3rem; 
@@ -270,7 +269,7 @@ html {
 
 .card-dificuldade h2 {
   margin: 0;
-  color: #a6736a;
+  color: var(--white);
   font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
   padding: .5rem .2rem; 
@@ -291,12 +290,12 @@ html {
   padding: .5rem .3rem;
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  color: var(--branco);
+  color: var(--white);
   font-size: 1.9rem;
 }
 
 .card-servico {
-  background: white;
+  background: var(--white);
   width: 70%; /* comprimento do card */
   padding: .7rem 1rem;
   border-radius: .5rem;    
@@ -310,14 +309,14 @@ html {
 
 .card-servico p {
   margin: 0;
-  color: #a6736a;
+  color: var(--marrom-escuro);
   font-size: 1.5rem;
   line-height: 1.3;
   text-align: center;  
 }
 
 .card-servico strong {
-  color: #8c5a52;
+  color: var(--marrom-escuro);
 }
 
 
@@ -328,7 +327,7 @@ html {
 .analise-layout {
   display: flex;
   flex-direction: column; 
-  background-color: var(--container-claro);  
+  background-color: var(--bege-claro);  
   justify-content: center;
   align-items: center;
   font-family: 'Nunito', sans-serif;
@@ -336,8 +335,8 @@ html {
 }
 
 .analise-header {  
-  background-color: #5d6d97;
-  color: white;
+  background-color: var(--azul-escuro);
+  color: var(--white);
   padding: 15px 30px;
   margin: 1rem 1rem;
   border-radius: .5rem;  
@@ -348,13 +347,13 @@ html {
   font-family: 'Nunito', sans-serif;
   margin: 0;
   font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--branco);
+  font-weight: 700;
+  color: var(--white);
   line-height: 1.2;
 }
 
 .card-analise {
-  background-color: white;
+  background-color: var(--white);
   width: 60%;
   padding: 30px 10px 20px 40px;
   border-radius: 40px;
@@ -379,12 +378,12 @@ html {
   padding-left: 45px;
   margin-bottom: 20px;
   cursor: pointer; 
-  color: #a6736a;
+  color: var(--marrom-escuro);
   font-size: 1.1rem;
   line-height: 1.4;
   transition: all 0.2s;
 
-  /* Remove o destaque azul ao tocar no celular */
+  /* Remove destaque azul tocar no celular */
   -webkit-tap-highlight-color: transparent;
 
   /* Impede que o texto seja "selecionado" (ficando azul) ao clicar rápido */
@@ -399,7 +398,7 @@ html {
   top: 0;
   width: 28px;
   height: 28px;
-  border: 2px solid #a6736a;
+  border: 2px solid var(--marrom-escuro);
   border-radius: 6px;
   background-color: transparent;
   transition: all 0.3s;
@@ -407,14 +406,14 @@ html {
 
 /* Quando o item está marcado (O que acontece no clique) */
 .check-item input:checked + .checkbox-opcao {
-  background-color: #a6736a; /* Preenche o fundo */
+  background-color: var(--marrom-escuro); /* Preenche o fundo */
 }
 
-/* O símbolo de Check (✔) que aparece quando marcado */
+/* O símbolo de Check (✔) */
 .check-item input:checked + .checkbox-opcao::after {
   content: '✔';
   position: absolute;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   left: 50%;
   top: 50%;
@@ -423,7 +422,7 @@ html {
 
 /* Se o item tem um input checado, deixe o texto em negrito e mude a cor */
 .check-item:has(input:checked) {
-  color: #5d6d97; 
+  color: var(--azul-escuro); 
   font-weight: bold;
 }
 
@@ -433,14 +432,14 @@ html {
 
 
 .duvidas-layout {
-  background-color: var(--container-escuro); 
-  padding: 60px 20px;
+  background-color: var(--marrom-medio); 
+  padding: 20px 30px;
   text-align: center;
 }
 
 .duvidas-layout h2 {
-  color: white;
-  margin-bottom: 40px;
+  color: var(--white);
+  margin-bottom: 3rem;
   font-family: sans-serif;
 }
 
@@ -452,12 +451,13 @@ html {
 
 .faq-item {
   width: 80%;
-  background-color: white;
+  background-color: var(--white);
   margin-bottom: 20px;
   border-radius: 4px; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: left;
   overflow: hidden;
+
 }
 
 /* Gira o sinal quando o FAQ está aberto */
@@ -473,29 +473,55 @@ summary {
   cursor: pointer;
   font-family: 'Nunito', sans-serif;
   font-weight: bold;
-  color: #a6736a;
+  color: var(--marrom-escuro);
   font-size: 1.3rem;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+
+  
 }
 
 /* Criando o sinal de + customizado */
 summary::after {
   content: '+';
   font-size: 1.5rem;
-  color: #a6736a;
+  color: var(--marrom-escuro);
   transition: transform 0.3s ease;
+
+  cursor: pointer;
+  padding: 10px 0;
+  list-style: none; /* Esconde a seta em alguns navegadores */
+
+  
+
+}
+
+summary::-webkit-details-marker {
+  display: none; /* Esconde a seta no Safari/Chrome */
 }
 
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
   padding: 0 40px 25px 40px;
-  color: #a6736a;
+
+  border-top: 3px solid var(--azul-escuro);
+  width: 90%; /* Define o comprimento da linha */
+  padding-top: 15px;
+  margin-top: 10px;
+
+  color: var(--marrom-escuro);
   font-size: 1.2rem;
   line-height: 1.1;
   animation: slideDown 0.4s ease-out;
+
+  margin-left: auto;  /* Joga o espaço para a esquerda */
+  margin-right: auto; /* Joga o espaço para a direita, centralizando */
+  
+  text-align: center; /* Centraliza o texto dentro da div também */
+
 }
 
 /* Animação suave para abrir */
@@ -509,8 +535,7 @@ summary::after {
   =====================================*/
 
 .agendamento-layout {
-  background-color: var(--container-claro);
-  padding: 1rem 0;
+  background-color: var(--bege-claro);  
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
@@ -519,7 +544,7 @@ summary::after {
 .agendamento-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
-  margin: 10px auto; /* separar das outras seções */
+  margin: 0 auto; /* separar das outras seções */
   
   padding-bottom: 2.5rem; 
   
@@ -530,7 +555,7 @@ summary::after {
 }
 
 .agendamento-bg-azul h2 {
-  color: white;
+  color: var(--white);
   margin: 2.2rem 0 3.2rem 0;
   font-size: 1.6rem;
 }
@@ -553,7 +578,7 @@ summary::after {
 
 /* O Card Individual */
 .card {
-  background: white;
+  background: var(--white);
   width: 320px;  
   height: auto; /* permite que o card cresça com o texto */
   min-height: 150px; 
@@ -571,8 +596,8 @@ summary::after {
 .numero {
   position: absolute;
   top: -20px;
-  background-color: var(--rosa-claro);
-  color: white;
+  background-color: var(--marrom-claro);
+  color: var(--marrom-escuro);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -584,15 +609,15 @@ summary::after {
 }
 
 .card h3 {
-  color: var(--texto-vinho);
+  color: var(--marrom-escuro);
   font-size: 1.8rem;
   margin: 0;
 }
 
 .btn-saiba-mais {
   margin-top: 20px;
-  background: white;
-  border: 1px solid var(--rosa-claro);
+  background: var(--white);
+  border: 1px solid var(--marrom-claro);
   color: var(--azul-escuro);
   padding: 10px 30px;
   border-radius: 10px;
@@ -601,7 +626,7 @@ summary::after {
 }
 
 .btn-saiba-mais:hover {
-  background-color: var(--branco);
+  background-color: var(--white);
   color: var(--azul-escuro);
 }
 
@@ -634,19 +659,18 @@ summary::after {
   align-items: center;
   max-width: 100%;
   position: relative;
-  background-color: var(--container-claro);
+  background-color: var(--bege-claro);
   padding: 6.2rem 1.2rem;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Bloco Rosa de Fundo */
 .texto-card {
-  background-color: var(--rosa-fundo);
+  background-color: var(--marrom-medio);
   padding: 60px 60px 60px 180px; 
   border-radius: .8rem;
-  color: white;
+  color: var(--white);
   align-items: center;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -657,7 +681,7 @@ summary::after {
 .foto-wrapper {
   position: relative;
   z-index: 2;
-  margin-right: -100px; /* Puxa foto p dentro bloco rosa */
+  margin-right: -100px; 
   margin-top: 60px;
 }
 
@@ -676,6 +700,7 @@ summary::after {
   font-size: 3.5rem;
   margin-bottom: 25px;
   font-weight: 600;
+  color: var(--white);
 }
 
 .texto-principal p {
@@ -690,8 +715,8 @@ summary::after {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: white;
-  color: var(--rosa-fundo);
+  background: var(--white);
+  color: var(--marrom-medio);
   padding: 10px 25px;
   border-radius: .8rem;
   text-decoration: none;
@@ -730,8 +755,8 @@ summary::after {
   height: 60px;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  color: #FFF;
+  background-color: var(--verde-claro);
+  color: var(--white);
   border-radius: 50px;
   text-align: center;
   font-size: 40px;
@@ -746,8 +771,8 @@ summary::after {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    background-color: #20ba5a;
-    color: #FFF;
+    background-color: var(--verde-medio);
+    color: var(--white);
 }
 
 /*=====================================
@@ -763,8 +788,8 @@ summary::after {
     align-items: center;
     flex-wrap: wrap; /* telas pequenas itens quebrem linha */
     gap: 20px;
-    background-color: #5d6d8e;
-    color: white;
+    background-color: var(--azul-escuro);
+    color: var(--white);
     padding: 20px 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: .3rem;
@@ -781,40 +806,40 @@ summary::after {
 }
 
 .perfil-logo img {
-  height: 6.5rem;  /* tamanho da imagem - logo do footer */
+  height: 6.5rem; 
   width: auto;   /* Mantém a proporção */
   display: block;
 }
 
 .info-texto h2 {
-    font-size: 2rem;
-    margin: 0;
-    font-weight: 500;
-    color: var(--branco);
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 500;
+  color: var(--white);
 }
 
 .info-texto p {
-    margin: 2px 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
+  margin: 2px 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
 }
 
 .contatos {
-    text-align: left;
+  text-align: left;
 }
 
 .chamada {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
 }
 
 .item-contato {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
 
