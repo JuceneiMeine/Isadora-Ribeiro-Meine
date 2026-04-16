@@ -162,11 +162,7 @@
     width: 99%;
     margin-bottom: 1.5rem;
   }
-
-  .interatividade {
-    width: 90%;     
-  }
-
+  
   .check-item {
     font-size: 1rem; 
     padding-left: 40px; 
@@ -178,11 +174,10 @@
     height: 24px;
   }
 
-
-/*=============== DUVIDAS ===============*/
+/*============= DUVIDAS =============*/
 
   .duvidas-layout {
-    padding: 40px 15px; /* Reduz respiro vertical da seção */
+    padding: 40px .2rem; /* Reduz respiro vertical da seção */
   }
 
   .duvidas-layout h2 {
@@ -190,41 +185,40 @@
     margin-bottom: 25px;
   }
 
+  .faq-item {
+    width: 95%;
+  }
+
   summary {
     padding: 15px 20px; /* Reduz espaço interno da pergunta */
     font-size: 1rem;    /* Fonte menor para caber melhor */
   }
 
-  .faq-content {
-    padding: 0 20px 20px 20px; /* Reduz espaço interno */
-    font-size: 0.95rem;  /* Melhora leitura telas pequenas */
-  }
 
   summary::after {
     font-size: 1.2rem; /* Diminui ícone de + */
   }
 
 
-/*=============== AGENDAMENTO ===============*/
-
-
-  .agendamento-layout h2 {
-    padding-bottom: 200px;
+  .faq-content {
+    padding: 0 20px 20px 20px; /* Reduz espaço interno */
+    font-size: 0.95rem;  /* Melhora leitura telas pequenas */
   }
+  
 
-  .cards-agendamento {
-    margin-top: -180px;
-  }
+/*========== AGENDAMENTO =============*/
 
 
-/*=============== SOBRE-MIM ===============*/
+
+  
+/*============ SOBRE-MIM ============*/
 
 .sobre-mim-layout {
     display: flex;
     flex-direction: column; /* Força a coluna */
     align-items: center; /* Centraliza itens horizontalmente */
     justify-content: center;
-    padding: 40px 20px;
+    padding: 3rem 0;
     gap: 0;     /* controlar gap manualmente via margens */
   }
 
@@ -250,26 +244,21 @@
     width: 100%;
     max-width: 100%;
     padding: 80px 25px 40px 25px; 
-    text-align: center;  /* Centraliza todos textos internos */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
   }
 
   .texto-principal p {
     text-align: center;  /* parágrafos fiquem centralizados */
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
   }
 
   .btn-insta {
-    margin-top: 20px;
     width: fit-content; /* Botão se ajusta ao texto e centraliza */
   }
   
 
-  /*=============== WHATSAPP FLUTUANTE ===============*/
+  /*====== WHATSAPP FLUTUANTE ========*/
 
   .whatsapp-float {
     width: 50px;
@@ -279,7 +268,7 @@
     font-size: 35px;
   }
 
-  /*=============== FOOTER ===============*/
+  /*============ FOOTER ==============*/
 
   .footer-layout {
     flex-direction: column;

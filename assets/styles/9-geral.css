@@ -362,18 +362,13 @@ html {
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-.interatividade {    
-  width: 100%;  
-  max-width: 630px;  
-  margin: 0 auto;  
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 /* Esconde o checkbox original feio */
 .check-item input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .check-item {
@@ -388,6 +383,13 @@ html {
   font-size: 1.1rem;
   line-height: 1.4;
   transition: all 0.2s;
+
+  /* Remove o destaque azul ao tocar no celular */
+  -webkit-tap-highlight-color: transparent;
+
+  /* Impede que o texto seja "selecionado" (ficando azul) ao clicar rápido */
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* O quadrado do checkbox desmarcado */
@@ -426,7 +428,7 @@ html {
 }
 
 /*=====================================
-  SECTION - DUVIDAS
+  DUVIDAS
   =====================================*/
 
 
@@ -445,9 +447,11 @@ html {
 .faq-container {
   max-width: 100%;
   margin: 0 auto;
+  justify-items: center;
 }
 
 .faq-item {
+  width: 80%;
   background-color: white;
   margin-bottom: 20px;
   border-radius: 4px; 
@@ -456,12 +460,10 @@ html {
   overflow: hidden;
 }
 
-/* Estilo da Resposta (O que aparece ao clicar) */
-.faq-content {
-  padding: 0 40px 25px 40px;
-  color: #a6736a;
-  line-height: 1.6;
-  animation: slideDown 0.4s ease-out;
+/* Gira o sinal quando o FAQ está aberto */
+details[open] summary::after {
+  transform: rotate(45deg); /* O + vira um X ou apenas gira */
+  
 }
 
 /* Estilo da Pergunta (O que fica visível) */
@@ -469,9 +471,10 @@ summary {
   padding: 25px 40px;
   list-style: none; /* Remove setinha padrão do navegador */
   cursor: pointer;
+  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   color: #a6736a;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -486,9 +489,13 @@ summary::after {
   transition: transform 0.3s ease;
 }
 
-/* Gira o sinal quando o FAQ está aberto */
-details[open] summary::after {
-  transform: rotate(45deg); /* O + vira um X ou apenas gira */
+/* Estilo da Resposta (O que aparece ao clicar) */
+.faq-content {
+  padding: 0 40px 25px 40px;
+  color: #a6736a;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  animation: slideDown 0.4s ease-out;
 }
 
 /* Animação suave para abrir */
@@ -498,7 +505,7 @@ details[open] summary::after {
 }
 
 /*=====================================
-  SECTION - AGENDAMENTO
+  AGENDAMENTO
   =====================================*/
 
 .agendamento-layout {
@@ -512,11 +519,11 @@ details[open] summary::after {
 .agendamento-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
-  margin: 10px auto; /* Margem p separar das outras seções */
+  margin: 10px auto; /* separar das outras seções */
   
-  padding-bottom: 1rem; 
+  padding-bottom: 2.5rem; 
   
-  /* Flexbox para alinhar tudo dentro do azul */
+  /* alinhamento Flexbox */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -524,7 +531,7 @@ details[open] summary::after {
 
 .agendamento-bg-azul h2 {
   color: white;
-  margin-bottom: 50px; /* Espaço entre o título e os cards */
+  margin: 2.2rem 0 3.2rem 0;
   font-size: 1.6rem;
 }
 
@@ -550,7 +557,7 @@ details[open] summary::after {
   width: 320px;  
   height: auto; /* permite que o card cresça com o texto */
   min-height: 150px; 
-  border-radius: 20px;
+  border-radius: .5rem;
   padding: 40px 25px;
   display: flex;
   flex-direction: column;
@@ -617,93 +624,106 @@ details[open] summary::after {
 }
 
 
-
-
-
-
 /*=====================================
-  SECTION - SOBRE-MIM
+  SOBRE-MIM
   =====================================*/
 
 .sobre-mim-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
-    align-items: center;
-    max-width: 100%;
-    position: relative;
-    background-color: var(--container-claro);
-    padding: 100px 20px;
-    display: flex;
-    justify-content: center;
-    font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  background-color: var(--container-claro);
+  padding: 6.2rem 1.2rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Bloco Rosa de Fundo */
 .texto-card {
-    background-color: var(--rosa-fundo);
-    padding: 60px 60px 60px 120px; 
-    border-radius: 40px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    z-index: 1;
+  background-color: var(--rosa-fundo);
+  padding: 60px 60px 60px 180px; 
+  border-radius: .8rem;
+  color: white;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 1;
 }
 
 /* Moldura e Foto */
 .foto-wrapper {
-    position: relative;
-    z-index: 2;
-    margin-right: -100px; /* Puxa foto p dentro bloco rosa */
-    margin-top: 60px;
+  position: relative;
+  z-index: 2;
+  margin-right: -100px; /* Puxa foto p dentro bloco rosa */
+  margin-top: 60px;
 }
 
 .foto-wrapper img {
-    width: 300px;
-    max-width: 400px;
-    height: auto;    
-    border-radius: 20px 50px 50px 20px; 
-    object-fit: cover;
-    display: block;
-    box-shadow: 5px 5px 55px rgba(0,0,0,0.45);    
+  width: 300px;
+  max-width: 400px;
+  height: auto;    
+  border-radius: 20px 50px 50px 20px; 
+  object-fit: cover;
+  display: block;
+  box-shadow: 5px 5px 55px rgba(0,0,0,0.45);    
 }
 
 /* Tipografia */
 .texto-card h2 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
-    font-weight: 500;
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .texto-principal p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-weight: 300;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 /* Botão Instagram */
 .btn-insta {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: white;
-    color: var(--rosa-fundo);
-    padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: var(--rosa-fundo);
+  padding: 10px 25px;
+  border-radius: .8rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  transition: transform 0.3s ease;
 }
 
 .btn-insta:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Seleciona especificamente o ícone do Instagram */
+.fab.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  
+  /* Faz o degradê aparecer apenas dentro do ícone */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Torna a cor original do ícone transparente para revelar o fundo */
+  -webkit-text-fill-color: transparent;
+  
+  /* Ajuste de tamanho opcional */
+  font-size: 1.5rem; 
+  vertical-align: middle;
+}
 
 /*=====================================
-  SECTION - CONTATO
+  CONTATO
   =====================================*/
+
 .whatsapp-float {
   position: fixed;
   width: 60px;
