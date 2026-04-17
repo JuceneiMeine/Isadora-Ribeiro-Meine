@@ -125,7 +125,7 @@ html {
 }
 
 /* Chamada Menu Hamburguer */
-#home, #servicos, #analises, #duvidas, #agendamentos, #sobre-mim {
+#home, #servicos, #analises, #duvidas, #terapia, #sobre-mim {
   scroll-margin-top: 0; 
   /* Ajustar valor p altura header */
 }
@@ -468,9 +468,7 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-
-  
+  text-align: center;  
 }
 
 /* Criando o sinal de + customizado */
@@ -483,9 +481,6 @@ summary::after {
   cursor: pointer;
   padding: 10px 0;
   list-style: none; /* Esconde a seta em alguns navegadores */
-
-  
-
 }
 
 summary::-webkit-details-marker {
@@ -494,9 +489,9 @@ summary::-webkit-details-marker {
 
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
-  padding: 0 40px 25px 40px;
+  padding: 1px 40px 25px 40px;
 
-  border-top: 3px solid var(--azul-escuro);
+  border-top: 1px ridge var(--marrom-medio);
   width: 90%; /* Define o comprimento da linha */
   padding-top: 15px;
   margin-top: 10px;
@@ -510,7 +505,7 @@ summary::-webkit-details-marker {
   margin-right: auto; /* Joga o espaço para a direita, centralizando */
   
   text-align: center; /* Centraliza o texto dentro da div também */
-
+  background-color: var(--bege-claro);
 }
 
 /* Animação suave para abrir */
@@ -520,17 +515,17 @@ summary::-webkit-details-marker {
 }
 
 /*=====================================
-  AGENDAMENTO
+  TERAPIA
   =====================================*/
 
-.agendamento-layout {
+.terapia-layout {
   background-color: var(--bege-claro);  
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
 /* O Container que define o fundo azul */
-.agendamento-bg-azul {
+.terapia-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
   margin: 0 auto; /* separar das outras seções */
@@ -543,14 +538,14 @@ summary::-webkit-details-marker {
   align-items: center;
 }
 
-.agendamento-bg-azul h2 {
+.terapia-bg-azul h2 {
   color: var(--white);
   margin: 2.2rem 0 3.2rem 0;
   font-size: 1.6rem;
 }
 
 /* Container dos Cards */
-.cards-agendamento {
+.cards-terapia {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -649,7 +644,7 @@ summary::-webkit-details-marker {
   max-width: 100%;
   position: relative;
   background-color: var(--bege-claro);
-  padding: 6.2rem 1.2rem;
+  padding: 1rem 1.2rem;
   display: flex;
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
@@ -657,7 +652,7 @@ summary::-webkit-details-marker {
 
 .texto-card {
   background-color: var(--marrom-medio);
-  padding: 60px 60px 60px 180px; 
+  padding: 20px 60px 60px 180px; 
   border-radius: .8rem;
   color: var(--white);
   align-items: center;
@@ -828,7 +823,7 @@ summary::-webkit-details-marker {
 
 
 /*=====================================
-  SECTION - FOOTER
+  FOOTER
   =====================================*/
 
 .footer-layout {
@@ -842,7 +837,7 @@ summary::-webkit-details-marker {
     gap: 20px;
     background-color: var(--azul-escuro);
     color: var(--white);
-    padding: 20px 10px;
+    padding: 1.5rem 6rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: .3rem;
 }
@@ -881,8 +876,8 @@ summary::-webkit-details-marker {
 }
 
 .chamada {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
   opacity: 0.8;
 }
 
@@ -893,6 +888,13 @@ summary::-webkit-details-marker {
   margin-bottom: 8px;
   font-size: 1.2rem;
 }
+
+.item-contato span {
+  padding-left: .5rem;
+  color: var(--white);
+}
+
+
 
 
 

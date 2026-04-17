@@ -176,7 +176,7 @@
     width: 99%;
     margin-bottom: 1.5rem;
   }
-  
+
   .check-item {
     font-size: 1rem; 
     padding-left: 40px; 
@@ -201,34 +201,37 @@
 
   .faq-item {
     width: 95%;
+    text-align: left;   
   }
 
   summary {
-    padding: 15px 20px; /* Reduz espaço interno da pergunta */
+    padding: 15px 10px; /* Reduz espaço interno da pergunta */
     font-size: 1rem;    /* Fonte menor para caber melhor */
+    text-align: center;
   }
 
   summary::after {
-    font-size: 1.2rem; /* Diminui ícone de + */
+    font-size: 1.4rem; /* Diminui ícone de + */
+    
   }
 
   .faq-content {
-    padding: 0 0px 0px 0px; /* Reduz espaço interno */
+    padding: 0 0; /* Reduz espaço interno */
     font-size: 0.95rem;  /* Melhora leitura telas pequenas */
     width: 96%;
   }
   
 
-/*========== AGENDAMENTO =============*/
+/*========== TERAPIA =============*/
 
-.card h3 {
-  font-size: 1.6rem;
-}
+  .card h3 {
+    font-size: 1.6rem;
+  }
 
   
 /*============ SOBRE-MIM ============*/
 
-.sobre-mim-layout {
+  .sobre-mim-layout {
     display: flex;
     flex-direction: column; /* Força a coluna */
     align-items: center; /* Centraliza itens horizontalmente */
@@ -251,8 +254,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 30%; /* deixa foto redonda no mobile */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);    
   }
 
   .texto-card {
@@ -261,6 +263,10 @@
     padding: 80px 25px 40px 25px; 
     display: flex;
     flex-direction: column;
+  }
+
+  .texto-card h2 {
+    font-size: 3rem;
   }
 
   .texto-principal p {
@@ -288,6 +294,7 @@
   .footer-layout {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem 2rem;
   }
 
   .perfil {
@@ -298,22 +305,32 @@
     height: 3.5rem;   
   }
 
+  .info-texto h2 {
+    font-size: 1.8rem;
+  }
+
   .contatos {
     text-align: center;
   }
 
+  .chamada {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+
   .item-contato {
     justify-content: center;
+    padding-bottom: 2.5rem;
   }
 
   /* Ajuste Responsivo (opcional, se quiser menor no celular) */
-    .back-to-top {
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
-        bottom: 15px;
-        left: 15px;
-    }
+  .back-to-top {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    bottom: 20px;
+    left: 20px;
+  }
 
 }
 
@@ -333,6 +350,32 @@
     height: 2.5rem;   
   }
 
+  .chamada {
+    font-size: .9rem;
+  }
+
+
+}
+
+
+
+@media (max-width: 320px) {  
+
+  .info-texto h2 {
+      font-size: 1.5rem;
+  }
+
+  .perfil-logo img {
+    height: 2.5rem;   
+  }
+
+  .chamada {
+    font-size: .9rem;
+  }
+
+  .card {
+    width: 96%;;
+  }
 
 }
 
