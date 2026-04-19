@@ -105,10 +105,6 @@
     width: 100%;
   }
   
-  /*========== REDES SOCIAIS =========*/
-
-
-
     
 /*=============== HOME ===============*/
 
@@ -144,12 +140,17 @@
 
 /*============= SERVICO =============*/
 
-.card-dificuldade, .card-servico {
+.card-servico {
   width: 95vw;
 }
 
-.card-dificuldade h2 {
-  font-size: 1.3rem;  
+.ajudar-layout h3 {
+  font-size: 1.8rem;
+  margin: 0 auto;
+}
+
+.subtitle {
+  text-align: center;
 }
 
 .card-servico p {

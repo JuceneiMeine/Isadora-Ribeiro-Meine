@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.getElementById('nav-links');
 
     if (menuBtn && navLinks) {
-        // Clique no botão hambúrguer
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
@@ -19,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Fechar menu ao rolar a página
         window.addEventListener('scroll', () => {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Fechar menu ao clicar fora dele
         document.addEventListener('click', (e) => {
             if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
                 navLinks.classList.remove('active');
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 const section = document.querySelector(targetId);
 
                 if (section) {
-                    // Fecha o menu mobile ao clicar em um link
                     if (navLinks) navLinks.classList.remove('active');
                     if (menuBtn) {
                         const icon = menuBtn.querySelector('i');
@@ -65,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             icon.classList.remove('fa-xmark');
                         }
                     }
-
                     section.scrollIntoView({ behavior: 'smooth' });
                 }
             }
@@ -73,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ============================================
-       3. AGENDAMENTO - EXPANDIR DESCRIÇÃO
+       3. CARDS DE SERVIÇO - EXPANDIR CONTEÚDO
        =========================================== */
     const botoesSaibaMais = document.querySelectorAll('.btn-saiba-mais');
 
@@ -82,18 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             e.stopPropagation();
 
-            const descricao = this.nextElementSibling;
+            // Busca o card pai e o parágrafo de conteúdo dentro dele
+            const card = this.closest('.card-servico');
+            const conteudo = card.querySelector('.conteudo-oculto');
 
-            if (descricao && descricao.classList.contains('descricao')) {
-                descricao.classList.toggle('ativo');
-
-                if (descricao.classList.contains('ativo')) {
+            if (conteudo) {
+                conteudo.classList.toggle('ativo');
+                
+                // Atualiza o texto do botão e estilo visual
+                if (conteudo.classList.contains('ativo')) {
                     this.textContent = 'Fechar';
+                    this.classList.add('aberto');
                 } else {
                     this.textContent = 'Saiba mais';
+                    this.classList.remove('aberto');
                 }
-            } else {
-                console.error("Erro: Tag <p class='descricao'> não encontrada após o botão.");
             }
         });
     });
@@ -131,16 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
     /* ============================================
-       6. BOTÃO VOLTAR AO TOPO (Lógica)
+       6. BOTÃO VOLTAR AO TOPO
        ============================================ */
     const backToTopBtn = document.getElementById('back-to-top');
 
     if (backToTopBtn) {
-        // Função para monitorar o scroll e mostrar/esconder o botão
         window.addEventListener('scroll', () => {
-            // Se rolar mais de 300px para baixo, mostra o botão
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
             } else {
@@ -148,11 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Função para rolar para o topo ao clicar
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
-                behavior: 'smooth' // Rolagem suave
+                behavior: 'smooth'
             });
         });
     }
