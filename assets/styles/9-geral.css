@@ -260,6 +260,10 @@ html {
   align-items: flex-start;
 }
 
+.icon {
+  color: var(--azul-escuro);
+}
+
 /* Estilo Individual do Card */
 .card-servico {
   background: var(--white);
@@ -336,18 +340,6 @@ html {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /*=====================================
   ANALISE
   =====================================*/
@@ -362,13 +354,26 @@ html {
   padding: 30px 15px;
 }
 
-.analise-header {  
+.analise-header, .diagnostico {  
   background-color: var(--azul-escuro);
   color: var(--white);
   padding: 15px 30px;
   margin: 1rem 1rem;
   border-radius: .5rem;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.diagnostico {  
+  background-color: var(--azul-escuro);
+  color: var(--white);
+  padding: 15px 30px;
+  margin: 1rem 1rem;
+  border-radius: .5rem;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.diagnostico h3, .diagnostico p {
+  text-align: center;
 }
 
 .analise-header h2 {
