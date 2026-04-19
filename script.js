@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ============================================
-       3. CARDS DE SERVIÇO - EXPANDIR CONTEÚDO
+       3. CARDS (SERVIÇO E TERAPIA) - EXPANDIR CONTEÚDO
        =========================================== */
     const botoesSaibaMais = document.querySelectorAll('.btn-saiba-mais');
 
@@ -77,20 +77,23 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             e.stopPropagation();
 
-            // Busca o card pai e o parágrafo de conteúdo dentro dele
-            const card = this.closest('.card-servico');
-            const conteudo = card.querySelector('.conteudo-oculto');
+            // Tenta encontrar o card de "Serviços" OU o card de "Terapia"
+            const card = this.closest('.card-servico') || this.closest('.card');
+            
+            if (card) {
+                // Tenta encontrar a descrição de "Serviços" (.conteudo-oculto) OU de "Terapia" (.descricao)
+                const conteudo = card.querySelector('.conteudo-oculto') || card.querySelector('.descricao');
 
-            if (conteudo) {
-                conteudo.classList.toggle('ativo');
-                
-                // Atualiza o texto do botão e estilo visual
-                if (conteudo.classList.contains('ativo')) {
-                    this.textContent = 'Fechar';
-                    this.classList.add('aberto');
-                } else {
-                    this.textContent = 'Saiba mais';
-                    this.classList.remove('aberto');
+                if (conteudo) {
+                    conteudo.classList.toggle('ativo');
+                    
+                    if (conteudo.classList.contains('ativo')) {
+                        this.textContent = 'Fechar';
+                        this.classList.add('aberto');
+                    } else {
+                        this.textContent = 'Saiba mais';
+                        this.classList.remove('aberto');
+                    }
                 }
             }
         });

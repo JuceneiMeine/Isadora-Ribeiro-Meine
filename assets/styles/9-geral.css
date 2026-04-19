@@ -44,95 +44,108 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /*=====================================
-  HEADER
+  HEADER - LOGO - NAV (DESKTOP)
   =====================================*/
 
 .header-layout {
   display: flex;
-  width: 100vw;
+  width: 100%; /* Use 100% para evitar problemas de scroll horizontal com 100vw */
   max-width: 1400px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
-  background-color: var(--azul-escuro);  
-  
-  /* Mantém o header fixo no topo em qualquer resolução */
-  position: sticky;
+  padding: 0.8rem 2rem;
+  background-color: var(--azul-escuro);
+
+  position: sticky; /* header fixo topo qualquer resolução */
   top: 0;
-  z-index: 999;  
-  
+  z-index: 1100; /* Aumentado para ficar acima de tudo */
+
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   gap: 15px;
-  /* margin-top: 1rem; */
+
+  margin: 0 auto;
 }
 
 /*=========== LOGO ===========*/
 
 .logo-layout {
-  flex-shrink: 0; /* logo tamanho original */
+  flex-shrink: 0;
 }
-
-.logo-imagem {}
 
 .logo-imagem img {
   display: block;
-  width: 120px; 
+  width: 120px;
   height: auto;
-  max-width: 120px;
-  min-width: 90px;
+
+  /* max-width: 120px; */
+  /* min-width: 90px; */
 }
 
 /*=========== NAV ===========*/
 
+/* Container da Nav */
 .nav-layout {
-  display: flex;  
+  display: flex;
   align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
+
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
 }
 
-.menu-mobile-btn { display: none; } /* Esconde botão no PC */
-
+/* Lista de Links no Desktop */
 .nav-links ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem;
   margin: 0;
-  padding: 0;
+  padding: .5rem .8rem;
 }
 
 .nav-links li {
   font-family: 'Nunito', sans-serif;
   color: var(--white);
-  padding: .3rem .9rem;
   border-radius: .7rem;
   border: solid 1px var(--azul-gelo);
   background-color: var(--azul-escuro); 
-  transition: transform 0.3s, color 0.3s;
+  transition: all 0.3s;
+
+  /* padding: .3rem .9rem;   */
+  /* transition: transform 0.3s, color 0.3s; */
 }
 
-.nav-links li:hover { 
-  background-color: var(--white);   
+.nav-links li:hover {
+  background-color: var(--white);
 }
 
-.nav-links a { 
-  text-decoration: none; 
-  color: var(--white); 
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0 .7rem;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  /* transition: 0.3s;*/
 }
 
-.nav-links a:hover { 
-  color: var(--azul-escuro); 
+.nav-links li:hover a {
+  color: var(--azul-escuro);
 }
+
+/* Esconde o botão hambúrguer no PC */
+.menu-mobile-btn {
+  display: none;
+}
+
+
 
 /* Chamada Menu Hamburguer */
 #home, #servicos, #analises, #duvidas, #terapia, #sobre-mim {
   scroll-margin-top: 0; 
   /* Ajustar valor p altura header */
 }
-
-/*=========== REDES SOCIAIS ===========*/
-
 
 
 
@@ -143,7 +156,6 @@ html {
 .main-layout {
   flex-grow: 1;
 }
-
 
 /*=====================================
   HOME
@@ -237,15 +249,19 @@ html {
 .ajudar-layout h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  font-family: 'Nunito', sans-serif;
   text-align: center;
+  color: var(--white);
+
+  /* width: 95%; */
+  /* padding: .5rem .3rem; */
 }
 
 .subtitle {
   font-size: 1.2rem;
   margin-bottom: 3rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3rem auto;
 }
 
 /* Container que alinha os cards lado a lado */
@@ -271,13 +287,16 @@ html {
   padding: 2rem 1.5rem;
   border-radius: 10px;
   flex: 1;
-  min-width: 250px; /* Largura mínima antes de quebrar linha */
+  min-width: 230px; 
+  /* Largura mínima antes de quebrar linha */
   max-width: 280px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
+
+  margin: 0 auto;
 }
 
 .card-servico:hover {
@@ -286,12 +305,13 @@ html {
 
 .card-servico .icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .card-servico h4 {
-  font-size: 1.1rem;
-  font-weight: bold;
+  color: var(--marrom-escuro);
+  font-size: 1.3rem;
+  font-weight: 800;
   margin-bottom: 15px;
   min-height: 2.5rem; /* Alinha os títulos */
 }
@@ -313,12 +333,13 @@ html {
 /* Botão Saiba Mais */
 .btn-saiba-mais {
   border: 1px solid var(--marrom-claro);
-  color: var(--marrom-escuro);
+  color: var(--azul-escuro);
   text-decoration: none;
   padding: 5px 20px;
   border-radius: 20px;
   font-size: 0.9rem;
   margin-bottom: 20px;
+  font-weight: 800;
 }
 
 /* Opcional: mudar a cor do botão quando aberto */
@@ -335,9 +356,10 @@ html {
 }
 
 .card-servico p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  /* line-height: 1.1; */
   text-align: center;
+  color: var(--marrom-escuro);
 }
 
 /*=====================================
@@ -363,17 +385,13 @@ html {
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.diagnostico {  
-  background-color: var(--azul-escuro);
-  color: var(--white);
-  padding: 15px 30px;
-  margin: 1rem 1rem;
-  border-radius: .5rem;  
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+.diagnostico h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.diagnostico h3, .diagnostico p {
-  text-align: center;
+.diagnostico p {
+  margin: 0 auto;
 }
 
 .analise-header h2 {

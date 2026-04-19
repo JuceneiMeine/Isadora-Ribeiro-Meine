@@ -6,38 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center; 
-  background-color: var(--azul-escuro);
+  
   font-family: sans-serif;
 }
 
-.card-dificuldade-layout {
-  width: 100vw;
-  background-color: var(--bege-claro);
-  display: flex;
-  justify-content: center;  
-}
-
-.card-dificuldade {
-  background-color:var(--marrom-medio);
-  width: 70%; /* comprimento do card */
-  max-width: 1400px;
-  padding: .7rem 1rem;
-  border-radius: .3rem; 
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 3rem 0;
-}
-
-.card-dificuldade h2 {
-  margin: 0;
-  color: var(--white);
-  font-size: 1.6rem;
-  font-family: 'Nunito', sans-serif;
-  padding: .5rem .2rem; 
-}
 
 .ajudar-layout {
   width: 100%;
@@ -49,36 +21,45 @@
   padding-bottom: 1rem;
 }
 
-.ajudar-layout h3 {
-  width: 95%;
-  padding: .5rem .3rem;
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  color: var(--white);
-  font-size: 1.9rem;
-}
 
-.card-servico {
-  background: var(--white);
-  width: 70%; /* comprimento do card */
-  padding: .7rem 1rem;
-  border-radius: .5rem;    
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+
+/*=====================================
+  HEADER
+  =====================================*/
+
+/* Estilo para Desktop (Telas grandes) */
+.nav-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 4px 8px;  
-}
-
-.card-servico p {
+  flex-direction: row; /* Alinha um ao lado do outro */
+  position: static;
+  align-items: center; 
+  gap: 20px;           /* Espaçamento entre os links */
+  list-style: none;    /* Remove as bolinhas da lista, se for <ul> */
   margin: 0;
-  color: var(--marrom-escuro);
-  font-size: 1.5rem;
-  line-height: 1.3;
-  text-align: center;  
-}
+  padding: 0;
 
-.card-servico strong {
-  color: var(--marrom-escuro);
-}
+
+
+
+  
+
+/*=========== NAV ===========*/
+
+  /* Exibe o botão hambúrguer */
+  
+
+/* Esconde o menu por padrão no celular */
+  .nav-links {    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    z-index: 1000;
+    margin: 3.5rem 0 1rem 0;
+    
+  }
+
+  
+

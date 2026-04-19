@@ -30,22 +30,22 @@
 
 /*=========== LOGO ===========*/
 
-  .logo-layout {}
-
   .logo-imagem {
     max-width: 120px;
     min-width: 90px;
   }
 
-  .logo-imagem img {}
-
+}
   /*=========== NAV ===========*/
 
-  .nav-layout {}
+  /*=====================================
+  RESPONSIVIDADE (MOBILE)
+  =====================================*/
 
-  /* Exibe o botão hambúrguer */
+  @media (max-width: 768px) {
+  
   .menu-mobile-btn {
-    display: block;
+    display: block; /* Aparece no celular */
     background: none;
     border: 1px solid var(--white);
     color: var(--white);
@@ -53,57 +53,49 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 1200;
   }
 
-/* Esconde o menu por padrão no celular */
   .nav-links {
-    display: none; 
-    position: absolute;
-    top: 100%;
-
-
-    /* Centralização Horizontal de 50% */
-    left: 50%;
-    transform: translateX(-50%); 
-    width: 50%; 
-
-    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido à direita */
+    width: 60%;   /* Ajustado para 60% para melhor leitura */
+    height: auto;
     
     background-color: var(--azul-escuro);
-    padding: 1.5rem 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-
-
-    /* Evita que o menu seja cortado se o header for pequeno */
-    overflow: visible;
-
-
+    transition: 0.4s ease-in-out;
+    padding-top: 80px; /* Espaço para o botão fechar não cobrir os links */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
   }
 
-  /* Classe que o JS vai ativar */
   .nav-links.active {
-    display: block;
+    right: 0; /* Desliza para dentro */
+
+    /* margin-right: .4rem; */
+    /* padding: .6rem 0; */
   }
 
+  /* Faz a lista de links virar coluna no celular */
   .nav-links ul {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     width: 100%;
-  }  
+  }
 
   .nav-links li {
-    width: 85%; /* Os botões internos ocupam quase todo o menu de 50% */
-    text-align: center;   
+    width: 100%;
+    border-color: rgba(255,255,255,0.2); /* Borda mais sutil no mobile */
+
+    /* text-align: center;   */
   }
 
-  /* Estilizando links para parecerem botões no celular */
   .nav-links a {
-    display: block;
-    width: 100%;
+    text-align: center;
+    padding: .5rem;
   }
+
   
     
 /*=============== HOME ===============*/
@@ -141,7 +133,11 @@
 /*============= SERVICO =============*/
 
 .card-servico {
-  width: 95vw;
+  /* width: 90vw; */
+  padding: 1rem 1rem;
+  border-radius: .4rem;
+  min-width: 250px; /* Largura mínima antes de quebrar linha */
+  max-width: 80%;
 }
 
 .ajudar-layout h3 {
@@ -153,20 +149,27 @@
   text-align: center;
 }
 
+
+card-servico h4 {
+  font-size: .8rem;
+}
 .card-servico p {
   font-size: 1.2rem;
 }
 
 /*============= ANALISE =============*/
 
-  .analise-header {
+  .analise-header, .diagnostico {
     width: 98%; 
     white-space: normal; /* texto do título quebre linha se necessário */
     text-align: center;
-    padding: 12px 15px;
+    padding: .8rem .6rem;
     top: -35px; /* Ajusta posição p/ não cobrir conteúdo interno */
   }
 
+  .diagnostico p {
+    padding: .4rem .2rem;
+  }
   .analise-header h2 {
     font-size: 1.3rem;    
   }

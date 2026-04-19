@@ -3,6 +3,8 @@
   RESET & NORMALIZE - "folha em branco" todos Navegadores
   =======================================================*/
 
+
+
 *, *::before, *::after {box-sizing: border-box;}
 
 body {
@@ -23,6 +25,10 @@ img {
 }
 
 p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
+
+p {
+  line-height: 1.1;
+}
 
 ul, ol {list-style: none;}
 
