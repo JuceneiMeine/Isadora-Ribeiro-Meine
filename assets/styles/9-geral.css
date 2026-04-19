@@ -1,4 +1,5 @@
 
+
 /*=====================================
   BODY - Corpo da página
   =====================================*/
@@ -210,6 +211,7 @@ html {
 }
 
 .btn-contate-me {  
+  font-family: 'Nunito', sans-serif;
   background-color: var(--azul-escuro);
   color: var(--white);
   border: none;
@@ -505,7 +507,7 @@ summary::-webkit-details-marker {
   margin-right: auto; /* Joga o espaço para a direita, centralizando */
   
   text-align: center; /* Centraliza o texto dentro da div também */
-  background-color: var(--bege-claro);
+
 }
 
 /* Animação suave para abrir */
