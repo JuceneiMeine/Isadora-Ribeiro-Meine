@@ -14,25 +14,22 @@
 
 /*=========== HEADER ===========*/
 
-.header-layout { 
-    display: flex; 
-    position: sticky;
-    z-index: 999;   
-    gap: 15px;
-    padding: .2rem 2rem;  
-    
-    justify-content: space-between; /* Mantém logo de um lado e botão do outro */
-    align-items: center;
-    width: 100vw;
-
-
+.header-container { 
+  display: flex; 
+  position: sticky;
+  z-index: 999;   
+  gap: 15px;
+  padding: .2rem 2rem;      
+  justify-content: space-between; /* Mantém logo de um lado e botão do outro */
+  align-items: center;
+  width: 100vw;
   }  
 
 /*=========== LOGO ===========*/
 
   .logo-imagem {
-    max-width: 120px;
-    min-width: 90px;
+  max-width: 120px;
+  min-width: 90px;
   }
 
 }
@@ -61,17 +58,15 @@
     top: 0;
     right: -100%; /* Escondido à direita */
     width: 60%;   /* Ajustado para 60% para melhor leitura */
-    height: auto;
-    
+    height: auto;    
     background-color: var(--azul-escuro);
     transition: 0.4s ease-in-out;
-    padding-top: 80px; /* Espaço para o botão fechar não cobrir os links */
+    padding-top: 80px; /* Espaço p botão fechar não cobrir os links */
     box-shadow: -5px 0 15px rgba(0,0,0,0.3);
   }
 
   .nav-links.active {
     right: 0; /* Desliza para dentro */
-
     /* margin-right: .4rem; */
     /* padding: .6rem 0; */
   }
@@ -87,20 +82,17 @@
   .nav-links li {
     width: 100%;
     border-color: rgba(255,255,255,0.2); /* Borda mais sutil no mobile */
-
     /* text-align: center;   */
   }
 
   .nav-links a {
     text-align: center;
     padding: .5rem;
-  }
-
-  
+  }  
     
 /*=============== HOME ===============*/
 
-.home-layout {
+.home-container {
     flex-direction: column;
     padding: 25px 5%;
     text-align: center;
@@ -113,7 +105,10 @@
 
   .foto img {
     height: auto;
-    object-fit: cover; /* Melhora encaixe da foto no mobile */
+    /* object-fit: cover;  */
+
+    height: 400px;
+    width: 270px;
   }
 
   .info-logo {
@@ -132,30 +127,30 @@
 
 /*============= SERVICO =============*/
 
-.card-servico {
-  /* width: 90vw; */
-  padding: 1rem 1rem;
-  border-radius: .4rem;
-  min-width: 250px; /* Largura mínima antes de quebrar linha */
-  max-width: 80%;
-}
+  .card-servico {
+    /* width: 90vw; */
+    padding: 1rem 1rem;
+    border-radius: .4rem;
+    min-width: 250px; /* Largura mínima antes de quebrar linha */
+    max-width: 80%;
+  }
 
-.ajudar-layout h3 {
-  font-size: 1.8rem;
-  margin: 0 auto;
-}
+  .ajudar-container h3 {
+    font-size: 1.8rem;
+    margin: 0 auto;
+  }
 
-.subtitle {
-  text-align: center;
-}
+  .subtitle {
+    text-align: center;
+  }
 
 
-card-servico h4 {
-  font-size: .8rem;
-}
-.card-servico p {
-  font-size: 1.2rem;
-}
+  card-servico h4 {
+    font-size: .8rem;
+  }
+  .card-servico p {
+    font-size: 1.2rem;
+  }
 
 /*============= ANALISE =============*/
 
@@ -170,6 +165,7 @@ card-servico h4 {
   .diagnostico p {
     padding: .4rem .2rem;
   }
+
   .analise-header h2 {
     font-size: 1.3rem;    
   }
@@ -194,11 +190,11 @@ card-servico h4 {
 
 /*============= DUVIDAS =============*/
 
-  .duvidas-layout {
+  .duvidas-container {
     padding: 40px .2rem; /* Reduz respiro vertical da seção */
   }
 
-  .duvidas-layout h2 {
+  .duvidas-container h2 {
     font-size: 1.5rem; /* pouco menor p/ não quebrar muitas linhas */
     margin-bottom: 25px;
   }
@@ -231,11 +227,10 @@ card-servico h4 {
   .card h3 {
     font-size: 1.6rem;
   }
-
   
 /*============ SOBRE-MIM ============*/
 
-  .sobre-mim-layout {
+  .sobre-mim-container {
     display: flex;
     flex-direction: column; /* Força a coluna */
     align-items: center; /* Centraliza itens horizontalmente */
@@ -245,8 +240,8 @@ card-servico h4 {
   }
 
   .foto-wrapper {
-    width: 250px;  /* Tamanho fixo/proporcional p/ celular */
-    height: 250px;
+    width: 300px;  /* Tamanho fixo/proporcional p/ celular */
+    height: 400px;
     margin-right: 0;   /* Remove margens desktop */
     margin-bottom: -50px;   /* Efeito sobreposição no card de texto */
     z-index: 2;     /* a foto fique acima do card */
@@ -258,7 +253,8 @@ card-servico h4 {
     height: 100%;
     object-fit: cover;
     border-radius: 30%; /* deixa foto redonda no mobile */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);  
+    border-radius: 1.8rem;  
   }
 
   .texto-card {
@@ -295,7 +291,7 @@ card-servico h4 {
 
   /*============ FOOTER ==============*/
 
-  .footer-layout {
+  .footer-container {
     flex-direction: column;
     text-align: center;
     padding: 1.5rem 2rem;
@@ -357,8 +353,6 @@ card-servico h4 {
   .chamada {
     font-size: .9rem;
   }
-
-
 }
 
 
@@ -380,6 +374,5 @@ card-servico h4 {
   .card {
     width: 96%;;
   }
-
 }
 

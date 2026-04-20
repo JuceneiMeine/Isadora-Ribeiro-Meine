@@ -4,7 +4,7 @@
   BODY - Corpo da página
   =====================================*/
 
-.body-layout {
+.body-container {
   display: flex;
   flex-direction: column;
   font-family: 'Times New Roman', Times, serif;
@@ -46,31 +46,28 @@ html {
 
 
 /*=====================================
-  HEADER - LOGO - NAV (DESKTOP)
+  HEADER - LOGO - NAV
   =====================================*/
 
-.header-layout {
+.header-container {
   display: flex;
-  width: 100%; /* Use 100% para evitar problemas de scroll horizontal com 100vw */
+  width: 100%;
   max-width: 1400px;
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
   background-color: var(--azul-escuro);
-
   position: sticky; /* header fixo topo qualquer resolução */
   top: 0;
-  z-index: 1100; /* Aumentado para ficar acima de tudo */
-
+  z-index: 1100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   gap: 15px;
-
   margin: 0 auto;
 }
 
 /*=========== LOGO ===========*/
 
-.logo-layout {
+.logo-container { 
   flex-shrink: 0;
 }
 
@@ -78,23 +75,19 @@ html {
   display: block;
   width: 120px;
   height: auto;
-
   /* max-width: 120px; */
   /* min-width: 90px; */
 }
 
 /*=========== NAV ===========*/
 
-/* Container da Nav */
-.nav-layout {
+.nav-container {
   display: flex;
   align-items: center;
-
   /* flex-direction: row; */
   /* justify-content: space-between; */
 }
 
-/* Lista de Links no Desktop */
 .nav-links ul {
   display: flex;
   list-style: none;
@@ -110,12 +103,11 @@ html {
   border: solid 1px var(--azul-gelo);
   background-color: var(--azul-escuro); 
   transition: all 0.3s;
-
   /* padding: .3rem .9rem;   */
   /* transition: transform 0.3s, color 0.3s; */
 }
 
-.nav-links li:hover {
+.nav-links li:hover { 
   background-color: var(--white);
 }
 
@@ -126,7 +118,6 @@ html {
   display: block;
   font-size: 1.3rem;
   font-weight: 500;
-
   /* transition: 0.3s;*/
 }
 
@@ -134,26 +125,20 @@ html {
   color: var(--azul-escuro);
 }
 
-/* Esconde o botão hambúrguer no PC */
 .menu-mobile-btn {
-  display: none;
+  display: none; /* Esconde botão hambúrguer no PC */
 }
 
-
-
-/* Chamada Menu Hamburguer */
-#home, #servicos, #analises, #duvidas, #terapia, #sobre-mim {
+#home, #servicos, #analise, #duvidas, #terapia, #sobre-mim {
   scroll-margin-top: 0; 
   /* Ajustar valor p altura header */
 }
-
-
 
 /*=====================================
   MAIN - AREA
   =====================================*/
 
-.main-layout {
+.main-container {
   flex-grow: 1;
 }
 
@@ -161,14 +146,13 @@ html {
   HOME
   =====================================*/
 
-.home-layout {
+.home-container {
   flex-grow: 1;
   display: flex;    
   align-items: center;
   padding: 10px 2%;
   gap: 20px;    
-  background-color: var(--bege-claro); 
-  
+  background-color: var(--bege-claro);   
 }
 
 .foto {
@@ -177,15 +161,20 @@ html {
   margin: 0 auto;  
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  
-  
+  border-radius: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: .8rem;
 }
 
 .foto img {
-  width: 100%;
+  width: 50%;
   height: 100%;
-  object-fit: contain;  
+  /* object-fit: contain;   */
+
+  border-radius: 1rem; 
+  
 }
 
 .info-pessoais { 
@@ -194,8 +183,6 @@ html {
   width: 100%;
   align-items: center;  
 }
-
-.info-logo {}
 
 .info-logo img{ 
   display: flex;
@@ -239,20 +226,19 @@ html {
   SERVIÇO
   =====================================*/
 
-.servico-layout {
+.servico-container {
   background-color: var(--marrom-medio);
   padding: 1rem .5rem 3rem .5rem;
   font-family: 'Nunito', sans-serif;
   color: var(--white);  
 }
 
-.ajudar-layout h3 {
+.ajudar-container h3 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: var(--white);
-
   /* width: 95%; */
   /* padding: .5rem .3rem; */
 }
@@ -264,15 +250,14 @@ html {
   margin: 3rem auto;
 }
 
-/* Container que alinha os cards lado a lado */
+/* alinha os cards lado a lado */
 .cards-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* Para quebrar linha em telas pequenas */
+  flex-wrap: wrap; /* quebrar linha telas pequenas */
   max-width: 1200px;
   margin: 0 auto;
-
   align-items: flex-start;
 }
 
@@ -287,15 +272,13 @@ html {
   padding: 2rem 1.5rem;
   border-radius: 10px;
   flex: 1;
-  min-width: 230px; 
-  /* Largura mínima antes de quebrar linha */
+  min-width: 230px; /* Largura mínima antes quebrar linha */
   max-width: 280px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease;
-
   margin: 0 auto;
 }
 
@@ -366,7 +349,7 @@ html {
   ANALISE
   =====================================*/
 
-.analise-layout {
+.analise-container {
   display: flex;
   flex-direction: column; 
   background-color: var(--bege-claro);  
@@ -481,14 +464,13 @@ html {
   DUVIDAS
   =====================================*/
 
-
-.duvidas-layout {
+.duvidas-container {
   background-color: var(--marrom-medio); 
   padding: 20px 30px;
   text-align: center;
 }
 
-.duvidas-layout h2 {
+.duvidas-container h2 {
   color: var(--white);
   margin-bottom: 3rem;
   font-family: sans-serif;
@@ -508,13 +490,11 @@ html {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: left;
   overflow: hidden;
-
 }
 
 /* Gira o sinal quando o FAQ está aberto */
 details[open] summary::after {
-  transform: rotate(45deg); /* O + vira um X ou apenas gira */
-  
+  transform: rotate(45deg); /* O + vira um X ou apenas gira */  
 }
 
 /* Estilo da Pergunta (O que fica visível) */
@@ -539,7 +519,6 @@ summary::after {
   font-size: 1.5rem;
   color: var(--marrom-escuro);
   transition: transform 0.3s ease;
-
   cursor: pointer;
   padding: 10px 0;
   list-style: none; /* Esconde a seta em alguns navegadores */
@@ -552,22 +531,17 @@ summary::-webkit-details-marker {
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
   padding: 1px 40px 25px 40px;
-
   border-top: 1px ridge var(--marrom-medio);
   width: 90%; /* Define o comprimento da linha */
   padding-top: 15px;
   margin-top: 10px;
-
   color: var(--marrom-escuro);
   font-size: 1.2rem;
   line-height: 1.1;
   animation: slideDown 0.4s ease-out;
-
-  margin-left: auto;  /* Joga o espaço para a esquerda */
-  margin-right: auto; /* Joga o espaço para a direita, centralizando */
-  
-  text-align: center; /* Centraliza o texto dentro da div também */
-
+  margin-left: auto;  /* Joga espaço p esquerda */
+  margin-right: auto; /* Joga espaço p direita, centralizando */
+  text-align: center; /* Centraliza texto dentro da div */
 }
 
 /* Animação suave para abrir */
@@ -580,7 +554,7 @@ summary::-webkit-details-marker {
   TERAPIA
   =====================================*/
 
-.terapia-layout {
+.terapia-container {
   background-color: var(--bege-claro);  
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -590,10 +564,8 @@ summary::-webkit-details-marker {
 .terapia-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
-  margin: 0 auto; /* separar das outras seções */
-  
-  padding-bottom: 2.5rem; 
-  
+  margin: 0 auto; /* separar das outras seções */  
+  padding-bottom: 2.5rem;   
   /* alinhamento Flexbox */
   display: flex;
   flex-direction: column;
@@ -699,9 +671,9 @@ summary::-webkit-details-marker {
   SOBRE-MIM
   =====================================*/
 
-.sobre-mim-layout {
+.sobre-mim-container {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Imagem menor que o texto */
+  grid-template-columns: 1fr 1.5fr; /* Imagem menor que texto */
   align-items: center;
   max-width: 100%;
   position: relative;
@@ -813,15 +785,14 @@ summary::-webkit-details-marker {
   justify-content: center;
   text-decoration: none;
   transition: transform 0.3s ease;
-
   -webkit-tap-highlight-color: transparent;
   outline: none;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: var(--verde-medio);
-    color: var(--white);
+  transform: scale(1.1);
+  background-color: var(--verde-medio);
+  color: var(--white);
 }
 
 /* =============================================
@@ -829,58 +800,55 @@ summary::-webkit-details-marker {
    ============================================= */
 
 .back-to-top {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px; /* Distância do fundo */
-    left: 20px;   /* Distância da esquerda (conforme solicitado) */
-    
-    background-color: var(--marrom-escuro); /* Use uma cor do seu tema */
-    color: var(--white);
-    border: none;
-    border-radius: 50%; /* Deixa redondo */
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra flutuante */
-    
-    /* Centraliza o ícone */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* Transições suaves */
-    transition: all 0.3s ease-in-out;
-    z-index: 998; /* Um pouco abaixo do header fixo (999) */
-    
-    /* Escondido por padrão */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px); /* Começa um pouco abaixo */
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px; /* Distância do fundo */
+  left: 20px;   /* Distância da esquerda */  
+  background-color: var(--marrom-escuro); 
+  color: var(--white);
+  border: none;
+  border-radius: 50%; /* Deixa redondo */
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra flutuante */  
+  /* Centraliza o ícone */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  /* Remove o realce azul ao clicar no mobile */
-    -webkit-tap-highlight-color: transparent;
+  /* Transições suaves */
+  transition: all 0.3s ease-in-out;
+  z-index: 998; /* Um pouco abaixo do header fixo (999) */
+  
+  /* Escondido por padrão */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* Começa um pouco abaixo */
 
-    /* Remove o contorno de foco (opcional, mas cuidado com acessibilidade) */
-    outline: none;
+/* Remove o realce azul ao clicar no mobile */
+  -webkit-tap-highlight-color: transparent;
 
+  /* Remove o contorno de foco (opcional, mas cuidado com acessibilidade) */
+  outline: none;
 }
 
 /* Estado Ativo (quando aparece) */
 .back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0); /* Sobe para a posição final */
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Sobe para a posição final */
 }
 
 /* Efeito Hover (passar o mouse) */
 .back-to-top:hover {
-    background-color: var(--azul-escuro); /* Muda para outra cor do tema */
-    transform: scale(1.1); /* Aumenta levemente */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: var(--azul-escuro); /* Muda para outra cor do tema */
+  transform: scale(1.1); /* Aumenta levemente */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 .back-to-top:active {
-    transform: scale(0.9); /* O botão "afunda" levemente ao ser clicado */
+  transform: scale(0.9); /* O botão "afunda" levemente ao ser clicado */
 }
 
 
@@ -888,30 +856,26 @@ summary::-webkit-details-marker {
   FOOTER
   =====================================*/
 
-.footer-layout {
-    /* max-width: 1100px; */
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* telas pequenas itens quebrem linha */
-    gap: 20px;
-    background-color: var(--azul-escuro);
-    color: var(--white);
-    padding: 1.5rem 6rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: .3rem;
+.footer-container {
+  /* max-width: 1100px; */
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* telas pequenas itens quebrem linha */
+  gap: 20px;
+  background-color: var(--azul-escuro);
+  color: var(--white);
+  padding: 1.5rem 6rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: .3rem;
 }
 
 .perfil {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.perfil-logo {
-
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .perfil-logo img {
