@@ -44,14 +44,20 @@
   .menu-mobile-btn {
     display: block; /* Aparece no celular */
     background: none;
-    border: 1px solid var(--white);
+    border: 1px solid var(--azul-gelo);
     color: var(--white);
     font-size: 1.8rem;
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 1200;
+   
   }
+
+  .menu-mobile-btn.open {
+    border-color: var(--marrom-claro); 
+    color: var(--marrom-claro);        
+  } 
 
   .nav-links {
     position: fixed;
@@ -63,12 +69,17 @@
     transition: 0.4s ease-in-out;
     padding-top: 80px; /* Espaço p botão fechar não cobrir os links */
     box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    
+
+    
   }
 
   .nav-links.active {
     right: 0; /* Desliza para dentro */
     /* margin-right: .4rem; */
     /* padding: .6rem 0; */
+    
+    
   }
 
   /* Faz a lista de links virar coluna no celular */
@@ -81,13 +92,13 @@
 
   .nav-links li {
     width: 100%;
-    border-color: rgba(255,255,255,0.2); /* Borda mais sutil no mobile */
-    /* text-align: center;   */
+    border-color: var(--marrom-claro); 
   }
 
   .nav-links a {
     text-align: center;
     padding: .5rem;
+    color: var(--marrom-claro);
   }  
     
 /*=============== HOME ===============*/

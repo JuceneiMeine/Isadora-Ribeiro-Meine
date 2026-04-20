@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         menuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('open'); 
 
             const icon = menuBtn.querySelector('i');
             if (icon) {

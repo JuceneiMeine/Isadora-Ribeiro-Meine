@@ -55,7 +55,7 @@ html {
   max-width: 1400px;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 2rem;
+  padding: 1rem 2rem;
   background-color: var(--azul-escuro);
   position: sticky; /* header fixo topo qualquer resolução */
   top: 0;
@@ -129,7 +129,12 @@ html {
   display: none; /* Esconde botão hambúrguer no PC */
 }
 
-#home, #servicos, #analise, #duvidas, #terapia, #sobre-mim {
+#home, #servicos {
+  scroll-margin-top: 73px; 
+  /* Ajustar valor p altura header */
+}
+
+#analise, #duvidas, #terapia, #sobre-mim {
   scroll-margin-top: 0; 
   /* Ajustar valor p altura header */
 }
