@@ -9,7 +9,7 @@
   max-width: 1400px;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem 2rem;
+  padding: .9rem 2rem;
   background-color: var(--azul-escuro);
   position: sticky; /* header fixo topo qualquer resolução */
   top: 0;

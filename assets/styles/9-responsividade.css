@@ -3,9 +3,22 @@
   CELULARES GRANDES - (de 767px até 480px)
 =========================================*/
 
+@media (max-width: 1170px) {
+
+  .card-servico h4 {
+    font-size: .8rem;
+  }
+
+}  
+
+
+/*=======================================
+  CELULARES GRANDES - (de 767px até 480px)
+=========================================*/
+
 @media (max-width: 768px) {  
 
-.header-container { 
+  .header-container { 
     display: flex; 
     position: sticky;
     z-index: 999;   
@@ -116,7 +129,7 @@
   }
 
   .ajudar-container h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 0 auto;
   }
 
@@ -124,8 +137,8 @@
     text-align: center;
   }
 
-  card-servico h4 {
-    font-size: .8rem;
+  .card-servico h4 {
+    font-size: 1.5rem;
   }
 
   .card-servico p {
@@ -169,10 +182,6 @@
   }
 
 /*============= DUVIDAS =============*/
-
-  .duvidas-container {
-    padding: 40px .2rem; /* Reduz respiro vertical da seção */
-  }
 
   .duvidas-container h2 {
     font-size: 1.5rem; /* menor p/ ñ quebrar muitas linhas */
@@ -331,6 +340,10 @@
 
   .chamada {
     font-size: .9rem;
+  }
+
+  .card-servico h4 {
+    font-size: 1.4rem;
   }
 
 }
