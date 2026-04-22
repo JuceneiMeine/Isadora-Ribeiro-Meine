@@ -1,0 +1,87 @@
+
+/*=====================================
+  HEADER - LOGO - NAV
+  =====================================*/
+
+.header-container {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 2rem;
+  background-color: var(--azul-escuro);
+  position: sticky; /* header fixo topo qualquer resolução */
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  gap: 15px;
+  margin: 0 auto;
+}
+
+/*=========== LOGO ===========*/
+
+.logo-container { 
+  flex-shrink: 0;
+}
+
+.logo-imagem img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+/*=========== NAV ===========*/
+
+.nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.nav-links li {
+  font-family: 'Nunito', sans-serif;
+  color: var(--white);
+  border-radius: .5rem;
+  box-shadow: 0 0 4px var(--azul-gelo);
+  background-color: var(--azul-escuro); 
+  transition: all 0.3s;
+}
+
+.nav-links li:hover { 
+  background-color: var(--white);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  padding: .2rem 1.3rem;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+
+.nav-links li:hover a {
+  color: var(--azul-escuro);
+}
+
+.menu-mobile-btn {
+  display: none; /* Esconde botão hambúrguer no PC */
+}
+
+#home, #servicos {
+  scroll-margin-top: 73px; 
+  /* Ajustar valor p altura header */
+}
+
+#analise, #duvidas, #terapia, #sobre-mim {
+  scroll-margin-top: 0; 
+  /* Ajustar valor p altura header */
+}

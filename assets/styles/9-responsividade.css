@@ -1,45 +1,25 @@
 
 /*=======================================
-  TABLETS - (de 1024px até 768px)
-=========================================*/
-
-@media (max-width: 1024px) { }
-  
-
-/*=======================================
   CELULARES GRANDES - (de 767px até 480px)
 =========================================*/
 
 @media (max-width: 768px) {  
 
-/*=========== HEADER ===========*/
-
 .header-container { 
-  display: flex; 
-  position: sticky;
-  z-index: 999;   
-  gap: 15px;
-  padding: .2rem 2rem;      
-  justify-content: space-between; /* Mantém logo de um lado e botão do outro */
-  align-items: center;
-  width: 100vw;
-  }  
-
-/*=========== LOGO ===========*/
+    display: flex; 
+    position: sticky;
+    z-index: 999;   
+    gap: 15px;
+    padding: .2rem 2rem;      
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+  } 
 
   .logo-imagem {
-  max-width: 120px;
-  min-width: 90px;
+    max-width: 120px;
+    min-width: 90px;
   }
-
-}
-  /*=========== NAV ===========*/
-
-  /*=====================================
-  RESPONSIVIDADE (MOBILE)
-  =====================================*/
-
-  @media (max-width: 768px) {
   
   .menu-mobile-btn {
     display: block; /* Aparece no celular */
@@ -50,8 +30,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 1200;
-   
+    z-index: 1200;   
   }
 
   .menu-mobile-btn.open {
@@ -63,26 +42,19 @@
     position: fixed;
     top: 0;
     right: -100%; /* Escondido à direita */
-    width: 60%;   /* Ajustado para 60% para melhor leitura */
+    width: 60%;   /* Ajustado p 60% - melhor leitura */
     height: auto;    
     background-color: var(--azul-escuro);
     transition: 0.4s ease-in-out;
     padding-top: 80px; /* Espaço p botão fechar não cobrir os links */
-    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-    
-
-    
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);    
   }
 
   .nav-links.active {
-    right: 0; /* Desliza para dentro */
-    /* margin-right: .4rem; */
-    /* padding: .6rem 0; */
-    
-    
+    right: 0; /* Desliza para dentro */    
   }
 
-  /* Faz a lista de links virar coluna no celular */
+  /* links virar coluna no celular */
   .nav-links ul {
     flex-direction: column;
     align-items: center;
@@ -103,7 +75,7 @@
     
 /*=============== HOME ===============*/
 
-.home-container {
+  .home-container {
     flex-direction: column;
     padding: 25px 5%;
     text-align: center;
@@ -111,13 +83,11 @@
 
   .foto {    
     height: auto;  /* Remove altura fixa */
-    max-width: 350px; /* Limita tamanho p/ foto não estourar */
+    max-width: 350px; /* p/ foto não estourar */
   }
 
   .foto img {
     height: auto;
-    /* object-fit: cover;  */
-
     height: 400px;
     width: 270px;
   }
@@ -139,10 +109,9 @@
 /*============= SERVICO =============*/
 
   .card-servico {
-    /* width: 90vw; */
     padding: 1rem 1rem;
     border-radius: .4rem;
-    min-width: 250px; /* Largura mínima antes de quebrar linha */
+    min-width: 250px; /* Largura mínima antes quebrar linha */
     max-width: 80%;
   }
 
@@ -155,10 +124,10 @@
     text-align: center;
   }
 
-
   card-servico h4 {
     font-size: .8rem;
   }
+
   .card-servico p {
     font-size: 1.2rem;
   }
@@ -167,10 +136,10 @@
 
   .analise-header, .diagnostico {
     width: 98%; 
-    white-space: normal; /* texto do título quebre linha se necessário */
+    white-space: normal; /*texto título quebre linha se neces*/
     text-align: center;
     padding: .8rem .6rem;
-    top: -35px; /* Ajusta posição p/ não cobrir conteúdo interno */
+    top: -35px; /*Ajusta posição p/ ñ cobrir conteúdo interno*/
   }
 
   .diagnostico p {
@@ -195,7 +164,7 @@
   }
 
   .checkbox-opcao {
-    width: 24px; /* levemente menor para acompanhar o texto */
+    width: 24px; /* levemente menor p acompanhar texto */
     height: 24px;
   }
 
@@ -206,7 +175,7 @@
   }
 
   .duvidas-container h2 {
-    font-size: 1.5rem; /* pouco menor p/ não quebrar muitas linhas */
+    font-size: 1.5rem; /* menor p/ ñ quebrar muitas linhas */
     margin-bottom: 25px;
   }
 
@@ -228,7 +197,7 @@
 
   .faq-content {
     padding: 0 0; /* Reduz espaço interno */
-    font-size: 0.95rem;  /* Melhora leitura telas pequenas */
+    font-size: 0.95rem; 
     width: 96%;
   }
   
@@ -243,18 +212,18 @@
 
   .sobre-mim-container {
     display: flex;
-    flex-direction: column; /* Força a coluna */
-    align-items: center; /* Centraliza itens horizontalmente */
+    flex-direction: column; 
+    align-items: center; 
     justify-content: center;
     padding: 3rem 0;
-    gap: 0;     /* controlar gap manualmente via margens */
+    gap: 0;     
   }
 
   .foto-wrapper {
     width: 300px;  /* Tamanho fixo/proporcional p/ celular */
     height: 400px;
     margin-right: 0;   /* Remove margens desktop */
-    margin-bottom: -50px;   /* Efeito sobreposição no card de texto */
+    margin-bottom: -50px; /* Efeito sobreposição no card de texto */
     z-index: 2;     /* a foto fique acima do card */
     margin-top: 0;
   }
@@ -263,7 +232,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30%; /* deixa foto redonda no mobile */
+    border-radius: 30%; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);  
     border-radius: 1.8rem;  
   }
@@ -281,7 +250,7 @@
   }
 
   .texto-principal p {
-    text-align: center;  /* parágrafos fiquem centralizados */
+    text-align: center; 
     font-size: 1.2rem;
   }
 
@@ -334,7 +303,7 @@
     padding-bottom: 2.5rem;
   }
 
-  /* Ajuste Responsivo (opcional, se quiser menor no celular) */
+  /* Ajuste menor no celular) */
   .back-to-top {
     width: 50px;
     height: 50px;
@@ -347,9 +316,8 @@
 
 
 /*=======================================
-  CELULARES PEQUENOS (Portrait) - (abaixo de 480px)
+  CELULARES PEQUENOS - (abaixo de 480px)
 =========================================*/
-
 
 @media (max-width: 480px) {  
 
@@ -364,9 +332,13 @@
   .chamada {
     font-size: .9rem;
   }
+
 }
 
 
+/*=======================================
+  CELULARES MENORES - (abaixo de 320px)
+=========================================*/
 
 @media (max-width: 320px) {  
 
@@ -385,5 +357,6 @@
   .card {
     width: 96%;;
   }
+  
 }
 

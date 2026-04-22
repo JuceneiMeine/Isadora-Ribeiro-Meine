@@ -1,20 +1,15 @@
 
 /* --- IMPORTAR OS ARQUIVOS CSS --- */
-@import url("./assets/styles/1-root-cores.css");
 
-@import url("./assets/styles/2-reset-normalize.css");
+@import url("./assets/styles/1-reset-normalize.css");
 
-@import url("./assets/styles/3-format-base.css");
-
-@import url("./assets/styles/4-header-nav.css");
+@import url("./assets/styles/3-header-logo-nav.css");
 
 @import url("./assets/styles/5-main-sections.css");
 
-@import url("./assets/styles/6-contact-footer.css");
+@import url("./assets/styles/7-footer.css");
 
-@import url("./assets/styles/9-geral.css");
-
-@import url("./assets/styles/10-responsividade.css");
+@import url("./assets/styles/9-responsividade.css");
 
 
 
