@@ -29,11 +29,11 @@
 
 .foto {
   width: 100%;
-  height: 450px;
+  height: 440px;
   margin: 0 auto;  
   align-items: center;
   justify-content: center;
-  border-radius: 1.8rem;
+  /* border-radius: 1.8rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,14 +43,17 @@
 .foto img {
   width: 50%;
   height: 100%;
-  border-radius: 1rem;   
+  /* border-radius: 0 1.8rem 0 1.8rem;  */
+  border-radius: 1.8rem 0 1.8rem 0;  
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .info-pessoais { 
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: center;  
+  align-items: center; 
+  padding-right: 8rem; 
 }
 
 .info-logo img{ 
@@ -67,6 +70,7 @@
 .info-pessoais p {
   text-align: center;  
   color: var(--marrom-escuro);
+  font-size: 1.1rem;
   padding: 0;
   margin: 0;
 }
@@ -103,7 +107,7 @@
 }
 
 .ajudar-container h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-family: 'Nunito', sans-serif;
   text-align: center;
@@ -114,7 +118,8 @@
   font-family: 'Nunito', sans-serif;
   font-size: 1.4rem;
   margin-bottom: 3rem;
-  max-width: 900px;
+  text-align: center;
+  
   margin: 3rem auto;
 }
 
@@ -135,8 +140,8 @@
 .card-servico {
   background: var(--white);
   color: var(--marrom-medio);
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
+  padding: 0 1.5rem;
+  border-radius: .5rem;
   flex: 1;
   min-width: 230px; /* Largura mínima antes quebrar linha */
   max-width: 280px;
@@ -154,15 +159,15 @@
 
 .card-servico .icon {
   font-size: 2.5rem;
-  margin: 1rem 0;
+  padding-top: 1rem;
 }
 
 .card-servico h4 {
   color: var(--marrom-escuro);
   font-size: 1.3rem;
   font-weight: 800;
-  margin-bottom: 15px;
-  min-height: 2.5rem; 
+  margin-bottom: 0;
+  min-height: .5rem; 
 }
 
 .conteudo-oculto { /* Esconde o parágrafo por padrão */
@@ -175,18 +180,23 @@
   display: block;
   opacity: 1;
   margin-top: 15px;
+  font-size: 1rem;
 }
 
 .btn-saiba-mais {
   border: 1px solid var(--marrom-claro);
+  background: var(--white);
   color: var(--azul-escuro);
   text-decoration: none;
-  padding: 5px 20px;
-  border-radius: 20px;
+  padding: .3rem 1.1rem;
+  border-radius: .5rem;
   font-size: 0.9rem;
-  margin-bottom: 20px;
   font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 2rem;
 }
+
 
 .btn-saiba-mais.aberto { /* mudar cor do botão quando aberto */
   background-color: var(--marrom-escuro);
@@ -220,7 +230,16 @@
   padding: 30px 15px;
 }
 
-.analise-header, .diagnostico {  
+.analise-header {  
+  background-color: var(--azul-escuro);
+  color: var(--white);
+  padding: 15px 30px;
+  margin: 1rem 1rem;
+  border-radius: .5rem;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.diagnostico {  
   background-color: var(--azul-escuro);
   color: var(--white);
   padding: 15px 30px;
@@ -234,9 +253,11 @@
 }
 
 .diagnostico h3 {
+  font-family: 'Nunito', sans-serif;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .diagnostico p {
@@ -341,8 +362,9 @@
 
 .duvidas-container h2 {
   color: var(--white);
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 3rem;
+  font-size: 2rem;
 }
 
 .faq-container {
@@ -444,7 +466,7 @@ summary::-webkit-details-marker {
 .terapia-bg-azul h2 {
   color: var(--white);
   margin: 2.2rem 0 3.2rem 0;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 /* Container dos Cards */
@@ -497,20 +519,12 @@ summary::-webkit-details-marker {
 
 .card h3 {
   color: var(--marrom-escuro);
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin: 0;
+  padding-top: .5rem;
 }
 
-.btn-saiba-mais {
-  margin-top: 3rem;
-  background: var(--white);
-  border: 1px solid var(--marrom-claro);
-  color: var(--azul-escuro);
-  padding: 10px 30px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+
 
 .btn-saiba-mais:hover {
   background-color: var(--white);
@@ -583,14 +597,15 @@ summary::-webkit-details-marker {
 }
 
 .texto-card h2 {
-  font-size: 3.5rem;
+  font-size: 2rem;
   margin-bottom: 5px;
   font-weight: 600;
   color: var(--white);
+  padding: 1rem 0;
 }
 
 .texto-principal p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.4;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -633,6 +648,7 @@ summary::-webkit-details-marker {
 /*=====================================
   CONTATO
   =====================================*/
+
 
 .whatsapp-float {
   position: fixed;

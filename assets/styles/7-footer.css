@@ -44,6 +44,7 @@
 }
 
 .contatos {
+  align-items: center;
   text-align: left;
 }
 
@@ -56,9 +57,11 @@
 .item-contato {
   display: flex;
   align-items: center;
+  text-align: center;
   gap: 10px;
   margin-bottom: 8px;
   font-size: 1.2rem;
+  background-color: violet;
 }
 
 .item-contato span {

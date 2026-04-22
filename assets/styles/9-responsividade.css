@@ -47,20 +47,22 @@
   }
 
   .menu-mobile-btn.open {
-    border-color: var(--marrom-claro); 
-    color: var(--marrom-claro);        
+    border-color: var(--white); 
+    color: var(--white);        
   } 
 
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%; /* Escondido à direita */
-    width: 60%;   /* Ajustado p 60% - melhor leitura */
+    width: 50%;   /* Ajustado p 60% - melhor leitura */
     height: auto;    
     background-color: var(--azul-escuro);
     transition: 0.4s ease-in-out;
     padding-top: 80px; /* Espaço p botão fechar não cobrir os links */
-    box-shadow: -5px 0 15px rgba(0,0,0,0.3);    
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3); 
+    background-color: violet;  
+    align-items: center; 
   }
 
   .nav-links.active {
@@ -73,17 +75,22 @@
     align-items: center;
     gap: 15px;
     width: 100%;
+    background-color: greenyellow;
+    
   }
 
   .nav-links li {
     width: 100%;
-    border-color: var(--marrom-claro); 
+    border-color: var(--white); 
+    background-color: aqua;
+    
   }
 
   .nav-links a {
     text-align: center;
     padding: .5rem;
-    color: var(--marrom-claro);
+    color: var(--white);
+    
   }  
     
 /*=============== HOME ===============*/
@@ -109,6 +116,10 @@
     padding-top: .3rem;
   }
 
+  .info-pessoais {
+    padding-right: 0; 
+  }
+
   .info-pessoais h1 {
     font-size: 1.5rem; 
     margin-top: .8rem;
@@ -131,9 +142,11 @@
   .ajudar-container h3 {
     font-size: 2rem;
     margin: 0 auto;
+    padding-top: 2rem;
   }
 
   .subtitle {
+    font-size: 1.2rem;
     text-align: center;
   }
 
@@ -147,15 +160,21 @@
 
 /*============= ANALISE =============*/
 
-  .analise-header, .diagnostico {
+  .analise-header {
     width: 98%; 
-    white-space: normal; /*texto título quebre linha se neces*/
     text-align: center;
     padding: .8rem .6rem;
-    top: -35px; /*Ajusta posição p/ ñ cobrir conteúdo interno*/
+    
+  }
+
+  .diagnostico {
+    width: 98%; 
+    text-align: center;
+    
   }
 
   .diagnostico p {
+    font-size: 1rem;
     padding: .4rem .2rem;
   }
 
@@ -183,10 +202,6 @@
 
 /*============= DUVIDAS =============*/
 
-  .duvidas-container h2 {
-    font-size: 1.5rem; /* menor p/ ñ quebrar muitas linhas */
-    margin-bottom: 25px;
-  }
 
   .faq-item {
     width: 95%;
@@ -255,7 +270,7 @@
   }
 
   .texto-card h2 {
-    font-size: 3rem;
+    padding-top: 0;
   }
 
   .texto-principal p {
@@ -303,12 +318,12 @@
   }
 
   .chamada {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 1rem 0;
   }
 
   .item-contato {
-    justify-content: center;
+    justify-content: center; 
     padding-bottom: 2.5rem;
   }
 
@@ -338,9 +353,6 @@
     height: 2.5rem;   
   }
 
-  .chamada {
-    font-size: .9rem;
-  }
 
   .card-servico h4 {
     font-size: 1.4rem;
@@ -363,9 +375,7 @@
     height: 2.5rem;   
   }
 
-  .chamada {
-    font-size: .9rem;
-  }
+  
 
   .card {
     width: 96%;;
