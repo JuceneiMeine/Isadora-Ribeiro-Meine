@@ -55,43 +55,39 @@
     position: fixed;
     top: 0;
     right: -100%; /* Escondido à direita */
-    width: 50%;   /* Ajustado p 60% - melhor leitura */
+    width: 58%;   /* Ajustado p 60% - melhor leitura */
     height: auto;    
     background-color: var(--azul-escuro);
     transition: 0.4s ease-in-out;
-    padding-top: 80px; /* Espaço p botão fechar não cobrir os links */
+    padding-top: 73px; /* Espaço p botão fechar não cobrir os links */
     box-shadow: -5px 0 15px rgba(0,0,0,0.3); 
-    background-color: violet;  
-    align-items: center; 
   }
 
   .nav-links.active {
-    right: 0; /* Desliza para dentro */    
+    right: 0; 
+    /* Desliza para dentro */ 
+    display: flex; /* Garante que apareça */   
   }
 
-  /* links virar coluna no celular */
   .nav-links ul {
-    flex-direction: column;
+    flex-direction: column; /* No celular vira coluna */
     align-items: center;
-    gap: 15px;
     width: 100%;
-    background-color: greenyellow;
-    
+    gap: 1rem;
   }
 
   .nav-links li {
-    width: 100%;
-    border-color: var(--white); 
-    background-color: aqua;
-    
+    width: 100%; /* No celular, o clique ocupa a linha toda */
+    text-align: center;
   }
 
   .nav-links a {
-    text-align: center;
-    padding: .5rem;
-    color: var(--white);
-    
-  }  
+    display: block;
+    width: 100%;
+    padding: .5rem 0;
+    font-size: 1.2rem;
+  }
+
     
 /*=============== HOME ===============*/
 
@@ -201,7 +197,9 @@
   }
 
 /*============= DUVIDAS =============*/
-
+  .duvidas-container {
+    padding: .6rem .2rem;
+  }
 
   .faq-item {
     width: 95%;
@@ -215,7 +213,7 @@
   }
 
   summary::after {
-    font-size: 1.4rem; /* Diminui ícone de + */
+    font-size: 1.8rem; /* Diminui ícone de + */
     
   }
 
@@ -297,12 +295,14 @@
 
   .footer-container {
     flex-direction: column;
+    justify-content: center;
     text-align: center;
-    padding: 1.5rem 2rem;
+    padding: 2rem; /* Reduzindo o padding lateral exagerado de 6rem no mobile */
   }
 
   .perfil {
-    flex-direction: column;
+    flex-direction: column; /* Foto em cima do nome da psicóloga */
+    text-align: center;
   }
 
   .perfil-logo img {
@@ -319,12 +319,13 @@
 
   .chamada {
     font-size: 1.3rem;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
   }
 
   .item-contato {
     justify-content: center; 
-    padding-bottom: 2.5rem;
+    /* padding-bottom: 2.5rem; */
+    
   }
 
   /* Ajuste menor no celular) */
@@ -353,7 +354,6 @@
     height: 2.5rem;   
   }
 
-
   .card-servico h4 {
     font-size: 1.4rem;
   }
@@ -373,9 +373,7 @@
 
   .perfil-logo img {
     height: 2.5rem;   
-  }
-
-  
+  }  
 
   .card {
     width: 96%;;
