@@ -152,16 +152,16 @@
 
 .card-servico h4 {
   color: var(--marrom-escuro);
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 1.6vw, 3rem);
   font-weight: 800;
   margin-bottom: 0;
-  min-height: .5rem; 
+  /* min-height: .5rem;  */
 }
 
 .conteudo-oculto { /* Esconde o parágrafo por padrão */
   display: none; 
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.6s ease;
 }
 
 .conteudo-oculto.ativo { /* Classe adicionada via JavaScript */
@@ -183,6 +183,8 @@
   cursor: pointer;
   transition: 0.3s;
   margin-top: 2rem;
+
+  
 }
 
 
@@ -418,9 +420,11 @@ summary::-webkit-details-marker {
   font-size: 1.2rem;
   line-height: 1.4;
   animation: slideDown 0.4s ease-out;
+  
   margin-left: auto;  /* Joga espaço p esquerda */
   margin-right: auto; /* Joga espaço p direita, centralizando */
   text-align: center; /* Centraliza texto dentro da div */
+  
 }
 
 /* Animação suave para abrir */
@@ -436,7 +440,6 @@ summary::-webkit-details-marker {
 .terapia-container {
   background-color: var(--bege-claro);  
   text-align: center;
-  padding: 2rem .2rem;
 }
 
 /* O Container que define o fundo azul */
@@ -599,13 +602,13 @@ summary::-webkit-details-marker {
 .btn-insta {
   display: inline-flex;
   align-items: center;
-  /* gap: .7rem; */
+  gap: .8rem;
   background: var(--white);
   color: var(--marrom-escuro);
   padding: 10px 25px;
   border-radius: .5rem;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 900;
   margin-top: 1.2rem;
   transition: transform 0.3s ease;
 }
