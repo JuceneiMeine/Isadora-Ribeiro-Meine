@@ -1,12 +1,48 @@
 
 /*=======================================
-  CELULARES GRANDES - (de 767px até 480px)
+  TABLET - (de 949px até 768px)
 =========================================*/
 
-@media (max-width: 1170px) {
+@media (max-width: 950px) {
+
+  .nav-links ul {
+    gap: .7rem;
+  }
+
+  .nav-links li {
+    padding: 0 .8rem;
+  }
+
+  .nav-links a {
+    font-size: .8rem;
+  }
 
   .card-servico h4 {
     font-size: .8rem;
+  }
+
+  /* HOME */
+  .foto {    
+    height: auto;  /* Remove altura fixa */
+    max-width: 350px; /* p/ foto não estourar */
+  }
+
+
+  .footer-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem; /* Reduzindo o padding lateral exagerado de 6rem no mobile */
+  }
+
+  .perfil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfil-logo img {
+    height: 3.5rem;   
   }
 
 }  
@@ -26,13 +62,8 @@
     padding: .2rem 2rem;      
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-  } 
-
-  .logo-imagem {
-    max-width: 120px;
-    min-width: 90px;
-  }
+    width: 100%;
+  }   
   
   .menu-mobile-btn {
     display: block; /* Aparece no celular */
@@ -71,9 +102,6 @@
 
   .nav-links ul {
     flex-direction: column; /* No celular vira coluna */
-    align-items: center;
-    width: 100%;
-    gap: 1rem;
   }
 
   .nav-links li {
@@ -82,8 +110,8 @@
   }
 
   .nav-links a {
-    display: block;
-    width: 100%;
+    /* display: block; */
+    /* width: 100%; */
     padding: .5rem 0;
     font-size: 1.2rem;
   }
@@ -94,22 +122,18 @@
   .home-container {
     flex-direction: column;
     padding: 25px 5%;
-    text-align: center;
-  }
-
-  .foto {    
-    height: auto;  /* Remove altura fixa */
-    max-width: 350px; /* p/ foto não estourar */
+    /* text-align: center; */
   }
 
   .foto img {
     height: auto;
-    height: 400px;
+    /* height: 400px; */
     width: 270px;
+    
   }
 
   .info-logo {
-    padding-top: .3rem;
+    /* padding-top: .3rem; */
   }
 
   .info-pessoais {
@@ -128,37 +152,36 @@
 
 /*============= SERVICO =============*/
 
-  .card-servico {
-    padding: 1rem 1rem;
-    border-radius: .4rem;
-    min-width: 250px; /* Largura mínima antes quebrar linha */
-    max-width: 80%;
-  }
-
   .ajudar-container h3 {
-    font-size: 2rem;
-    margin: 0 auto;
-    padding-top: 2rem;
+    /* font-size: 2rem; */
+    /* margin: 0 auto; */
+    /* padding-top: 2rem; */
   }
 
   .subtitle {
     font-size: 1.2rem;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .card-servico h4 {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+  }
+
+  .card-servico {
+    padding: 1rem 1rem;
+    /* min-width: 250px;  */
+    max-width: 90%;
   }
 
   .card-servico p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
 /*============= ANALISE =============*/
 
   .analise-header {
     width: 98%; 
-    text-align: center;
+    /* text-align: center; */
     padding: .8rem .6rem;
     
   }
@@ -170,25 +193,25 @@
   }
 
   .diagnostico p {
-    font-size: 1rem;
+    /* font-size: 1rem; */
     padding: .4rem .2rem;
   }
 
   .analise-header h2 {
-    font-size: 1.3rem;    
+    /* font-size: 1.3rem;     */
   }
 
   .card-analise {
     padding-left: .8rem;
-    border-radius: .5rem;
-    width: 99%;
+    /* border-radius: .5rem; */
+    width: 98%;
     margin-bottom: 1.5rem;
   }
 
   .check-item {
     font-size: 1rem; 
     padding-left: 40px; 
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
   }
 
   .checkbox-opcao {
@@ -197,19 +220,20 @@
   }
 
 /*============= DUVIDAS =============*/
+  
   .duvidas-container {
-    padding: .6rem .2rem;
+    /* padding: .6rem .2rem; */
   }
 
   .faq-item {
     width: 95%;
-    text-align: left;   
+    /* text-align: left;    */
   }
 
   summary {
-    padding: 15px 10px; /* Reduz espaço interno da pergunta */
-    font-size: 1rem;    /* Fonte menor para caber melhor */
-    text-align: center;
+    /* padding: 15px 10px;  */
+    font-size: 1.1rem;    /* Fonte menor para caber melhor */
+    /* text-align: center; */
   }
 
   summary::after {
@@ -219,16 +243,13 @@
 
   .faq-content {
     padding: 0 0; /* Reduz espaço interno */
-    font-size: 0.95rem; 
+    font-size: 1rem; 
     width: 96%;
   }
   
 
 /*========== TERAPIA =============*/
 
-  .card h3 {
-    font-size: 1.6rem;
-  }
   
 /*============ SOBRE-MIM ============*/
 
@@ -238,7 +259,8 @@
     align-items: center; 
     justify-content: center;
     padding: 3rem 0;
-    gap: 0;     
+
+    /* gap: 0;      */
   }
 
   .foto-wrapper {
@@ -273,7 +295,7 @@
 
   .texto-principal p {
     text-align: center; 
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .btn-insta {
@@ -292,41 +314,7 @@
   }
 
   /*============ FOOTER ==============*/
-
-  .footer-container {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem; /* Reduzindo o padding lateral exagerado de 6rem no mobile */
-  }
-
-  .perfil {
-    flex-direction: column; /* Foto em cima do nome da psicóloga */
-    text-align: center;
-  }
-
-  .perfil-logo img {
-    height: 3.5rem;   
-  }
-
-  .info-texto h2 {
-    font-size: 1.8rem;
-  }
-
-  .contatos {
-    text-align: center;
-  }
-
-  .chamada {
-    font-size: 1.3rem;
-    /* margin: 1rem 0; */
-  }
-
-  .item-contato {
-    justify-content: center; 
-    /* padding-bottom: 2.5rem; */
-    
-  }
+ 
 
   /* Ajuste menor no celular) */
   .back-to-top {

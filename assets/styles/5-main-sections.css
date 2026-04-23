@@ -1,11 +1,4 @@
 
-.div-container {
-  max-width: 1400px;    /* Impede que o conteúdo passe dessa largura */
-    margin-inline: auto;  /* Centraliza o bloco na tela (atalho para margin-left e right) */
-    width: 90%;           /* Garante um respiro lateral em telas menores que 1400px */
-}
-
-
 /*=====================================
   MAIN - CONTAINER
   =====================================*/
@@ -43,7 +36,6 @@
 .foto img {
   width: 50%;
   height: 100%;
-  /* border-radius: 0 1.8rem 0 1.8rem;  */
   border-radius: 1.8rem 0 1.8rem 0;  
   box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); 
 }
@@ -83,7 +75,6 @@
 }
 
 .btn-contate-me {  
-  font-family: 'Nunito', sans-serif;
   background-color: var(--azul-escuro);
   color: var(--white);
   border: none;
@@ -102,25 +93,22 @@
 .servico-container {
   background-color: var(--marrom-medio);
   padding: 1rem .5rem 3rem .5rem;
-  font-family: 'Nunito', sans-serif;
   color: var(--white);  
 }
 
 .ajudar-container h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  font-family: 'Nunito', sans-serif;
   text-align: center;
   color: var(--white);
 }
 
 .subtitle {
-  font-family: 'Nunito', sans-serif;
   font-size: 1.4rem;
   margin-bottom: 3rem;
+  align-items: center;
   text-align: center;
-  
-  margin: 3rem auto;
+  max-width: 100%;
 }
 
 .cards-container {
@@ -164,7 +152,7 @@
 
 .card-servico h4 {
   color: var(--marrom-escuro);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 0;
   min-height: .5rem; 
@@ -211,7 +199,7 @@
 }
 
 .card-servico p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
   color: var(--marrom-escuro);
 }
@@ -226,11 +214,12 @@
   background-color: var(--bege-claro);  
   justify-content: center;
   align-items: center;
-  font-family: 'Nunito', sans-serif;
   padding: 30px 15px;
 }
 
-.analise-header {  
+.analise-header { 
+  width: 98%; 
+  text-align: center; 
   background-color: var(--azul-escuro);
   color: var(--white);
   padding: 15px 30px;
@@ -249,11 +238,10 @@
 }
 
 .analise-header {
-  width: 60%;
+  width: 70%;
 }
 
 .diagnostico h3 {
-  font-family: 'Nunito', sans-serif;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -262,14 +250,13 @@
 
 .diagnostico p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0 auto;
   padding-top: 1rem;
 }
 
 .analise-header h2 {
-  font-family: 'Nunito', sans-serif;
   margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
@@ -279,9 +266,9 @@
 
 .card-analise {
   background-color: var(--white);
-  width: 60%;
+  width: 70%;
   padding: 30px 10px 20px 40px;
-  border-radius: 40px;
+  border-radius: .5rem;
   margin-bottom: 3rem;  
   box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
@@ -300,10 +287,10 @@
   text-align: left; 
   position: relative;
   padding-left: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   cursor: pointer; 
   color: var(--marrom-escuro);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   transition: all 0.2s;
 
@@ -323,7 +310,7 @@
   width: 28px;
   height: 28px;
   border: 2px solid var(--marrom-escuro);
-  border-radius: 6px;
+  border-radius: .3rem;
   background-color: transparent;
   transition: all 0.3s;
 }
@@ -338,7 +325,7 @@
   content: '✔';
   position: absolute;
   color: var(--white);
-  font-size: 1rem;
+  font-size: 1.3rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -356,14 +343,14 @@
 
 .duvidas-container {
   background-color: var(--marrom-medio); 
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   text-align: center;
 }
 
 .duvidas-container h2 {
   color: var(--white);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   font-size: 2rem;
 }
 
@@ -371,13 +358,14 @@
   max-width: 100%;
   margin: 0 auto;
   justify-items: center;
+  padding-bottom: 1rem;
 }
 
 .faq-item {
   width: 80%;
   background-color: var(--white);
-  margin-bottom: 20px;
-  border-radius: 4px; 
+  margin-bottom: 1rem;
+  border-radius: .5rem; 
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: left;
   overflow: hidden;
@@ -391,10 +379,9 @@ details[open] summary::after {
 
 /* Estilo da Pergunta (O que fica visível) */
 summary {
-  padding: 25px 40px;
+  padding: .5rem 1rem;
   list-style: none; 
   cursor: pointer;
-  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   color: var(--marrom-escuro);
   font-size: 1.3rem;
@@ -402,7 +389,7 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;  
+  /* text-align: center;   */
 }
 
 /* Criando o sinal de + customizado */
@@ -422,13 +409,13 @@ summary::-webkit-details-marker {
 
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
-  padding: 1px 40px 25px 40px;
+  /* padding: 1px 40px 25px 40px; */
   border-top: 1px ridge var(--marrom-medio);
   width: 90%; /* Define o comprimento da linha */
-  padding-top: 15px;
-  margin-top: 10px;
+  padding-top: .5rem;
+  /* margin-top: 10px; */
   color: var(--marrom-escuro);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   animation: slideDown 0.4s ease-out;
   margin-left: auto;  /* Joga espaço p esquerda */
@@ -449,31 +436,33 @@ summary::-webkit-details-marker {
 .terapia-container {
   background-color: var(--bege-claro);  
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  padding: 2rem .2rem;
 }
 
 /* O Container que define o fundo azul */
 .terapia-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
-  margin: 0 auto; /* separar das outras seções */  
-  padding-bottom: 2.5rem;   
+  margin: 0 auto;
+  /* padding-bottom: 2.5rem;    */
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
 }
 
 .terapia-bg-azul h2 {
   color: var(--white);
-  margin: 2.2rem 0 3.2rem 0;
+  /* margin: 2.2rem 0 3.2rem 0; */
   font-size: 2rem;
+  padding: 2.5rem .1rem;
 }
 
 /* Container dos Cards */
 .cards-terapia {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 3rem;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -488,11 +477,11 @@ summary::-webkit-details-marker {
 /* O Card Individual */
 .card {
   background: var(--white);
-  width: 320px;  
+  width: 350px;  
   height: auto; /* permite que o card cresça com o texto */
   min-height: 150px; 
   border-radius: .5rem;
-  padding: 40px 25px;
+  padding: 2.5rem 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -504,11 +493,11 @@ summary::-webkit-details-marker {
 
 .numero {
   position: absolute;
-  top: -20px;
+  top: -1.4rem;
   background-color: var(--marrom-claro);
   color: var(--marrom-escuro);
-  width: 45px;
-  height: 45px;
+  width: 2.8rem;
+  height: 2.8rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -519,12 +508,10 @@ summary::-webkit-details-marker {
 
 .card h3 {
   color: var(--marrom-escuro);
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   margin: 0;
   padding-top: .5rem;
 }
-
-
 
 .btn-saiba-mais:hover {
   background-color: var(--white);
@@ -537,7 +524,7 @@ summary::-webkit-details-marker {
   overflow: hidden;
   opacity: 0;
   color: var(--marrom-escuro);
-  transition: all 0.4s ease-out; /* Transição suave */
+  transition: all 0.6s ease-out; /* Transição suave */
   text-align: center;
   margin: 0;
 }
@@ -564,13 +551,12 @@ summary::-webkit-details-marker {
   padding: 1rem 1.2rem;
   display: flex;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .texto-card {
   background-color: var(--marrom-medio);
   padding: 0 60px 60px 180px; 
-  border-radius: .8rem;
+  border-radius: .5rem;
   color: var(--white);
   align-items: center;
   text-align: center;
@@ -598,14 +584,13 @@ summary::-webkit-details-marker {
 
 .texto-card h2 {
   font-size: 2rem;
-  margin-bottom: 5px;
   font-weight: 600;
   color: var(--white);
   padding: 1rem 0;
 }
 
 .texto-principal p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1.4;
   margin-bottom: 1rem;
   font-weight: 400;
@@ -614,11 +599,11 @@ summary::-webkit-details-marker {
 .btn-insta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  /* gap: .7rem; */
   background: var(--white);
-  color: var(--marrom-medio);
+  color: var(--marrom-escuro);
   padding: 10px 25px;
-  border-radius: .8rem;
+  border-radius: .5rem;
   text-decoration: none;
   font-weight: bold;
   margin-top: 1.2rem;

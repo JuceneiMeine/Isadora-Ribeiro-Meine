@@ -9,7 +9,7 @@
   max-width: 1400px;
   justify-content: space-between;
   align-items: center;
-  padding: .9rem 2rem;
+  padding: .3rem 2rem;
   background-color: var(--azul-escuro);
   position: sticky; /* header fixo topo qualquer resolução */
   top: 0;
@@ -41,7 +41,7 @@
 .nav-links ul {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;  
   width: 100%;
   padding: 0 1rem .5rem 1rem ; /* padding padrão que empurra os itens */
@@ -53,7 +53,6 @@
   width: auto;
   margin: 0;
   border-color: var(--white);
-  font-family: 'Nunito', sans-serif;
   color: var(--white);
   border-radius: .5rem;
   box-shadow: 0 0 4px var(--azul-gelo);
@@ -66,12 +65,10 @@
   background-color: var(--white);
 }
 
-.nav-links a {
-  
+.nav-links a {  
   display: block; /* faz o link ocupar largura toda do LI */
   width: 100%;
-  text-align: center; /* texto centraliza relação 100% largura */
-  
+  text-align: center; /* texto centraliza relação 100% largura */  
   text-decoration: none;
   color: var(--white);
   padding: .3rem 0;
