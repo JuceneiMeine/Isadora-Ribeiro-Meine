@@ -30,23 +30,19 @@ CORES PADRONIZADAS - Variáveis de Cores
   RESET & NORMALIZE 
   ================================================*/
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box;}
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  /* Define a fonte para o site inteiro aqui */
+  
   font-family: 'Nunito', sans-serif;
   font-weight: 500;
   line-height: 1.3;
   color: var(--black);
   background: var(--bege-claro);
   
-  /* Melhora a renderização da fonte */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,13 +50,11 @@ body {
 .body-container {
   display: flex;
   flex-direction: column;  
-  min-height: 100vh; /*Corpo pagina tenha altura da tela*/
-
+  min-height: 100vh; 
   max-width: 1400px;  
   margin: 0 auto;  
 }
 
-/* Força Elm de form a usarem a fonte do pai */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
@@ -85,25 +79,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-label, span, p {   
-  font-weight: 400;
-}
+label, span, p { font-weight: 400;}
 
-p {
-  line-height: 1.3;
-}
+p {line-height: 1.3;}
 
-ul, ol {
-  list-style: none;
-}
+ul, ol { list-style: none;}
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none;}
 
-table {
-  border-collapse: collapse;
-}
+table { border-collapse: collapse;}
 
 textarea {
   resize: vertical;
@@ -111,10 +95,7 @@ textarea {
 }
 
 /* Acessibilidade */
-@media (prefers-reduced-motion: reduce) {
-  
-  html {
-    scroll-behavior: auto;
-  }
+@media (prefers-reduced-motion: reduce) {  
+  html { scroll-behavior: auto;}
 }
 

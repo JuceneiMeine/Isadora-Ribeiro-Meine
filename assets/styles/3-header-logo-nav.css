@@ -11,7 +11,7 @@
   align-items: center;
   padding: .3rem 2rem;
   background-color: var(--azul-escuro);
-  position: sticky; /* header fixo topo qualquer resolução */
+  position: sticky;
   top: 0;
   z-index: 1100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -44,7 +44,7 @@
   gap: 1rem;
   align-items: center;  
   width: 100%;
-  padding: 0 1rem; /* padrão que empurra os itens */
+  padding: 0 1rem;
   margin: 0;
   list-style: none; 
 }
@@ -70,7 +70,7 @@
 }
 
 .nav-links a {  
-  display: block; /* faz link ocupar largura toda do LI */
+  display: block; 
   width: 100%;
   text-align: center;  
   text-decoration: none;

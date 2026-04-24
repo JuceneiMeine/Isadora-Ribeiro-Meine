@@ -5,23 +5,17 @@
 
 @media (max-width: 950px) {
 
-  .nav-links ul {
-    gap: .7rem;
-  }
+  .nav-links ul { gap: .7rem;}
 
-  .nav-links li {
-    padding: 0 .8rem;
-  }
+  .nav-links li { padding: 0 .8rem;}
 
-  .nav-links a {
-    font-size: .8rem;
-  }  
+  .nav-links a { font-size: .8rem; }  
 
   /* HOME */
 
   .foto {    
-    height: auto;  /* Remove altura fixa */
-    max-width: 350px; /* p/ foto não estourar */
+    height: auto; 
+    max-width: 350px; 
   }
 
   .footer-container {
@@ -37,9 +31,7 @@
     text-align: center;
   }
 
-  .perfil-logo img {
-    height: 3.5rem;   
-  }
+  .perfil-logo img { height: 3.5rem; }
 }  
 
 /*=======================================
@@ -100,13 +92,11 @@
   }
 
   .nav-links li {
-    width: 100%; /* clique ocupa a linha toda */
+    width: 100%; 
     text-align: center;    
   }
 
-  .nav-links a {
-    padding: .5rem 0;
-  }
+  .nav-links a { padding: .5rem 0;  }
     
 /*=============== HOME ===============*/
 
@@ -120,24 +110,18 @@
     width: 270px;    
   }
 
-  .info-pessoais {
-    padding-right: 0; 
-  }
+  .info-pessoais { padding-right: 0; }
 
   .info-pessoais h1 {
     font-size: 1.5rem; 
     margin-top: .8rem;
   }
 
-  .home-btn {
-    margin-top: 1rem;     
-  }
+  .home-btn { margin-top: 1rem;  }
 
 /*============= SERVICO =============*/
 
-  .subtitle {
-    font-size: 1.2rem;
-  }
+  .subtitle { font-size: 1.2rem; }
 
   .card-servico {
     padding: 1rem 1rem;
@@ -156,9 +140,7 @@
     text-align: center;    
   }
 
-  .diagnostico p {
-    padding: .4rem .2rem;
-  }
+  .diagnostico p { padding: .4rem .2rem; }
 
   .card-analise {
     padding-left: .8rem;
@@ -172,19 +154,15 @@
   }
 
   .checkbox-opcao {
-    width: 24px; /* levemente menor p acompanhar texto */
+    width: 24px; 
     height: 24px;
   }
 
 /*============= DUVIDAS =============*/
   
-  .faq-item {
-    width: 95%;
-  }
+  .faq-item { width: 95%;  }
 
-  summary {
-    font-size: 1.1rem; /* Fonte menor p caber melhor */    
-  }
+  summary { font-size: 1.1rem;  }
 
   summary::after {
     font-size: 1.8rem; /* Diminui ícone de + */    
@@ -207,9 +185,9 @@
   }
 
   .foto-wrapper {
-    width: 300px;  /* Tamanho fixo/proporcional p/ celular */
+    width: 300px; 
     height: 400px;
-    margin-right: 0;  /* Remove margens desktop */
+    margin-right: 0;  
     margin-bottom: -50px; /* Efeito sobreposição no card de texto */
     z-index: 2;     /* foto fique acima do card */
     margin-top: 0;
@@ -232,13 +210,9 @@
     flex-direction: column;
   }
 
-  .texto-card h2 {
-    padding-top: 0;
-  }
+  .texto-card h2 {padding-top: 0; }
 
-  .texto-principal p {
-    text-align: center; 
-  }
+  .texto-principal p { text-align: center;  }
 
   .btn-insta {
     width: fit-content; /* Botão se ajusta ao texto e centraliza */
@@ -272,17 +246,11 @@
 
 @media (max-width: 480px) {  
 
-  .info-texto h2 {
-      font-size: 1.5rem;
-  }
+  .info-texto h2 { font-size: 1.5rem;  }
 
-  .perfil-logo img {
-    height: 3.5rem;   
-  }
+  .perfil-logo img { height: 3.5rem;  }
 
-  .card-servico h4 {
-    font-size: 1.4rem;
-  }
+  .card-servico h4 { font-size: 1.4rem; }
 }
 
 /*=======================================
@@ -291,12 +259,8 @@
 
 @media (max-width: 320px) {  
 
-  .info-texto h2 {
-      font-size: 1.5rem;
-  }
+  .info-texto h2 { font-size: 1.5rem; }
 
-  .card {
-    width: 96%;;
-  }  
+  .card { width: 96%; }  
 }
 
