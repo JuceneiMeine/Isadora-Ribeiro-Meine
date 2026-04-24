@@ -15,22 +15,20 @@
 
   .nav-links a {
     font-size: .8rem;
-  }
-
-  
+  }  
 
   /* HOME */
+
   .foto {    
     height: auto;  /* Remove altura fixa */
     max-width: 350px; /* p/ foto não estourar */
   }
 
-
   .footer-container {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    padding: 2rem; /* Reduzindo o padding lateral exagerado de 6rem no mobile */
+    padding: 2rem;
   }
 
   .perfil {
@@ -42,9 +40,7 @@
   .perfil-logo img {
     height: 3.5rem;   
   }
-
 }  
-
 
 /*=======================================
   CELULARES GRANDES - (de 767px até 480px)
@@ -84,7 +80,7 @@
     position: fixed;
     top: 0;
     right: -100%; /* Escondido à direita */
-    width: 58%;   /* Ajustado p 60% - melhor leitura */
+    width: 58%;   /* Ajustado p x% - melhor leitura */
     height: auto;    
     background-color: var(--azul-escuro);
     transition: 0.4s ease-in-out;
@@ -93,45 +89,35 @@
   }
 
   .nav-links.active {
-    right: 0; 
-    /* Desliza para dentro */ 
+    right: 0; /* Desliza para dentro */ 
     display: flex; /* Garante que apareça */   
   }
 
   .nav-links ul {
-    flex-direction: column; /* No celular vira coluna */
+    flex-direction: column;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
 
   .nav-links li {
-    width: 100%; /* No celular, o clique ocupa a linha toda */
-    text-align: center;
+    width: 100%; /* clique ocupa a linha toda */
+    text-align: center;    
   }
 
   .nav-links a {
-    /* display: block; */
-    /* width: 100%; */
     padding: .5rem 0;
-    font-size: 1.2rem;
   }
-
     
 /*=============== HOME ===============*/
 
   .home-container {
     flex-direction: column;
     padding: 25px 5%;
-    /* text-align: center; */
   }
 
   .foto img {
     height: auto;
-    /* height: 400px; */
-    width: 270px;
-    
-  }
-
-  .info-logo {
-    /* padding-top: .3rem; */
+    width: 270px;    
   }
 
   .info-pessoais {
@@ -147,61 +133,35 @@
     margin-top: 1rem;     
   }
 
-
 /*============= SERVICO =============*/
-
-  .ajudar-container h3 {
-    /* font-size: 2rem; */
-    /* margin: 0 auto; */
-    /* padding-top: 2rem; */
-  }
 
   .subtitle {
     font-size: 1.2rem;
-    /* text-align: center; */
-  }
-
-  .card-servico h4 {
-    /* font-size: 1.5rem; */
   }
 
   .card-servico {
     padding: 1rem 1rem;
-    /* min-width: 250px;  */
     max-width: 90%;
-  }
-
-  .card-servico p {
-    /* font-size: 1.2rem; */
   }
 
 /*============= ANALISE =============*/
 
   .analise-header {
     width: 98%; 
-    /* text-align: center; */
-    padding: .8rem .6rem;
-    
+    padding: .8rem .6rem;    
   }
 
   .diagnostico {
     width: 98%; 
-    text-align: center;
-    
+    text-align: center;    
   }
 
   .diagnostico p {
-    /* font-size: 1rem; */
     padding: .4rem .2rem;
-  }
-
-  .analise-header h2 {
-    /* font-size: 1.3rem;     */
   }
 
   .card-analise {
     padding-left: .8rem;
-    /* border-radius: .5rem; */
     width: 98%;
     margin-bottom: 1.5rem;
   }
@@ -209,7 +169,6 @@
   .check-item {
     font-size: 1rem; 
     padding-left: 40px; 
-    /* margin-bottom: 15px; */
   }
 
   .checkbox-opcao {
@@ -219,35 +178,23 @@
 
 /*============= DUVIDAS =============*/
   
-  .duvidas-container {
-    /* padding: .6rem .2rem; */
-  }
-
   .faq-item {
     width: 95%;
-    /* text-align: left;    */
   }
 
   summary {
-    /* padding: 15px 10px;  */
-    font-size: 1.1rem;    /* Fonte menor para caber melhor */
-    /* text-align: center; */
+    font-size: 1.1rem; /* Fonte menor p caber melhor */    
   }
 
   summary::after {
-    font-size: 1.8rem; /* Diminui ícone de + */
-    
+    font-size: 1.8rem; /* Diminui ícone de + */    
   }
 
   .faq-content {
     padding: 0 0; /* Reduz espaço interno */
     font-size: 1rem; 
     width: 96%;
-  }
-  
-
-/*========== TERAPIA =============*/
-
+  }  
   
 /*============ SOBRE-MIM ============*/
 
@@ -257,16 +204,14 @@
     align-items: center; 
     justify-content: center;
     padding: 3rem 0;
-
-    /* gap: 0;      */
   }
 
   .foto-wrapper {
     width: 300px;  /* Tamanho fixo/proporcional p/ celular */
     height: 400px;
-    margin-right: 0;   /* Remove margens desktop */
+    margin-right: 0;  /* Remove margens desktop */
     margin-bottom: -50px; /* Efeito sobreposição no card de texto */
-    z-index: 2;     /* a foto fique acima do card */
+    z-index: 2;     /* foto fique acima do card */
     margin-top: 0;
   }
 
@@ -293,14 +238,12 @@
 
   .texto-principal p {
     text-align: center; 
-    /* font-size: 1.2rem; */
   }
 
   .btn-insta {
     width: fit-content; /* Botão se ajusta ao texto e centraliza */
   }
   
-
   /*====== WHATSAPP FLUTUANTE ========*/
 
   .whatsapp-float {
@@ -313,7 +256,6 @@
 
   /*============ FOOTER ==============*/
  
-
   /* Ajuste menor no celular) */
   .back-to-top {
     width: 50px;
@@ -322,9 +264,7 @@
     bottom: 20px;
     left: 20px;
   }
-
 }
-
 
 /*=======================================
   CELULARES PEQUENOS - (abaixo de 480px)
@@ -343,9 +283,7 @@
   .card-servico h4 {
     font-size: 1.4rem;
   }
-
 }
-
 
 /*=======================================
   CELULARES MENORES - (abaixo de 320px)
@@ -359,7 +297,6 @@
 
   .card {
     width: 96%;;
-  }
-  
+  }  
 }
 

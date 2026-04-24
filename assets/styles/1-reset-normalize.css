@@ -54,12 +54,13 @@ body {
 .body-container {
   display: flex;
   flex-direction: column;  
-  min-height: 100vh;
+  min-height: 100vh; /*Corpo pagina tenha altura da tela*/
+
   max-width: 1400px;  
   margin: 0 auto;  
 }
 
-/* Força elementos de formulário a usarem a fonte do pai */
+/* Força Elm de form a usarem a fonte do pai */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;

@@ -26,7 +26,6 @@
   margin: 0 auto;  
   align-items: center;
   justify-content: center;
-  /* border-radius: 1.8rem; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,7 +114,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* quebrar linha telas pequenas */
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   align-items: flex-start;
@@ -131,7 +130,7 @@
   padding: 0 1.5rem;
   border-radius: .5rem;
   flex: 1;
-  min-width: 230px; /* Largura mínima antes quebrar linha */
+  min-width: 230px; 
   max-width: 280px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   display: flex;
@@ -155,13 +154,13 @@
   font-size: clamp(1.2rem, 1.6vw, 3rem);
   font-weight: 800;
   margin-bottom: 0;
-  /* min-height: .5rem;  */
 }
 
 .conteudo-oculto { /* Esconde o parágrafo por padrão */
   display: none; 
   opacity: 0;
   transition: opacity 0.6s ease;
+  transition: all 0.6s ease-out;
 }
 
 .conteudo-oculto.ativo { /* Classe adicionada via JavaScript */
@@ -182,13 +181,11 @@
   font-weight: 800;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 2rem;
-
-  
+  margin-top: 2rem;  
 }
 
 
-.btn-saiba-mais.aberto { /* mudar cor do botão quando aberto */
+.btn-saiba-mais.aberto { 
   background-color: var(--marrom-escuro);
   color: var(--white);
 }
@@ -220,7 +217,7 @@
 }
 
 .analise-header { 
-  width: 98%; 
+  width: 70%; 
   text-align: center; 
   background-color: var(--azul-escuro);
   color: var(--white);
@@ -237,10 +234,6 @@
   margin: 1rem 1rem;
   border-radius: .5rem;  
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.analise-header {
-  width: 70%;
 }
 
 .diagnostico h3 {
@@ -345,7 +338,6 @@
 
 .duvidas-container {
   background-color: var(--marrom-medio); 
-  /* padding: 10px 30px; */
   text-align: center;
 }
 
@@ -354,13 +346,14 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   font-size: 2rem;
+  margin: 0;
 }
 
 .faq-container {
   max-width: 100%;
   margin: 0 auto;
   justify-items: center;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .faq-item {
@@ -391,7 +384,6 @@ summary {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* text-align: center;   */
 }
 
 /* Criando o sinal de + customizado */
@@ -402,7 +394,7 @@ summary::after {
   transition: transform 0.3s ease;
   cursor: pointer;
   padding: 10px 0;
-  list-style: none; /* Esconde a seta em alguns navegadores */
+  list-style: none; 
 }
 
 summary::-webkit-details-marker {
@@ -411,11 +403,9 @@ summary::-webkit-details-marker {
 
 /* Estilo da Resposta (O que aparece ao clicar) */
 .faq-content {
-  /* padding: 1px 40px 25px 40px; */
   border-top: 1px ridge var(--marrom-medio);
   width: 90%; /* Define o comprimento da linha */
   padding-top: .5rem;
-  /* margin-top: 10px; */
   color: var(--marrom-escuro);
   font-size: 1.2rem;
   line-height: 1.4;
@@ -442,12 +432,10 @@ summary::-webkit-details-marker {
   text-align: center;
 }
 
-/* O Container que define o fundo azul */
 .terapia-bg-azul {
   background-color: var(--azul-escuro);
   width: 100%;
   margin: 0 auto;
-  /* padding-bottom: 2.5rem;    */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -456,7 +444,6 @@ summary::-webkit-details-marker {
 
 .terapia-bg-azul h2 {
   color: var(--white);
-  /* margin: 2.2rem 0 3.2rem 0; */
   font-size: 2rem;
   padding: 2.5rem .1rem;
 }
@@ -492,6 +479,11 @@ summary::-webkit-details-marker {
   /* Alinha o conteúdo no topo do card */
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   position: relative;
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .numero {
@@ -538,7 +530,6 @@ summary::-webkit-details-marker {
   opacity: 1;
   margin-top: 20px; /* Espaço entre o botão e o texto */
 }
-
 
 /*=====================================
   SOBRE-MIM
@@ -637,7 +628,6 @@ summary::-webkit-details-marker {
   CONTATO
   =====================================*/
 
-
 .whatsapp-float {
   position: fixed;
   width: 60px;
@@ -674,15 +664,15 @@ summary::-webkit-details-marker {
   position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 20px; /* Distância do fundo */
-  left: 20px;   /* Distância da esquerda */  
+  bottom: 20px; 
+  left: 20px;   
   background-color: var(--marrom-escuro); 
   color: var(--white);
   border: none;
-  border-radius: 50%; /* Deixa redondo */
+  border-radius: 50%; 
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra flutuante */  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
   
   /* Centraliza o ícone */
   display: flex;

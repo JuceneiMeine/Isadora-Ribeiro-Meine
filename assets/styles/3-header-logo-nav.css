@@ -44,7 +44,7 @@
   gap: 1rem;
   align-items: center;  
   width: 100%;
-  padding: 0 1rem .5rem 1rem ; /* padding padrão que empurra os itens */
+  padding: 0 1rem; /* padrão que empurra os itens */
   margin: 0;
   list-style: none; 
 }
@@ -65,22 +65,21 @@
   background-color: var(--white);
 }
 
+.nav-links li:hover a {
+  color: var(--azul-escuro);
+}
+
 .nav-links a {  
-  display: block; /* faz o link ocupar largura toda do LI */
+  display: block; /* faz link ocupar largura toda do LI */
   width: 100%;
-  text-align: center; /* texto centraliza relação 100% largura */  
+  text-align: center;  
   text-decoration: none;
   color: var(--white);
-  padding: .3rem 0;
   display: block;
   font-size: .9rem;
   font-weight: 550;
   letter-spacing: .1rem; 
-
-}
-
-.nav-links li:hover a {
-  color: var(--azul-escuro);
+  padding: .2rem 0;
 }
 
 .menu-mobile-btn {
@@ -88,11 +87,9 @@
 }
 
 #home, #servicos {
-  scroll-margin-top: 73px; 
-  /* Ajustar valor p altura header */
+  scroll-margin-top: 73px;  /* valor p altura header */
 }
 
 #analise, #duvidas, #terapia, #sobre-mim {
-  scroll-margin-top: 0; 
-  /* Ajustar valor p altura header */
+  scroll-margin-top: 0;   /* valor p altura header */
 }
