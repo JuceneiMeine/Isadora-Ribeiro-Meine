@@ -86,10 +86,7 @@
   display: none; /* Esconde botão hambúrguer no PC */
 }
 
-#home, #servicos {
-  scroll-margin-top: 73px;  /* valor p altura header */
+#home, #servico, #analise, #duvidas, #terapia, #sobre-mim {
+  scroll-margin-top: 60px;  /* valor p altura header */
 }
 
-#analise, #duvidas, #terapia, #sobre-mim {
-  scroll-margin-top: 0;   /* valor p altura header */
-}
