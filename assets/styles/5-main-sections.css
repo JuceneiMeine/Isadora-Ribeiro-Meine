@@ -100,6 +100,15 @@
   color: var(--white);
 }
 
+.dificuldades {
+  background-color: var(--azul-escuro);  
+  border-radius: .5rem;
+}
+
+.dificuldades h3 {
+  padding: 2rem;
+}
+
 .subtitle {
   font-size: 1.4rem;
   margin-bottom: 3rem;
