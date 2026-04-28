@@ -121,6 +121,13 @@
 
 /*============= SERVICO =============*/
 
+  .dificuldades {
+    margin: 0;
+  }
+
+  .dificuldades h3 {
+    font-size: clamp(1.2rem, 1.4vw, 1.5rem);
+  }
   .subtitle { font-size: 1.2rem; }
 
   .card-servico {
@@ -137,7 +144,9 @@
 
   .diagnostico {
     width: 98%; 
-    text-align: center;    
+    padding: 15px 10px 35px 10px;
+    text-align: center;
+
   }
 
   .diagnostico p { padding: .4rem .2rem; }
@@ -172,6 +181,9 @@
     padding: 0 0; /* Reduz espaço interno */
     font-size: 1rem; 
     width: 96%;
+    text-align: justify;
+    text-indent: 1.5rem;
+    padding: 0 0.5rem;
   }  
   
 /*============ SOBRE-MIM ============*/

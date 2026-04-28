@@ -55,7 +55,7 @@
   border-color: var(--white);
   color: var(--white);
   border-radius: .5rem;
-  box-shadow: 0 0 4px var(--azul-gelo);
+  border: solid 1px var(--azul-gelo);
   background-color: var(--azul-escuro); 
   transition: all 0.3s;
   padding: 0 1rem;
